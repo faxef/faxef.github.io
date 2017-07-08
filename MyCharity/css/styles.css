@@ -1,0 +1,415 @@
+/* -------------------------- START FONTS ------------------------ */
+/* -------------------------- END FONTS ------------------------ */
+/* -------------------------- First fixed window ---------------------- */
+body {
+  color: white;
+  overflow-X: hidden; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+.clearfix {
+  clear: both; }
+
+header {
+  padding: 35px 0; }
+  header .logo {
+    width: 212px; }
+  header .header-menu {
+    cursor: pointer;
+    text-align: center;
+    padding-top: 20px; }
+  header nav > ul > li {
+    display: inline-block;
+    cursor: pointer;
+    padding: 15px 5px;
+    color: #373838; }
+    header nav > ul > li:hover a {
+      background-color: #9b242d;
+      color: white;
+      text-decoration: none; }
+    header nav > ul > li a {
+      text-decoration: none;
+      font-size: 14px;
+      padding: 15px 10px;
+      font-family: 'Roboto Slab', serif;
+      font-weight: 400;
+      text-transform: uppercase; }
+
+.main {
+  background-color: #3cc3f4;
+  text-align: center;
+  height: 782.5px; }
+  .main h1 {
+    text-transform: uppercase;
+    padding-top: 350px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 50px;
+    font-weight: 700; }
+  .main h4 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+    padding-bottom: 47px;
+    font-weight: 300;
+    line-height: 68px; }
+  .main .donate {
+    text-decoration: none;
+    border: 6px solid #7bceec;
+    -webkit-border-radius: 30px;
+            border-radius: 30px;
+    background-color: #ffffff;
+    color: #46a651;
+    padding: 10px 60px;
+    font-size: 26px; }
+    .main .donate:hover {
+      border: 6px solid rgba(123, 206, 236, 0.7);
+      color: #57c964; }
+
+.banner {
+  width: 100%; }
+  .banner .left {
+    width: 50%;
+    display: inline-block; }
+    .banner .left .item-1 {
+      background-color: #f1efec;
+      text-align: right;
+      padding: 110px 80px; }
+      .banner .left .item-1 img {
+        width: 212px; }
+    .banner .left .item-2 {
+      height: 267.5px;
+      background-color: #af6e73; }
+    .banner .left .item-3 {
+      background-color: #46a651;
+      height: 267.5px;
+      text-align: right;
+      padding: 30px 80px; }
+      .banner .left .item-3 h2 {
+        font-family: 'Roboto Slab', serif;
+        font-size: 40px;
+        font-weight: 700;
+        padding: 20px 0 30px 0; }
+      .banner .left .item-3 .subscribe {
+        display: inline-block;
+        color: white;
+        background-color: #5ec069;
+        font-family: 'Roboto Slab', serif;
+        font-size: 16px;
+        text-decoration: none;
+        padding: 2.5% 3% 2.5% 47%;
+        -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+        -webkit-transition-property: -webkit-transform;
+        transition-property: -webkit-transform;
+        transition-property: transform;
+        transition-property: transform, -webkit-transform;
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+        -webkit-box-shadow: 0 0 1px transparent;
+                box-shadow: 0 0 1px transparent; }
+        .banner .left .item-3 .subscribe:hover {
+          -webkit-transform: translate(10px, 0);
+              -ms-transform: translate(10px, 0);
+                  transform: translate(10px, 0);
+          border-left: 1px solid white; }
+      .banner .left .item-3 p {
+        padding-top: 20px;
+        font-family: 'Roboto Slab', serif;
+        font-size: 14px;
+        line-height: 25px; }
+    .banner .left .item-4 {
+      background-color: #9b242d;
+      height: 267.5px; }
+  .banner .right {
+    width: 50%;
+    float: right; }
+    .banner .right .item-1 {
+      background-color: #9b242d;
+      text-align: left;
+      padding: 95.79px 80px; }
+      .banner .right .item-1 h2 {
+        font-family: 'Roboto Slab', serif;
+        font-size: 40px; }
+      .banner .right .item-1 p {
+        font-family: 'Roboto Slab', serif;
+        font-size: 16px;
+        padding-top: 20px; }
+    .banner .right .item-2 {
+      background-image: url(../img/item-2.png);
+      background-size: cover;
+      height: 535px;
+      padding: 0; }
+    .banner .right .item-3 {
+      background-color: #3b5997;
+      position: relative;
+      top: 50%;
+      height: 267.5px;
+      text-align: center;
+      padding-top: 90px; }
+      .banner .right .item-3 a {
+        text-decoration: none;
+        color: white; }
+        .banner .right .item-3 a p {
+          padding-top: 30px; }
+
+.events {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto; }
+  .events .row > h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 50px;
+    color: #373838;
+    padding: 70px 0; }
+  .events .event {
+    margin: 0 auto;
+    padding-bottom: 90px; }
+    .events .event .shape {
+      background: url(../img/shape.png);
+      height: 102px;
+      width: 88px;
+      margin: 0 auto;
+      padding: 25px 0;
+      font-family: 'Roboto Slab', serif;
+      font-size: 36px;
+      cursor: pointer; }
+      .events .event .shape:hover {
+        background: url(../img/shape-hover.png); }
+    .events .event h2 {
+      font-family: 'Roboto Slab', serif;
+      font-size: 30px;
+      color: #9b242d; }
+    .events .event p {
+      font-family: 'Roboto Slab', serif;
+      color: #373838;
+      font-size: 14px;
+      line-height: 22px;
+      padding-bottom: 30px; }
+      .events .event p:first-of-type {
+        font-size: 18px;
+        padding: 20px 0; }
+    .events .event a {
+      background-color: #373838;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      text-transform: uppercase;
+      padding: 5px 15px;
+      text-decoration: none;
+      color: white; }
+      .events .event a:hover {
+        background: url(../img/shape-hover.png); }
+
+footer {
+  background-color: #373838; }
+  footer nav {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+    footer nav ul > li {
+      display: inline-block;
+      padding: 45px 30px;
+      font-size: 15px;
+      font-family: 'Roboto Slab', serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: #939393; }
+      footer nav ul > li:hover {
+        color: #f1efec; }
+  footer .contacts {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+    footer .contacts .item {
+      padding: 45px 0; }
+      footer .contacts .item h2 {
+        padding: 15px 0;
+        font-size: 18px;
+        font-family: 'Roboto Slab', serif;
+        color: #c6c6c6; }
+      footer .contacts .item .subscribe {
+        padding: 5.5% 5.5% 5.5% 70%;
+        display: inline-block;
+        color: white;
+        font-family: 'Roboto Slab', serif;
+        font-size: 16px;
+        text-decoration: none;
+        background-color: #494949;
+        -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+        -webkit-transition-property: -webkit-transform;
+        transition-property: -webkit-transform;
+        transition-property: transform;
+        transition-property: transform, -webkit-transform;
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+        -webkit-box-shadow: 0 0 1px transparent;
+                box-shadow: 0 0 1px transparent; }
+        footer .contacts .item .subscribe:hover {
+          -webkit-transform: translate(10px, 0);
+              -ms-transform: translate(10px, 0);
+                  transform: translate(10px, 0);
+          border-left: 1px solid white; }
+    footer .contacts .contact {
+      text-align: right;
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+          -ms-flex-order: 2;
+              order: 2;
+      font-size: 14px;
+      color: #939393; }
+    footer .contacts .news {
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+          -ms-flex-order: 1;
+              order: 1; }
+    footer .contacts .social a {
+      width: 40px;
+      text-decoration: none;
+      padding-right: 5px; }
+      footer .contacts .social a i {
+        color: white;
+        width: 40px;
+        text-align: center;
+        height: 40px;
+        padding: 4px;
+        -webkit-border-radius: 10px;
+                border-radius: 10px; }
+    footer .contacts .social .facebook i {
+      background-color: #3b5997; }
+      footer .contacts .social .facebook i:hover {
+        background-color: #373838;
+        color: #3b5997; }
+    footer .contacts .social .twitter i {
+      background-color: #3ec2f3; }
+      footer .contacts .social .twitter i:hover {
+        background-color: #373838;
+        color: #3ec2f3; }
+    footer .contacts .social .vk i {
+      background-color: #3ea0d9; }
+      footer .contacts .social .vk i:hover {
+        background-color: #373838;
+        color: #3ea0d9; }
+  footer .copyright {
+    padding: 50px 0;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    color: #939393; }
+
+/* -------------------------- First fixed window ------------------------ */
+/* -------------------------- START MEDIA ---------------------- */
+/*==========  Desktop First Method  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  .top-menu ul > li {
+    padding: 10px 2px; }
+    .top-menu ul > li a {
+      font-size: 13.5px; } }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  header .logo {
+    margin: 0 auto; }
+  header .top-menu {
+    text-align: center; }
+    header .top-menu ul {
+      display: none; }
+      header .top-menu ul li {
+        display: block;
+        padding: 15px 0; }
+        header .top-menu ul li:hover {
+          background-color: #9b242d; }
+  header .header-menu {
+    padding: 15px 0; }
+  .main {
+    height: 400px; }
+    .main h1 {
+      padding-top: 100px;
+      font-size: 36px; }
+    .main h4 {
+      font-size: 14px;
+      line-height: 18px;
+      padding-top: 25px; }
+  .banner .left .item-2, .banner .left .item-4 {
+    display: none; }
+  .banner .left .item-3 {
+    padding: 20px 40px 20px 0; }
+    .banner .left .item-3 h2 {
+      font-size: 30px; }
+    .banner .left .item-3 p {
+      font-size: 12px; }
+  .banner .right .item-1 {
+    height: 267.5px; }
+    .banner .right .item-1 h2 {
+      font-size: 34px; }
+    .banner .right .item-1 p {
+      font-size: 13px; }
+  .banner .right .item-2 {
+    height: 267.5px; }
+    .banner .right .item-2 .item-3 {
+      position: relative;
+      top: 0; }
+  footer nav {
+    text-align: center; }
+    footer nav ul > li {
+      padding: 20px 15px;
+      font-size: 15px; } }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .left {
+    width: 100% !important; }
+    .left .item-1 {
+      text-align: left !important; }
+  .right {
+    width: 100% !important; }
+  footer nav {
+    text-align: center; }
+    footer nav ul > li {
+      padding: 15px 20px;
+      font-size: 13px; }
+  footer .contacts i {
+    width: 30px !important;
+    font-size: 1.4em;
+    height: 30px !important; }
+  footer .item {
+    padding: 5px !important; }
+  footer .news {
+    text-align: center; }
+    footer .news .subscribe {
+      padding: 2.5% 2.5% 2.5% 30% !important; }
+  footer .social {
+    padding: 15px 0 20px 15px !important; }
+  footer .contact {
+    padding: 15px 15px 20px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  /**/ }
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  /**/ }
+
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  /**/ }
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  /**/ }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  /**/ }
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  .top-menu ul {
+    display: block !important; } }
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  /**/ }
