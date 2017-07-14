@@ -230,5 +230,33 @@ var mixer = mixitup(mixOnLoad,{
         block: 'furniture'
     }
 })
+
+//  ================= !!! PAGE ANCHOR SCROLL!!! ==================== //
+// ========================!! Fixed menu !!========================== //
+
+var headerHeight = $('.nav-stripe').outerHeight();
+var toMenu = $('.nav-stripe').offset().top
+// ---- Fixed menu -----
+$(window).scroll(function(){
+	if($(this).scrollTop() >= toMenu){
+		$('.nav-stripe').css({
+			backgroundColor : 'white'
+		}).addClass('navbar-fixed-top');
+		$('body').css({paddingTop : headerHeight + 'px'});
+	}
+	else {
+		$('.nav-stripe').removeClass('navbar-fixed-top');
+		$('body').css({paddingTop : ''});
+	}
+});
+// ---- Anchor scroll -----
+$('.page-scroll a').bind('click', function(event){
+	event.preventDefault();
+	var id = $(this).attr('href'),
+		top = $(id).offset().top - headerHeight
+	$('html, body').stop().animate({
+		scrollTop: top
+	},1500);	
+});
 });
 
