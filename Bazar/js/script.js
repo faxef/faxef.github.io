@@ -258,5 +258,11 @@ $('.page-scroll a').bind('click', function(event){
 		scrollTop: top
 	},1500);	
 });
+//  ================= !!! Resize window !!! ==================== //
+// ============================================================ //
+$(window).resize(function(){
+window.setTimeout('location.reload()',100)
+})
+
 });
 

@@ -422,12 +422,12 @@ header .nav-stripe {
   text-align: right;
   background: url(../img/backgrounds/special.jpg) no-repeat; }
   .ad .right .part-2 h2 {
-    padding: 14.415% 0 2.885% 0;
+    padding: 14.415% 4% 2.885% 0;
     font-size: 24px;
     font-weight: 600;
     color: #d58e32; }
   .ad .right .part-2 p {
-    padding-bottom: 13.695%;
+    padding: 0 4% 13.695% 0;
     font-size: 18px;
     font-weight: 300; }
   .ad .right .part-2 .overflow {
