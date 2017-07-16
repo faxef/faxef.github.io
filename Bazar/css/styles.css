@@ -149,7 +149,7 @@ header .nav-stripe {
       text-decoration: none; }
       header .nav-stripe nav ul li {
         display: inline-block;
-        padding: 37px 0; }
+        padding: 36px 0; }
         header .nav-stripe nav ul li a {
           font-size: 14px;
           font-weight: 600;
@@ -157,7 +157,7 @@ header .nav-stripe {
           text-transform: uppercase;
           text-decoration: none;
           color: #2a2a2a;
-          padding: 32px 10px; }
+          padding: 31px 10px; }
           header .nav-stripe nav ul li a:hover {
             color: white;
             border-top: 4px solid  #2a2a2a; }
@@ -201,11 +201,11 @@ header .nav-stripe {
 .sales .hot-deals .deals .items .active {
   display: block; }
   .sales .hot-deals .deals .items .active .add-to-cart {
-    padding: 26.82% 32.5%;
+    padding: 26.82% 28.5%;
     background-color: rgba(255, 255, 255, 0.74);
     cursor: pointer; }
     .sales .hot-deals .deals .items .active .add-to-cart i {
-      padding: 14px 5px;
+      padding: 14px 9%;
       font-size: 13px;
       font-weight: 600;
       text-transform: uppercase;
@@ -322,6 +322,7 @@ header .nav-stripe {
     cursor: pointer; }
   .sales .arrows .left, .sales .arrows .right {
     text-align: center;
+    cursor: pointer;
     padding: 2% 0; }
   .sales .arrows .left {
     border-right: 1px solid white; }
@@ -403,13 +404,14 @@ header .nav-stripe {
   text-transform: uppercase;
   text-align: center;
   background: url(../img/backgrounds/chairs.jpg) no-repeat;
-  color: white; }
+  color: white;
+  padding-bottom: 3%; }
   .ad .right .part-1 h2 {
     padding: 9.01% 0 0 2%;
     font-size: 30px;
     font-weight: 400; }
   .ad .right .part-1 p {
-    padding: 4% 0 8.074%;
+    padding: 1.4% 0 8.074%;
     font-size: 36px;
     font-weight: 600;
     color: #d58e32; }
@@ -487,16 +489,16 @@ header .nav-stripe {
       .new-products .active .product:hover .info .icons .price {
         background-color: #d58e32; }
       .new-products .active .product:hover .bg .hidden-menu {
-        -webkit-transform: translateY(-38px);
-            -ms-transform: translateY(-38px);
-                transform: translateY(-38px);
+        -webkit-transform: translateY(-41px);
+            -ms-transform: translateY(-41px);
+                transform: translateY(-41px);
         -webkit-transition: -webkit-transform 0.5s;
         transition: -webkit-transform 0.5s;
         transition: transform 0.5s;
         transition: transform 0.5s, -webkit-transform 0.5s; }
       .new-products .active .product .bg {
         overflow: hidden;
-        max-height: 262px; }
+        max-height: 264px; }
         .new-products .active .product .bg .hidden-menu {
           position: relative;
           -webkit-transition: -webkit-transform 1s;
@@ -507,7 +509,7 @@ header .nav-stripe {
             display: inline-block;
             margin-right: 22px;
             text-align: right;
-            padding: 13px 7px 11px 7px;
+            padding: 15px 7px 13px 7px;
             background-color: #2a2a2a; }
             .new-products .active .product .bg .hidden-menu .view h2 {
               color: white;
@@ -517,17 +519,17 @@ header .nav-stripe {
             .new-products .active .product .bg .hidden-menu .view:hover {
               background-color: #d58e32; }
           .new-products .active .product .bg .hidden-menu .add-to-cart {
-            display: inline-block; }
+            display: inline-block;
+            padding: 12px 3px;
+            background-color: #2a2a2a; }
             .new-products .active .product .bg .hidden-menu .add-to-cart i {
-              padding: 12px 5px;
               font-size: 13px;
               font-weight: 600;
-              text-transform: uppercase;
-              background-color: #2a2a2a; }
+              text-transform: uppercase; }
               .new-products .active .product .bg .hidden-menu .add-to-cart i::before {
                 padding-right: 10px; }
-              .new-products .active .product .bg .hidden-menu .add-to-cart i:hover {
-                background-color: #d58e32; }
+            .new-products .active .product .bg .hidden-menu .add-to-cart:hover {
+              background-color: #d58e32; }
       .new-products .active .product .info {
         border: 1px solid #e2e2e2;
         border-top: none; }
@@ -697,6 +699,7 @@ header .nav-stripe {
       margin-bottom: 90px; }
       .furniture .gallery .slider-bottom .left, .furniture .gallery .slider-bottom .right {
         position: relative;
+        cursor: pointer;
         top: 5px;
         background-color: #2a2a2a;
         padding: 27px 7px; }
@@ -867,6 +870,7 @@ header .nav-stripe {
   margin-bottom: 90px; }
   .blog .slider-blog .left, .blog .slider-blog .right {
     position: relative;
+    cursor: pointer;
     top: 10px;
     background-color: #2a2a2a;
     padding: 38px 14px;
@@ -1013,7 +1017,7 @@ footer .bottom-stripe {
     header .nav-stripe nav ul li {
       padding: 7.3% 0; }
       header .nav-stripe nav ul li a {
-        padding: 27px 6px; }
+        padding: 30px 6px; }
   header .logo-stripe .phone {
     padding: 17.05% 0; }
   .sales .hot-deals .top-stripe h2 {
@@ -1025,7 +1029,7 @@ footer .bottom-stripe {
     width: auto;
     background-repeat: round; }
     .sales .hot-deals .deals .items .item .bg .add-to-cart {
-      padding: 27.6% 27.5%; }
+      padding: 27.6% 25.5%; }
     .sales .hot-deals .deals .items .item .bg .deal-time li {
       font-size: 12px; }
       .sales .hot-deals .deals .items .item .bg .deal-time li p {
@@ -1055,6 +1059,10 @@ footer .bottom-stripe {
     height: 213px; }
     .new-products .products .product .bg .hidden-menu .view {
       margin: 0; }
+      .new-products .products .product .bg .hidden-menu .view h2 {
+        font-size: 12px; }
+    .new-products .products .product .bg .hidden-menu .add-to-cart i {
+      font-size: 12px; }
   .new-products .products .product .info .icons .price h2 {
     font-size: 15px; }
   .furniture .gallery .text .bg .item-wrap .item {
@@ -1099,7 +1107,7 @@ footer .bottom-stripe {
     width: auto;
     background-repeat: round; }
     .sales .hot-deals .deals .items .item .bg .add-to-cart {
-      padding: 19.82% 27.5%; }
+      padding: 19.82% 24.5%; }
     .sales .hot-deals .deals .items .item .bg .deal-time li {
       font-size: 12px; }
       .sales .hot-deals .deals .items .item .bg .deal-time li p {
