@@ -15,6 +15,15 @@ $( document ).ready(function() {
 		target: '.navbar-fixed-top'
 	});
 	
+//  ================= !!! Resize window !!! ==================== //
+// ============================================================ //
+var oldWidth = window.innerWidth;
+window.onresize = function () {
+  var newWidth = window.innerWidth;
+  if (newWidth != oldWidth) {
+    window.setTimeout('location.reload()',100)
+  }
+};
 	
 	// Floating label headings for the contact form
 
@@ -188,6 +197,7 @@ $( document ).ready(function() {
         }
       });
 	  
+	
 	  /*Javascript for portfolio*/
     var $container = $('#container');
     $container.isotope({

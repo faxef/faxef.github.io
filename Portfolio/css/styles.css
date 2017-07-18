@@ -105,7 +105,6 @@ header {
 }
 
 header .container {
-    padding-top: 100px;
     padding-bottom: 50px;
 }
 
@@ -150,9 +149,6 @@ header  .menu-icon:hover i {
 	}
 
 @media(min-width:768px) {
-    header .container {
-        padding: 90px 0 100px;
-    }
 
     header .intro-text .name {
         font-size: 1.869em;
@@ -692,7 +688,7 @@ border-top: 22px solid #3fbfE1;
 	font-size:2.5em;
 	}
 	.left-services .service-item{
-		text-align:left;
+		text-align: center;
 		margin: 40px 0;
 	}
 	.left-services .service-item h4{
@@ -711,7 +707,7 @@ border-top: 22px solid #3fbfE1;
 	font-size:2.5em;
 }
 .right-services .service-item{
-	text-align:left;
+	text-align: center;
 	margin: 40px 0;
 }
 .right-services .service-item h4{
@@ -984,8 +980,12 @@ div#loading {
 .intro-text h1 {
 	font-size: 2.59em;
 }
+.photo {
+	width: 20%;
+	margin: 0 auto;
+}
 .intro-text img {
-	width: 10%;
+	width: 100%;
 	border-radius: 50%;
 }
 @media (min-width: 768px){
@@ -1137,7 +1137,11 @@ div#loading {
 .section-heading .heading-width{
 	width:0.01%;
 }
-img.about-photo{
+.about-photo{
+	width: 30%;
+	margin: auto;
+}
+.about-photo img{
 	border-radius:50%;
 	max-width:100%;
 }
