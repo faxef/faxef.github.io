@@ -264,7 +264,8 @@ var oldWidth = window.innerWidth;
 window.onresize = function () {
 	var newWidth = window.innerWidth;
 	if (newWidth != oldWidth) {
-		oldWidth = newWidth;
+		window.setTimeout('location.reload()',100)
 	}
 };
 });
+
