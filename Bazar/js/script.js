@@ -260,9 +260,11 @@ $('.page-scroll a').bind('click', function(event){
 });
 //  ================= !!! Resize window !!! ==================== //
 // ============================================================ //
-$(window).resize(function(){
-window.setTimeout('location.reload()',100)
-})
-
+var oldWidth = window.innerWidth;
+window.onresize = function () {
+	var newWidth = window.innerWidth;
+	if (newWidth != oldWidth) {
+		oldWidth = newWidth;
+	}
+};
 });
-
