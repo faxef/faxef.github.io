@@ -91,7 +91,6 @@ function  budgetInput(maxBudget,maxViews,maxConversion,budgetCof){
 	if(budget < maxBudget){
 		$('[data-result = views]').val(views);	
 		console.log('current' + '----' + budgetNum)
-		console.log('maxBudget' + '----' + maxBudget)
 		$('[data-result = conversion]').val(conversion);
 		$('[data-result = budget]').val(budgetNum);
 		button.css({
@@ -106,6 +105,7 @@ function  budgetInput(maxBudget,maxViews,maxConversion,budgetCof){
 
 	}else if(budget >= maxBudget) {
 		var maxBudgetVal = maxBudget.toLocaleString();
+			console.log('maxBudget' + '----' + maxBudgetVal)
 		var maxViewsVal = maxViews.toLocaleString();
 		var maxConversionVal = maxConversion.toLocaleString();
 		$('[data-result = budget]').val(maxBudgetVal)
