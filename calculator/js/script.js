@@ -58,6 +58,7 @@ function placement(value, coefficient){
 	var smallSecond = Math.round(count / 3.33);
 	var midSecond = Math.round((count / 3.33) / 3.5);
 	var largeSecond = Math.round(midSecond / 2.18);
+	console.log((value + ' - ' + ' - ' + coefficient))
 	if (count <= 1754 && count > 2){
 		$('[data-channel-small] .item__num').text(smallSecond + ' - ' + count);
 
@@ -107,8 +108,8 @@ function  budgetInput(maxBudget,maxViews,maxConversion,budgetCof){
 		var maxViewsVal = maxViews.toLocaleString();
 		var maxConversionVal = maxConversion.toLocaleString();
 		$('[data-result = budget]').val(maxBudgetVal)
-		$('[data-result = views]').val(maxViews)
-		$('[data-result = conversion]').val(maxConversion)
+		$('[data-result = views]').val(maxViewsVal)
+		$('[data-result = conversion]').val(maxConversionVal)
 		var maxBudgetCount = Math.round((maxBudget / 900) /2)
 		var smallBudgetCount = Math.round(maxBudgetCount / 3.33);
 		var midBudgetCount = Math.round((maxBudgetCount / 3.33) / 3.5);
@@ -244,6 +245,8 @@ $('.network__box').on('click', function (){
 		maxConversion = 250000;
 		budgetCof = 900;
 		viewsCof = 15000;
+		iewsCof = 5000;
+		conversionCof = 225;
 		budgetInput(maxBudget,maxViews,maxConversion,budgetCof)
 	}
 	if($(this).index() == 1){
