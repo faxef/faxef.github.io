@@ -82,7 +82,7 @@ $('[data-result = budget]').on('input', function (){
 })
 function  budgetInput(maxBudget,maxViews,maxConversion,budgetCof){
 	var budgetVal = $((('[data-result = budget]'))).val();
-	var budget = parseFloat(budgetVal.replace(",",".").replace(/[^0-9.]/gim, ""))
+	var budget = parseFloat(budgetVal.replace(/[^0-9.]/gim, ""))
 	var viewsToString = Math.round((maxViews / maxBudget * budget));
 	var conversionToString = Math.round((maxConversion / maxBudget * budget));
 	var views = viewsToString.toLocaleString();
@@ -138,7 +138,7 @@ $('[data-result = views]').on('input',  function(){
 
 function viewsInput(viewsCof){
 	var viewsVal = $('[data-result = views]').val();
-	var views = parseFloat(viewsVal.replace(",",".").replace(/[^0-9.]/gim, ""))
+	var views = parseFloat(viewsVal.replace(/[^0-9.]/gim, ""))
 	var budgetToString = Math.round((maxBudget / maxViews * views));
 	var conversionToString = Math.round((maxConversion / maxViews * views));
 	var budget = budgetToString.toLocaleString();
@@ -188,7 +188,7 @@ $('[data-result = conversion]').on('input', function (){
 })
 function conversionInput(conversionCof){
 	var conversionVal = $('[data-result = conversion]').val();
-	var conversion = parseFloat(conversionVal.replace(",",".").replace(/[^0-9.]/gim, ""))
+	var conversion = parseFloat(conversionVal.replace(/[^0-9.]/gim, ""))
 	var viewsToString = Math.round((maxViews / maxConversion * conversion));
 	var budgetToString = Math.round((maxBudget / maxConversion * conversion));
 	var views = viewsToString.toLocaleString();
