@@ -90,6 +90,8 @@ function  budgetInput(maxBudget,maxViews,maxConversion,budgetCof){
 	var budgetNum = budget.toLocaleString();
 	if(budget < maxBudget){
 		$('[data-result = views]').val(views);	
+		console.log('current' + '----' + budgetNum)
+		console.log('maxBudget' + '----' + maxBudget)
 		$('[data-result = conversion]').val(conversion);
 		$('[data-result = budget]').val(budgetNum);
 		button.css({
