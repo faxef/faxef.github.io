@@ -27,30 +27,30 @@ button.on('mousedown', function(e) {
 			var coords = e.pageX
 			drag(e,coords)
 		}
-	document.onmouseup = function(e) {
-		e.stopPropagation();
+		document.onmouseup = function(e) {
+			e.stopPropagation();
 		e.preventDefault(); // функция изменения при отпускании ползунка
 		document.onmousemove = null;
 	}
 }
 });
 // -------- НА ТЕЛЕФОНАХ С СЕНСОРНЫХ ЭКРАНОМ ------ ///
-button.on('touchstart', function(e) {
-	e.stopPropagation();
-	e.preventDefault();
+button.on('touchstart', function(e) {// функция изменения при удерживании ползунка
 	if (isTouchDevice)  {
 		document.ontouchmove = function(e) {
 			e.stopPropagation();
 			e.preventDefault();
-			var coords = e.touches[0].clientX
-			drag(e,coords) // функция изменения при удерживании ползунка
+			var coords = e.changedTouches[0].clientX
+			drag(e,coords) 
 		}
-	document.ontouchend = function(e) { 
+	document.ontouchend = function(e) { // функция изменения при отпускании ползунка
 		e.stopPropagation();
-		e.preventDefault();// функция изменения при отпускании ползунка
+		e.preventDefault();
 		document.ontouchmove = null;
 	}
 }
+e.stopPropagation();
+e.preventDefault();
 });
 
 //===============================================================================//
@@ -84,6 +84,8 @@ function drag(e,coords){
 	var conversion = conversionVal.toLocaleString();
 	$('[data-result = conversion]').val(conversion);
 	placement(budgetVal,budgetCof)
+	e.stopPropagation();
+	e.preventDefault();
 }
 //===============================================================================//
 //====================== ФУНКЦИЯ ФОРМУЛ РАСЧЕТА РАЗМЕЩЕНИЙ ======================//
