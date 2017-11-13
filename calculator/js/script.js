@@ -12,45 +12,67 @@ $(function() {
 	var center = button.outerWidth(true) / 2; // координаты центра кружка
 	var sliderCoords = slider.offset(); // координаты линии ползунка
 	var sliderWidth = slider.width(); // ширина линии ползунка
-
+	var isTouchDevice = 'ontouchstart' in document.documentElement;
 //===============================================================================//
 //======= СОБЫТИЕ ИЗМЕНЕНИЯ ЗНАЧЕНИЙ ПОЛЕЙ ПРИ ПЕРЕТАСКИВАНИИ ПОЛЗУНКА =========//
+
+// -------- НА ТЕЛЕФОНАХ С СЕНСОРНЫХ ЭКРАНОМ ------ ///
 button.on('mousedown', function(e) {
-	document.onmousemove = function(e) { // функция изменения при удерживании ползунка
-		var left = e.pageX - sliderCoords.left - center; // адаптивная позиция ползунка при смещении
-		if (left < 0) {
-			left = 0;
+	if (isTouchDevice == false) { 
+		document.onmousemove = function(e) { // функция изменения при удерживании ползунка
+			var coords = e.pageX
+			drag(e,coords)
 		}
-		var right = slider.width() - button.width();
-		if (left > right) {
-			left = right;
-		}
-		button.css({
-			'left': (left * 100 / sliderWidth + '%')
-		})
-		$('.irs-bar').css({
-			'width' : (left * 100 / sliderWidth + '%')
-		})
-		$(document).on('dragstart', function() {return false;});
-
-		var budgetVal = Math.round((left * maxBudget / (sliderWidth - center)));
-		var budget = budgetVal.toLocaleString();
-		$('[data-result = budget]').val(budget);
-
-		var viewsVal = Math.round((left * maxViews / (sliderWidth - center)));
-		var views = viewsVal.toLocaleString();
-		$('[data-result = views]').val(views);	
-
-		var conversionVal = Math.round((left * maxConversion / (sliderWidth - center)));
-		var conversion = conversionVal.toLocaleString();
-		$('[data-result = conversion]').val(conversion);
-		placement(budgetVal,budgetCof)
-	}
 	document.onmouseup = function(e) { // функция изменения при отпускании ползунка
 		document.onmousemove = null;
 	}
+}
+});
+// -------- НА ТЕЛЕФОНАХ С СЕНСОРНЫХ ЭКРАНОМ ------ ///
+button.on('touchstart', function(e) {
+	if (isTouchDevice)  {
+		document.ontouchmove = function(e) {
+			var coords = e.touches[0].clientX
+			drag(e,coords) // функция изменения при удерживании ползунка
+		}
+	document.ontouchend = function(e) { // функция изменения при отпускании ползунка
+		document.ontouchmove = null;
+	}
+}
 });
 
+//===============================================================================//
+//======================= ФУНКЦИЯ ПЕРЕТАСКИВАНИЯ ПОЛЗУНКА ======================//
+function drag(e,coords){
+	var left = coords - sliderCoords.left - center; // адаптивная позиция ползунка при смещении
+	if (left < 0) {
+		left = 0;
+	}
+	var right = slider.width() - button.width();
+	if (left > right) {
+		left = right;
+	}
+	button.css({
+		'left': (left * 100 / sliderWidth + '%')
+	})
+	$('.irs-bar').css({
+		'width' : (left * 100 / sliderWidth + '%')
+	})
+	$(document).on('dragstart', function() {return false;});
+
+	var budgetVal = Math.round((left * maxBudget / (sliderWidth - center)));
+	var budget = budgetVal.toLocaleString();
+	$('[data-result = budget]').val(budget);
+
+	var viewsVal = Math.round((left * maxViews / (sliderWidth - center)));
+	var views = viewsVal.toLocaleString();
+	$('[data-result = views]').val(views);	
+
+	var conversionVal = Math.round((left * maxConversion / (sliderWidth - center)));
+	var conversion = conversionVal.toLocaleString();
+	$('[data-result = conversion]').val(conversion);
+	placement(budgetVal,budgetCof)
+}
 //===============================================================================//
 //====================== ФУНКЦИЯ ФОРМУЛ РАСЧЕТА РАЗМЕЩЕНИЙ ======================//
 function placement(value, coefficient){
@@ -88,10 +110,8 @@ function  budgetInput(maxBudget,maxViews,maxConversion,budgetCof){
 	var views = viewsToString.toLocaleString();
 	var conversion = conversionToString.toLocaleString();
 	var budgetNum = budget.toLocaleString();
-	console.log(budget)
 	if(budget < maxBudget){
 		$('[data-result = views]').val(views);	
-		console.log('current' + '----' + budgetNum)
 		$('[data-result = conversion]').val(conversion);
 		$('[data-result = budget]').val(budgetNum);
 		button.css({
@@ -106,7 +126,6 @@ function  budgetInput(maxBudget,maxViews,maxConversion,budgetCof){
 
 	}else if(budget >= maxBudget) {
 		var maxBudgetVal = maxBudget.toLocaleString();
-			console.log('maxBudget' + '----' + maxBudgetVal)
 		var maxViewsVal = maxViews.toLocaleString();
 		var maxConversionVal = maxConversion.toLocaleString();
 		$('[data-result = budget]').val(maxBudgetVal)
