@@ -44,8 +44,6 @@ button.on('mousedown', function(e) {
 		var conversionVal = Math.round((left * maxConversion / (sliderWidth - center)));
 		var conversion = conversionVal.toLocaleString();
 		$('[data-result = conversion]').val(conversion);
-		console.log(budgetVal)
-		console.log(budgetCof)
 		placement(budgetVal,budgetCof)
 	}
 	document.onmouseup = function(e) { // функция изменения при отпускании ползунка
@@ -105,7 +103,10 @@ function  budgetInput(maxBudget,maxViews,maxConversion,budgetCof){
 		placement(budget,budgetCof)
 
 	}else if(budget >= maxBudget) {
-		$('[data-result = budget]').val(maxBudget)
+		var maxBudgetVal = maxBudget.toLocaleString();
+		var maxViewsVal = maxViews.toLocaleString();
+		var maxConversionVal = maxConversion.toLocaleString();
+		$('[data-result = budget]').val(maxBudgetVal)
 		$('[data-result = views]').val(maxViews)
 		$('[data-result = conversion]').val(maxConversion)
 		var maxBudgetCount = Math.round((maxBudget / 900) /2)
@@ -156,9 +157,12 @@ function viewsInput(viewsCof){
 		placement(views,viewsCof)
 	}
 	if(views > maxViews) {
-		$('[data-result = views]').val(maxViews)
-		$('[data-result = budget]').val(maxBudget)
-		$('[data-result = conversion]').val(maxConversion)
+		var maxBudgetVal = maxBudget.toLocaleString();
+		var maxViewsVal = maxViews.toLocaleString();
+		var maxConversionVal = maxConversion.toLocaleString();
+		$('[data-result = views]').val(maxViewsVal)
+		$('[data-result = budget]').val(maxBudgetVal)
+		$('[data-result = conversion]').val(maxConversionVal)
 		var maxViewsCount = Math.round((maxViews / viewsCof) /2)
 		var smallViewsCount = Math.round(maxViewsCount / 3.33);
 		var midViewsCount = Math.round((maxViewsCount / 3.33) / 3.5);
@@ -202,9 +206,12 @@ function conversionInput(conversionCof){
 		placement(conversion, conversionCof)
 
 	}if(conversion > maxConversion) {
-		$('[data-result = conversion]').val(maxConversion)
-		$('[data-result = budget]').val(maxBudget)
-		$('[data-result = views]').val(maxViews)
+		var maxBudgetVal = maxBudget.toLocaleString();
+		var maxViewsVal = maxViews.toLocaleString();
+		var maxConversionVal = maxConversion.toLocaleString();
+		$('[data-result = conversion]').val(maxConversionVal)
+		$('[data-result = budget]').val(maxBudgetVal)
+		$('[data-result = views]').val(maxViewsVal)
 		var maxConversionCount = Math.round((maxConversion / conversionCof) /2)
 		var smallConversionCount = Math.round(maxConversionCount / 3.33);
 		var midConversionCount = Math.round((maxConversionCount / 3.33) / 3.5);
@@ -260,15 +267,17 @@ $('.network__box').on('click', function (){
 });
 
 //===============================================================================//
-//============================ ВСПЛЫВАЮЩИЕ ПОДСКАЗКИ ===========================//
-$('[data-tooltip = question]').on('mouseover', function () {
-	$(this).find('.tooltip').css({
-		'display': 'block'
-	})
-	$(this).on('mouseout', function(){
-		$(this).find('.tooltip').css({
-			'display': 'none'
-		})
-	})
-})
+//=============== ОБНОВЛЕНИЕ ПОЛЗУНКА ПРИ ИЗМЕНЕНИИ ШИРИНЫ ОКНА ================//
+var oldWidth = window.innerWidth;
+window.onresize = function () {
+	var newWidth = window.innerWidth;
+	if (newWidth != oldWidth) {
+		buttonCoords = button.offset(); // координаты кружка
+		center = button.outerWidth(true) / 2; // координаты центра кружка
+		sliderCoords = slider.offset(); // координаты линии ползунка
+		sliderWidth = slider.width(); 
+		oldWidth = newWidth;
+	}
+};
+
 });
