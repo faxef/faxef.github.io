@@ -58,7 +58,6 @@ function placement(value, coefficient){
 	var smallSecond = Math.round(count / 3.33);
 	var midSecond = Math.round((count / 3.33) / 3.5);
 	var largeSecond = Math.round(midSecond / 2.18);
-	console.log((value + ' - ' + ' - ' + coefficient))
 	if (count <= 1754 && count > 2){
 		$('[data-channel-small] .item__num').text(smallSecond + ' - ' + count);
 
@@ -125,7 +124,7 @@ function  budgetInput(maxBudget,maxViews,maxConversion,budgetCof){
 		})
 		
 		// изменение размещений при значениях больше максимального
-		placement(budget,budgetCof)
+		placement(maxBudget,budgetCof)
 	}
 };
 
