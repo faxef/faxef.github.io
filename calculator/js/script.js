@@ -18,24 +18,36 @@ $(function() {
 
 // -------- НА ТЕЛЕФОНАХ С СЕНСОРНЫХ ЭКРАНОМ ------ ///
 button.on('mousedown', function(e) {
+	e.stopPropagation();
+	e.preventDefault();
 	if (isTouchDevice == false) { 
-		document.onmousemove = function(e) { // функция изменения при удерживании ползунка
+		document.onmousemove = function(e) { 
+			e.stopPropagation();
+			e.preventDefault();// функция изменения при удерживании ползунка
 			var coords = e.pageX
 			drag(e,coords)
 		}
-	document.onmouseup = function(e) { // функция изменения при отпускании ползунка
+	document.onmouseup = function(e) {
+		e.stopPropagation();
+		e.preventDefault(); // функция изменения при отпускании ползунка
 		document.onmousemove = null;
 	}
 }
 });
 // -------- НА ТЕЛЕФОНАХ С СЕНСОРНЫХ ЭКРАНОМ ------ ///
 button.on('touchstart', function(e) {
+	e.stopPropagation();
+	e.preventDefault();
 	if (isTouchDevice)  {
 		document.ontouchmove = function(e) {
+			e.stopPropagation();
+			e.preventDefault();
 			var coords = e.touches[0].clientX
 			drag(e,coords) // функция изменения при удерживании ползунка
 		}
-	document.ontouchend = function(e) { // функция изменения при отпускании ползунка
+	document.ontouchend = function(e) { 
+		e.stopPropagation();
+		e.preventDefault();// функция изменения при отпускании ползунка
 		document.ontouchmove = null;
 	}
 }
