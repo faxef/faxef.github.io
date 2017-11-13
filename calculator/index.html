@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="css/reset.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="row row__title">
+		<div class="main">
+			<div class="title"><span>Калькулятор рекламы</span> <span>в социальных сетях</span></div>
+		</div>
+	</div>
+	<div class="row row__calculator">
+		<div class="main">
+			<div class="calculator__box">
+				<div class="calculator__nav">
+					<div class="top__networks">
+						<div class="network__box is-active" data-network="youtube">
+							<div class="network__content">
+								<div class="icon">
+									<i class="icon-youtube"></i>
+								</div>
+								<div class="name">Youtube</div>
+							</div>
+						</div>
+						<div class="network__box" data-network="instagram">
+							<div class="network__content">
+								<div class="icon">
+									<i class="icon-instagram"></i>
+								</div>
+								<div class="name">Instagram</div>
+							</div>
+						</div>
+						<div class="network__box" data-network="telegram">
+							<div class="network__content">
+								<div class="icon">
+									<i class="icon-telegram"></i>
+								</div>
+								<div class="name">Telegram</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="calculator__params">
+					<div class="params__desc">Введите бюджет рекламной кампании или желаемый результат по просмотрам и переходам.</div>
+					<div class="params__property">
+						<div class="property__item property__item-budget">
+							<div class="property__name">
+								<div class="name">Бюджет, руб.</div>
+								<div class="question" data-tooltip="question">
+									<div class="mark">?</div>
+									<div class="tooltip">
+										<div class="tooltip__content">Сколько денег вы готовы потратить на рекламную кампанию</div>
+									</div>
+								</div>
+							</div>
+							<div class="property__result">
+								<input value="0" data-result="budget" type="text" >
+							</div>
+						</div>
+						<div class="property__item property__item-views">
+							<div class="property__name">
+								<div class="name">Охват/Просмотры</div>
+								<div class="question" data-tooltip="question">
+									<div class="mark">?</div>
+									<div class="tooltip">
+										<div class="tooltip__content">Сколько просмотров вы хотите получить</div>
+									</div>
+								</div>
+							</div>
+							<div class="property__result">
+								<input value="0" data-result="views" type="text">
+							</div>
+						</div>
+						<div class="property__item property__item-conversion">
+							<div class="property__name">
+								<div class="name">Переходы/Клики</div>
+								<div class="question" data-tooltip="question">
+									<div class="mark">?</div>
+									<div class="tooltip">
+										<div class="tooltip__content">Сколько переходов на сайт вы хотите получить</div>
+									</div>
+								</div>
+							</div>
+							<div class="property__result">
+								<input value="0" data-result="conversion" type="text">
+							</div>
+						</div>
+					</div>
+					<div class="params__range">
+						<span class="irs js-irs-0">
+							<span class="irs">
+								<span class="irs-line" tabindex="0"></span>
+							</span>
+							<span class="irs-bar"></span>
+							<span class="irs-slider single"></span>
+						</span>
+					</div>
+				</div>
+				<div class="calculator__result">
+					<div class="result__box">
+						<div class="result__item" data-channel-large="">
+							<div class="item__num">0</div>
+							<div class="item__name">
+								<span data-channel-declination="placement">Размещений</span> на
+								<div class="link" data-tooltip="">
+									<span>крупных каналах</span>
+									<div class="tooltip">
+										<div class="tooltip__content">Каналы от 350 000 до 750 000 подписчиков</div>
+									</div>
+								</div>
+							</div>
+							<div class="or">или</div>
+						</div>
+						<div class="result__item" data-channel-mid="">
+							<div class="item__num">0</div>
+							<div class="item__name">
+								<span data-channel-declination="placement">Размещений</span> на
+								<div class="link" data-tooltip="">
+									<span>средних каналах</span>
+									<div class="tooltip">
+										<div class="tooltip__content">Каналы от 100 000 до 350 000 подписчиков</div>
+									</div>
+								</div>
+							</div>
+							<div class="or">или</div>
+						</div>
+						<div class="result__item" data-channel-small="">
+							<div class="item__num">0</div>
+							<div class="item__name">
+								<span data-channel-declination="placement">Размещений</span> на
+								<div class="link" data-tooltip="">
+									<span>мелких каналах</span>
+									<div class="tooltip">
+										<div class="tooltip__content">Каналы от 30 000 до 100 000 подписчиков</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/libs.min.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+	</html>
