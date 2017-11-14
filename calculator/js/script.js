@@ -39,6 +39,7 @@ button.on('mousedown', function(e) {
 			}
 		}
 		e.preventDefault();
+		e.stopPropagation();
 	});
 	button.on('touchend', function(e) { // функция изменения при отпускании ползунка
 		document.ontouchmove = null;
