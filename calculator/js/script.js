@@ -41,11 +41,11 @@ button.on('touchstart', function(e) {// функция изменения при
 			var coords = e.targetTouches[0].pageX
 			drag(e,coords) 
 		},false)
-	document.addEventListener('touchend', function(e) { // функция изменения при отпускании ползунка
-		document.ontouchmove = null;
-	},false)
-}
+	}
 });
+button.on('touchend', function(e) { // функция изменения при отпускании ползунка
+	document.ontouchmove = null;
+},false)
 
 //===============================================================================//
 //======================= ФУНКЦИЯ ПЕРЕТАСКИВАНИЯ ПОЛЗУНКА ======================//
