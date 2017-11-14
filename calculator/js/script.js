@@ -43,7 +43,6 @@ button.on('touchstart', function(e) {// функция изменения при
 			drag(e,coords) 
 		}
 	document.ontouchend = function(e) { // функция изменения при отпускании ползунка
-		e.stopPropagation();
 		e.preventDefault();
 		document.ontouchmove = null;
 	}
@@ -82,7 +81,6 @@ function drag(e,coords){
 	var conversion = conversionVal.toLocaleString();
 	$('[data-result = conversion]').val(conversion);
 	placement(budgetVal,budgetCof)
-	e.stopPropagation();
 	e.preventDefault();
 }
 //===============================================================================//
