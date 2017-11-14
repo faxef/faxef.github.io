@@ -43,7 +43,6 @@ button.on('touchstart', function(e) {// функция изменения при
 		},false)
 	document.addEventListener('touchend', function(e) { // функция изменения при отпускании ползунка
 		document.ontouchmove = null;
-		e.preventDefault()
 	},false)
 }
 });
@@ -79,6 +78,7 @@ function drag(e,coords){
 	var conversion = conversionVal.toLocaleString();
 	$('[data-result = conversion]').val(conversion);
 	placement(budgetVal,budgetCof)
+
 }
 //===============================================================================//
 //====================== ФУНКЦИЯ ФОРМУЛ РАСЧЕТА РАЗМЕЩЕНИЙ ======================//
