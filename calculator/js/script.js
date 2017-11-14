@@ -17,35 +17,30 @@ $(function() {
 //======= СОБЫТИЕ ИЗМЕНЕНИЯ ЗНАЧЕНИЙ ПОЛЕЙ ПРИ ПЕРЕТАСКИВАНИИ ПОЛЗУНКА =========//
 
 // -------- НА ТЕЛЕФОНАХ С СЕНСОРНЫХ ЭКРАНОМ ------ ///
-button.on('mousedown', function(e) {
+button.on('mousedown touchstart', function(e) {
 	if (isTouchDevice == false) { 
 		document.onmousemove = function(e) { // функция изменения при удерживании ползунка
 			var coords = e.pageX
 			drag(e,coords)
-		}
-		document.onmouseup = function(e) { // функция изменения при отпускании ползунка
-			document.onmousemove = null;
+			console.log('PC')
 		}
 	}
-});
-// -------- НА ТЕЛЕФОНАХ С СЕНСОРНЫХ ЭКРАНОМ ------ ///
-	document.ontouchstart = function(e) {// функция изменения при удерживании ползунка
-		if (isTouchDevice)  {
-			button.on('touchmove', function(e) {
-				var coords = e.changedTouches[0].clientX
-				drag(e,coords) 
-				e.preventDefault();
-				e.stopPropagation();
-			}
+	else {
+		document.ontouchmove = function(e) { 
+			var coords = e.changedTouches[0].clientX
+			drag(e,coords) 
+			console.log('phone')
 		}
-		e.preventDefault();
-		e.stopPropagation();
-	});
-	button.on('touchend', function(e) { // функция изменения при отпускании ползунка
+	}
+	document.onmouseup = function(e) { // функция изменения при отпускании ползунка
+		document.onmousemove = null;
+	}
+	document.ontouchend = function(e) { // функция изменения при отпускании ползунка
 		document.ontouchmove = null;
-		e.preventDefault();
-		e.stopPropagation();
-	})
+	}
+	e.preventDefault();
+	e.stopPropagation();
+});
 
 //===============================================================================//
 //======================= ФУНКЦИЯ ПЕРЕТАСКИВАНИЯ ПОЛЗУНКА ======================//
