@@ -40,11 +40,13 @@ button.on('touchstart', function(e) {// функция изменения при
 		document.addEventListener('touchmove', function(e) {
 			var coords = e.targetTouches[0].pageX
 			drag(e,coords) 
+			e.preventDefault()
 		},false)
 	}
 });
 button.on('touchend', function(e) { // функция изменения при отпускании ползунка
 	document.ontouchmove = null;
+	e.preventDefault()
 },false)
 
 //===============================================================================//
