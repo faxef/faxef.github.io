@@ -18,40 +18,34 @@ $(function() {
 
 // -------- НА ТЕЛЕФОНАХ С СЕНСОРНЫХ ЭКРАНОМ ------ ///
 button.on('mousedown', function(e) {
-	e.stopPropagation();
-	e.preventDefault();
 	if (isTouchDevice == false) { 
-		document.onmousemove = function(e) { 
-			e.stopPropagation();
-			e.preventDefault();// функция изменения при удерживании ползунка
+		document.onmousemove = function(e) { // функция изменения при удерживании ползунка
 			var coords = e.pageX
 			drag(e,coords)
 		}
-		document.onmouseup = function(e) {
-			e.stopPropagation();
-		e.preventDefault(); // функция изменения при отпускании ползунка
-		document.onmousemove = null;
+		document.onmouseup = function(e) { // функция изменения при отпускании ползунка
+			document.onmousemove = null;
+		}
 	}
-}
 });
 // -------- НА ТЕЛЕФОНАХ С СЕНСОРНЫХ ЭКРАНОМ ------ ///
 	button.on('touchstart', function(e) {// функция изменения при удерживании ползунка
 		if (isTouchDevice)  {
 			document.ontouchmove = function(e) {
-				e.stopPropagation();
-				e.preventDefault();
 				var coords = e.changedTouches[0].clientX
 				drag(e,coords) 
+				e.stopPropagation();
+				e.preventDefault();
 			}
 		}
 		e.stopPropagation();
 		e.preventDefault();
-	});
+	},false);
 	button.on('touchend', function(e) { // функция изменения при отпускании ползунка
+		document.ontouchmove = null;
 		e.stopPropagation();
 		e.preventDefault();
-		document.ontouchmove = null;
-	})
+	},false)
 
 //===============================================================================//
 //======================= ФУНКЦИЯ ПЕРЕТАСКИВАНИЯ ПОЛЗУНКА ======================//
