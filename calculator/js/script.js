@@ -34,18 +34,15 @@ button.on('mousedown', function(e) {
 			document.ontouchmove = function(e) {
 				var coords = e.changedTouches[0].clientX
 				drag(e,coords) 
-				e.stopPropagation();
 				e.preventDefault();
 			}
 		}
-		e.stopPropagation();
 		e.preventDefault();
 	});
 	button.on('touchend', function(e) { // функция изменения при отпускании ползунка
 		document.ontouchmove = null;
-		e.stopPropagation();
 		e.preventDefault();
-	})
+	},false)
 
 //===============================================================================//
 //======================= ФУНКЦИЯ ПЕРЕТАСКИВАНИЯ ПОЛЗУНКА ======================//
@@ -78,7 +75,6 @@ function drag(e,coords){
 	var conversion = conversionVal.toLocaleString();
 	$('[data-result = conversion]').val(conversion);
 	placement(budgetVal,budgetCof)
-	e.stopPropagation();
 	e.preventDefault();
 }
 //===============================================================================//
