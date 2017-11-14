@@ -38,7 +38,6 @@ button.on('mousedown', function(e) {
 button.on('touchstart', function(e) {// функция изменения при удерживании ползунка
 	if (isTouchDevice)  {
 		document.ontouchmove = function(e) {
-			e.stopPropagation();
 			e.preventDefault();
 			var coords = e.changedTouches[0].clientX
 			drag(e,coords) 
@@ -49,7 +48,6 @@ button.on('touchstart', function(e) {// функция изменения при
 		document.ontouchmove = null;
 	}
 }
-e.stopPropagation();
 e.preventDefault();
 });
 
