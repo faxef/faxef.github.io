@@ -29,9 +29,9 @@ button.on('mousedown', function(e) {
 	}
 });
 // -------- НА ТЕЛЕФОНАХ С СЕНСОРНЫХ ЭКРАНОМ ------ ///
-	button.on('touchstart', function(e) {// функция изменения при удерживании ползунка
+	document.ontouchstart = function(e) {// функция изменения при удерживании ползунка
 		if (isTouchDevice)  {
-			document.ontouchmove = function(e) {
+			$(button).on('touchmove', function(e) {
 				var coords = e.changedTouches[0].clientX
 				drag(e,coords) 
 				e.preventDefault();
