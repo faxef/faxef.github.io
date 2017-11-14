@@ -42,7 +42,8 @@ button.on('mousedown', function(e) {
 	button.on('touchend', function(e) { // функция изменения при отпускании ползунка
 		document.ontouchmove = null;
 		e.preventDefault();
-	})
+		e.stopPropagation();
+	},false)
 
 //===============================================================================//
 //======================= ФУНКЦИЯ ПЕРЕТАСКИВАНИЯ ПОЛЗУНКА ======================//
