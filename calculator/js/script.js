@@ -47,7 +47,7 @@ button.on('touchstart', function(e) {// функция изменения при
 button.on('touchend', function(e) { // функция изменения при отпускании ползунка
 	document.ontouchmove = null;
 	e.preventDefault()
-},false)
+})
 
 //===============================================================================//
 //======================= ФУНКЦИЯ ПЕРЕТАСКИВАНИЯ ПОЛЗУНКА ======================//
@@ -80,7 +80,7 @@ function drag(e,coords){
 	var conversion = conversionVal.toLocaleString();
 	$('[data-result = conversion]').val(conversion);
 	placement(budgetVal,budgetCof)
-
+	e.preventDefault()
 }
 //===============================================================================//
 //====================== ФУНКЦИЯ ФОРМУЛ РАСЧЕТА РАЗМЕЩЕНИЙ ======================//
