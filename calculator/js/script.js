@@ -38,7 +38,7 @@ button.on('mousedown', function(e) {
 button.on('touchstart', function(e) {// функция изменения при удерживании ползунка
 	if (isTouchDevice)  {
 		document.addEventListener('touchmove', function(e) {
-			var coords = e.changedTouches[0].clientX
+			var coords = e.targetTouches[0].pageX
 			drag(e,coords) 
 			e.preventDefault()
 		},false)
