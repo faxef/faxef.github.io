@@ -78,7 +78,6 @@ function drag(e,coords){
 	var conversion = conversionVal.toLocaleString();
 	$('[data-result = conversion]').val(conversion);
 	placement(budgetVal,budgetCof)
-	e.preventDefault();
 }
 //===============================================================================//
 //====================== ФУНКЦИЯ ФОРМУЛ РАСЧЕТА РАЗМЕЩЕНИЙ ======================//
