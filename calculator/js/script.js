@@ -31,7 +31,7 @@ button.on('mousedown', function(e) {
 // -------- НА ТЕЛЕФОНАХ С СЕНСОРНЫХ ЭКРАНОМ ------ ///
 	document.ontouchstart = function(e) {// функция изменения при удерживании ползунка
 		if (isTouchDevice)  {
-			$(button).on('touchmove', function(e) {
+			button.on('touchmove', function(e) {
 				var coords = e.changedTouches[0].clientX
 				drag(e,coords) 
 				e.preventDefault();
