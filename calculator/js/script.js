@@ -38,16 +38,13 @@ button.on('mousedown', function(e) {
 button.on('touchstart', function(e) {// функция изменения при удерживании ползунка
 	if (isTouchDevice)  {
 		document.ontouchmove = function(e) {
-			e.preventDefault();
 			var coords = e.changedTouches[0].clientX
 			drag(e,coords) 
 		}
 	document.ontouchend = function(e) { // функция изменения при отпускании ползунка
-		e.preventDefault();
 		document.ontouchmove = null;
 	}
 }
-e.preventDefault();
 });
 
 //===============================================================================//
