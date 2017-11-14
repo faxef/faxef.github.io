@@ -35,6 +35,7 @@ button.on('mousedown', function(e) {
 				var coords = e.changedTouches[0].clientX
 				drag(e,coords) 
 				e.preventDefault();
+				e.stopPropagation();
 			}
 		}
 		e.preventDefault();
