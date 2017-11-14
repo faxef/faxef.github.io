@@ -40,7 +40,6 @@ button.on('touchstart', function(e) {// функция изменения при
 		document.addEventListener('touchmove', function(e) {
 			var coords = e.targetTouches[0].pageX
 			drag(e,coords) 
-			e.preventDefault()
 		},false)
 	document.addEventListener('touchend', function(e) { // функция изменения при отпускании ползунка
 		document.ontouchmove = null;
@@ -48,7 +47,6 @@ button.on('touchstart', function(e) {// функция изменения при
 	},false)
 }
 e.preventDefault();
-e.stopPropagation();
 });
 
 //===============================================================================//
