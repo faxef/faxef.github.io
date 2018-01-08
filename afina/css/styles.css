@@ -23,24 +23,6 @@ b, strong {
 .blue {
   color: #00a2db; }
 
-.logo {
-  padding: 1% 0 0 1%; }
-  .logo a {
-    -webkit-transition: all 0.2s ease-in-out 0.2s;
-    transition: all 0.2s ease-in-out 0.2s; }
-    .logo a:hover {
-      color: #00a2db; }
-    .logo a img {
-      width: 50px;
-      vertical-align: middle; }
-  .logo span {
-    font-family: Circe;
-    text-transform: uppercase;
-    font-size: 1.25em;
-    line-height: 20px;
-    vertical-align: middle;
-    padding-left: 1%; }
-
 /* ---------- VARS ----------- */
 /* -------------------------- Main styles ---------------- */
 .wrapper-1 {
@@ -76,7 +58,7 @@ b, strong {
   background: url(../img/wrapper-2/wrapper-2.png) 50% 100%;
   background-size: cover; }
   .wrapper-2 .container {
-    padding: 12%; }
+    padding: 5% 0; }
     .wrapper-2 .container h1 {
       font-family: Circe-Light;
       font-size: 5.25em; }
