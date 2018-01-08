@@ -30,13 +30,13 @@ body, html {
   height: 100%; }
 
 .wrapper-1 {
-  background: url(../img/wrapper-1/wrapper-1.png) 50% 100%;
+  background: url(../img/wrapper-1/wrapper-1.png) 50% 70%;
   background-size: cover;
   height: 100%; }
   .wrapper-1 .container {
     padding: 2% 0; }
     .wrapper-1 .container .logo-main {
-      padding-bottom: 5%; }
+      padding-bottom: 3%; }
       .wrapper-1 .container .logo-main a {
         -webkit-transition: all 0.2s ease-in-out 0.2s;
         transition: all 0.2s ease-in-out 0.2s; }
@@ -53,10 +53,10 @@ body, html {
         padding-left: 2%; }
     .wrapper-1 .container .text h1 {
       font-family: Circe-Light;
-      font-size: 5.625em; }
+      font-size: 4.6875em; }
     .wrapper-1 .container .text p {
       font-family: Circe;
-      font-size: 1.625em;
+      font-size: 1.5em;
       padding-top: 2%; }
     .wrapper-1 .container .contact-button {
       position: fixed;
@@ -267,6 +267,8 @@ footer {
       width: 82%;
       padding: 4%;
       margin: 4%; }
+      #contactForm form input[type="text"]:focus, #contactForm form input[type="email"]:focus, #contactForm form textarea:focus {
+        border: 0.1rem solid black; }
     #contactForm form .formBtn {
       padding: 5%;
       margin: 1%;
