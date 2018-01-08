@@ -25,11 +25,14 @@ b, strong {
 
 /* ---------- VARS ----------- */
 /* -------------------------- Main styles ---------------- */
+body {
+  font-family: 'Circe', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }
+
 .wrapper-1 {
   background: url(../img/wrapper-1/wrapper-1.png) 50% 100%;
   background-size: cover; }
   .wrapper-1 .container {
-    padding: 5% 0 25% 0; }
+    padding: 6% 0 26% 0; }
     .wrapper-1 .container .logo-main {
       padding-bottom: 5%; }
       .wrapper-1 .container .logo-main a {
@@ -53,6 +56,27 @@ b, strong {
       font-family: Circe;
       font-size: 1.625em;
       padding-top: 2%; }
+    .wrapper-1 .container .contact-button {
+      position: fixed;
+      right: 0;
+      top: 0;
+      padding: 1%;
+      margin: 1%;
+      -webkit-border-radius: 6px;
+              border-radius: 6px;
+      background-color: #1d293c;
+      -webkit-box-shadow: 0 10px 20px 0 rgba(88, 92, 102, 0.3);
+              box-shadow: 0 10px 20px 0 rgba(88, 92, 102, 0.3);
+      font-family: Circe;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.8px;
+      color: #ffffff;
+      text-transform: uppercase;
+      z-index: 3;
+      cursor: pointer; }
+      .wrapper-1 .container .contact-button:hover {
+        color: #00a2db; }
 
 .wrapper-2 {
   background: url(../img/wrapper-2/wrapper-2.png) 50% 100%;
@@ -215,6 +239,69 @@ footer {
       letter-spacing: 1px; }
     footer .container .contacts p:last-of-type {
       color: #00a2db; }
+
+#contactForm {
+  -webkit-transition: all 0.4s ease-in-out 0.2s;
+  transition: all 0.4s ease-in-out 0.2s;
+  opacity: 0;
+  z-index: 5;
+  border: 6px solid #1d293c;
+  padding: 2em;
+  width: 25%;
+  text-align: center;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%); }
+  #contactForm form {
+    width: 90%;
+    margin: 0 auto; }
+    #contactForm form input[type="text"], #contactForm form input[type="email"], #contactForm form textarea {
+      border: 0.1rem solid rgba(209, 209, 209, 0.51);
+      color: #bac1cc;
+      width: 82%;
+      padding: 4%;
+      margin: 4%; }
+    #contactForm form .formBtn {
+      padding: 5%;
+      margin: 1%;
+      -webkit-border-radius: 6px;
+              border-radius: 6px;
+      background-color: #1d293c;
+      -webkit-box-shadow: 0 10px 20px 0 rgba(88, 92, 102, 0.3);
+              box-shadow: 0 10px 20px 0 rgba(88, 92, 102, 0.3);
+      font-family: Circe;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.8px;
+      color: #ffffff;
+      text-transform: uppercase;
+      z-index: 3;
+      cursor: pointer; }
+      #contactForm form .formBtn:hover {
+        color: #00a2db; }
+  #contactForm h1 {
+    font-size: 3.75em;
+    font-family: Circe;
+    font-weight: 300;
+    line-height: 1.0;
+    letter-spacing: 0.9px;
+    color: #1d293c; }
+
+.overlay {
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0.2s;
+  transition: all 0.2s ease-in-out 0.2s;
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  opacity: 0.2;
+  background: black; }
 
 /* -------------------------- Main styles ------------------ */
 /* -------------------------- START MEDIA ------------------------ */
