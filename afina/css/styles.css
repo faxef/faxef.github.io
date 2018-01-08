@@ -182,9 +182,9 @@ footer {
   background-size: cover; }
   footer .container {
     text-align: center;
-    padding: 10% 0 10% 0; }
+    padding: 5% 0; }
     footer .container .footer-logo {
-      padding-bottom: 5%; }
+      padding-bottom: 4%; }
       footer .container .footer-logo a {
         -webkit-transition: all 0.2s ease-in-out 0.2s;
         transition: all 0.2s ease-in-out 0.2s; }
@@ -198,7 +198,7 @@ footer {
     footer .container .footer-text {
       width: 45%;
       margin: auto;
-      padding-bottom: 10%; }
+      padding-bottom: 5%; }
       footer .container .footer-text p {
         font-family: Circe-light;
         font-size: 3em;
