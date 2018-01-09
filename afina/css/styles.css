@@ -316,7 +316,14 @@ footer {
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  /**/ }
+  #contactForm {
+    padding: 2%;
+    width: 30%;
+    border: 3px solid #1d293c; }
+    #contactForm h1 {
+      font-size: 2.25em; }
+    #contactForm form .formBtn {
+      font-size: 1em; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
@@ -370,7 +377,15 @@ footer {
       font-size: 1.5em;
       line-height: 25px; }
   footer .container .contacts p {
-    font-size: 1.5em; } }
+    font-size: 1.5em; }
+  #contactForm {
+    padding: 2%;
+    width: 40%;
+    border: 3px solid #1d293c; }
+    #contactForm h1 {
+      font-size: 2.25em; }
+    #contactForm form .formBtn {
+      font-size: 0.75em; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -385,6 +400,10 @@ footer {
           padding-bottom: 5%; }
         .wrapper-1 .container .logo-main span {
           display: block; }
+      .wrapper-1 .container .contact-button {
+        padding: 2% 1%;
+        margin: 3%;
+        font-size: 0.75em; }
       .wrapper-1 .container .text h1 {
         font-size: 1.925em;
         padding: 5% 0; }
@@ -462,7 +481,15 @@ footer {
       font-size: 1.25em;
       line-height: 25px; }
   footer .container .contacts p {
-    font-size: 1.25em; } }
+    font-size: 1.25em; }
+  #contactForm {
+    padding: 2%;
+    width: 50%;
+    border: 3px solid #1d293c; }
+    #contactForm h1 {
+      font-size: 1.625em; }
+    #contactForm form .formBtn {
+      font-size: 0.75em; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
@@ -556,11 +583,20 @@ footer {
         font-size: 1.25em;
         line-height: 25px; }
     footer .container .contacts p {
-      font-size: 1.25em; } }
+      font-size: 1.25em; }
+  #contactForm {
+    width: 60%; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
-  /**/ }
+  #contactForm {
+    padding: 2%;
+    width: 80%;
+    border: 3px solid #1d293c; }
+    #contactForm h1 {
+      font-size: 1.375em; }
+    #contactForm form .formBtn {
+      font-size: 0.625em; } }
 
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */

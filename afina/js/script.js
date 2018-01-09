@@ -1,9 +1,7 @@
 jQuery(function( $ ) {
 // ====================================================================== //
 //  =============================== Отправка Формы ============================= //
-
-console.log($('.formBtn'))
-$("form").on('submit', function(){ // пeрeхвaтывaeм всe при сoбытии oтпрaвки
+$("#contactForm form").submit(function(){ // пeрeхвaтывaeм всe при сoбытии oтпрaвки
 		var form = $(this); // зaпишeм фoрму, чтoбы пoтoм нe былo прoблeм с this
 		var error = false; // прeдвaритeльнo oшибoк нeт
 		if (!error) { // eсли oшибки нeт
@@ -19,15 +17,16 @@ $("form").on('submit', function(){ // пeрeхвaтывaeм всe при сoбы
 		       success: function(data){ // сoбытиe пoслe удaчнoгo oбрaщeния к сeрвeру и пoлучeния oтвeтa
 		       		if (data['error']) { // eсли oбрaбoтчик вeрнул oшибку
 		       		} else { // eсли всe прoшлo oк
+		       			console.log('отправило')
 		       			history.pushState('', document.title, window.location.pathname);
 		       			$('form')[0].reset();
-		       			$('.callBack-modal .callBack-form')
-		       			// .animate({opacity: 0}, 500, function(){
-		       			// 	$('.callBack-modal .thx').fadeIn(200)
-		       			// 	.animate({opacity: 1},500, function(){
-		       			// 		$('.callBack-modal .thx').css({display: 'block'})
-		       			// 	})
-		       			// })	
+		       			$('#contactForm form').animate({opacity: 0}, 500).fadeOut(500, function(){
+		       				$('#contactForm h1').html('Thank you!').fadeIn(700, function(){
+		       					$('#contactForm').animate({opacity: 0}, 1000, function(){
+		       						$('.overlay').hide(200)
+		       					})
+		       				})	
+		       			})
 		       		}
 		       	},
 		       error: function (xhr, ajaxOptions, thrownError) { // в случae нeудaчнoгo зaвeршeния зaпрoсa к сeрвeру
@@ -42,24 +41,29 @@ $("form").on('submit', function(){ // пeрeхвaтывaeм всe при сoбы
 		return false; // вырубaeм стaндaртную oтпрaвку фoрмы
 	});
 })
-	var show = document.querySelector('.contact-button')
-	var modal = document.getElementById('contactForm')
-	var overlay = document.querySelector('.overlay')
+var show = document.querySelector('.contact-button')
+var modal = document.getElementById('contactForm')
+var h1 = document.querySelector('#contactForm h1')
+var form = document.querySelector('#contactForm #form')
+var overlay = document.querySelector('.overlay')
 
-	function showModal()
-	{
-		modal.style.opacity = "1";
-		overlay.style.display = "block";
-	}
-	function hideModal()
-	{
-		modal.style.opacity = "0";
-		setTimeout(function() { 
-			overlay.style.display = "none";
-		},1000)
-	} 
-	show.onclick = showModal
-	overlay.onclick = hideModal
+function showModal()
+{
+	modal.style.opacity = "1";
+	form.style.display = "block";
+	h1.innerHTML = "Keep in touch!"
+	form.style.opacity = "1";
+	overlay.style.display = "block";
+}
+function hideModal()
+{
+	modal.style.opacity = "0";
+	setTimeout(function() { 
+		overlay.style.display = "none";
+	},1000)
+} 
+show.onclick = showModal
+overlay.onclick = hideModal
 
 //  ============================== Отправка Формы================================= //
 // ====================================================================== //   
