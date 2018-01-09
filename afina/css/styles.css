@@ -29,6 +29,9 @@ body, html {
   font-family: 'Circe', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   height: 100%; }
 
+.wrapper {
+  min-height: 100vh; }
+
 .wrapper-1 {
   background: url(../img/wrapper-1/wrapper-1.png) 50% 70%;
   background-size: cover;
@@ -205,7 +208,8 @@ body, html {
 
 footer {
   background: url(../img/footer/footer.png) 50% 100%;
-  background-size: cover; }
+  background-size: cover;
+  min-height: 100vh; }
   footer .container {
     text-align: center;
     padding: 5% 0; }
@@ -506,7 +510,7 @@ footer {
         padding: 2% 0; }
         .wrapper-3 .container ul li span {
           font-size: 15px;
-          line-height: 28px; }
+          line-height: 24px; }
   .wrapper-4 .container h1 {
     font-size: 3.25em;
     line-height: 55px;
@@ -542,15 +546,17 @@ footer {
       .wrapper-5 .container ul li span {
         font-size: 0.9375em;
         line-height: 20px; }
-  footer .container .footer-logo a img {
-    width: 80%; }
-  footer .container .footer-text {
-    width: 100%; }
-    footer .container .footer-text p {
-      font-size: 1.25em;
-      line-height: 25px; }
-  footer .container .contacts p {
-    font-size: 1.25em; } }
+  footer {
+    min-height: 100vh; }
+    footer .container .footer-logo a img {
+      width: 80%; }
+    footer .container .footer-text {
+      width: 100%; }
+      footer .container .footer-text p {
+        font-size: 1.25em;
+        line-height: 25px; }
+    footer .container .contacts p {
+      font-size: 1.25em; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {

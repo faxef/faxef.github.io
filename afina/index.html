@@ -12,7 +12,7 @@
 	<link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-	<section class="wrapper-1">
+	<section class="wrapper wrapper-1">
 		<div class="container">
 			<div class="logo-main wow fadeInLeft">
 				<a href=""><img alt="Afina" src="img/logo.svg"> <span>Afina</span></a>
@@ -27,7 +27,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="wrapper-2">
+	<section class="wrapper wrapper-2">
 		<div class="container">
 			<h1 class="wow fadeInLeft">System <span class="up">AFINA</span></h1>
 			<div class="advantages">
@@ -78,7 +78,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="wrapper-3">
+	<section class="wrapper wrapper-3">
 		<div class="container">
 			<h1 class="wow fadeInLeft">Capabilites</h1>
 			<ul>
@@ -89,7 +89,7 @@
 			</ul>
 		</div>
 	</section>
-	<section class="wrapper-4">
+	<section class="wrapper wrapper-4">
 		<div class="container">
 			<h1 class="wow fadeInLeft">Customized solutions</h1>
 			<p class="wow fadeInLeft" data-wow-delay="0.4s">To the basic publicly available features of our product and our services, we offer individual solutions for large companies and brands</p>
@@ -124,7 +124,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="wrapper-5">
+	<section class="wrapper wrapper-5">
 		<div class="container">
 			<h1 class="wow fadeInLeft">Guarantees</h1>
 			<ul>
@@ -153,15 +153,15 @@
 	</footer>
 	<div id="contactForm">
 		<h1>Keep in touch!</h1>
-		<form action="#">
-			<input placeholder="Name" required="" type="text">
-			<input placeholder="Email" required="" type="email">
-			<textarea placeholder="Message"></textarea>
+		<form id="form" method="post" action="">
+			<input placeholder="Name" required="" type="text" name="name">
+			<input placeholder="Email" required="" type="email" name="email">
+			<textarea placeholder="Message" name="message" type="text"></textarea>
 			<input class="formBtn" type="submit">
 		</form>
 	</div>
 	<div class="overlay"></div>
-	<script src="js/wow.min.js"></script> 
+	<script src="js/libs.min.js"></script>
 	<script src="js/script.js"></script> 
 	<script>
 		new WOW().init(); 
