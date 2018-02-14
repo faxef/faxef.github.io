@@ -1,5 +1,6 @@
 body {
   width: 100%;
+  font-family: 'Roboto', sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13,7 +14,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
-  font-family: 'Roboto', sans-serif; }
+  background: #d0d0ff4d; }
 
 .container {
   width: 50%;
@@ -24,10 +25,11 @@ body {
     .container for fieldset {
       background: #daeffb;
       padding: 3%;
-      -webkit-box-shadow: 7px 8px 18px -7px;
-              box-shadow: 7px 8px 18px -7px;
+      -webkit-box-shadow: 5px 6px 9px -7px;
+              box-shadow: 5px 6px 9px -7px;
       -webkit-border-radius: 7px;
-              border-radius: 7px; }
+              border-radius: 7px;
+      border: 1px solid #bfbdbd; }
       .container for fieldset .form-group {
         display: -webkit-box;
         display: -webkit-flex;
@@ -49,6 +51,7 @@ body {
           border: 1px solid #adacace6;
           -webkit-border-radius: 7px;
                   border-radius: 7px;
+          resize: none;
           font-family: 'Roboto', sans-serif;
           -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
           transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
@@ -78,7 +81,6 @@ body {
           .container for fieldset .form-group:last-child input:hover, .container for fieldset .form-group:last-child input :active {
             background: #656565; }
   .container .info {
-    width: 800px;
     position: relative;
     display: none;
     z-index: 1999;
