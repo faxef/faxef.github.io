@@ -12,7 +12,8 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 100vh; }
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif; }
 
 .container {
   width: 50%;
@@ -22,7 +23,9 @@ body {
     opacity: 1; }
     .container for fieldset {
       background: #daeffb;
-      padding: 3%; }
+      padding: 3%;
+      -webkit-box-shadow: 7px 8px 18px -7px;
+              box-shadow: 7px 8px 18px -7px; }
       .container for fieldset .form-group {
         display: -webkit-box;
         display: -webkit-flex;
@@ -39,7 +42,37 @@ body {
         .container for fieldset .form-group input, .container for fieldset .form-group textarea {
           width: 75%;
           padding: 10px;
-          margin: 5px; }
+          margin: 5px;
+          font-size: 12px;
+          border: 1px solid #adacace6;
+          font-family: 'Roboto', sans-serif;
+          -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+          transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+          transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+          transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out; }
+          .container for fieldset .form-group input:focus, .container for fieldset .form-group input :active, .container for fieldset .form-group textarea:focus, .container for fieldset .form-group textarea :active {
+            border: 1px solid black; }
+        .container for fieldset .form-group label {
+          font-size: 14px; }
+      .container for fieldset .form-group:last-child {
+        width: 50%;
+        margin: 0 auto; }
+        .container for fieldset .form-group:last-child input {
+          margin: 0 auto;
+          color: #fff;
+          letter-spacing: 1px;
+          background: #2c2123;
+          padding: 10px;
+          text-transform: uppercase;
+          -webkit-border-radius: 1.5rem;
+          border-radius: 10px;
+          font-weight: 700;
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+          border: 0;
+          cursor: pointer; }
+          .container for fieldset .form-group:last-child input:hover, .container for fieldset .form-group:last-child input :active {
+            background: #656565; }
   .container .info {
     width: 800px;
     position: relative;
@@ -91,8 +124,7 @@ body {
     .container .info .info__items .person__text {
       width: 60%; }
     .container .info .info__items .person:first-child {
-      -webkit-border-radius: 0;
-              border-radius: 0; }
+      margin-top: 10px; }
   .container .overlay {
     z-index: 1998;
     opacity: 0;

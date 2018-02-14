@@ -5,7 +5,7 @@ jQuery(document).ready(function ($) {
 	var text = $('textarea[name="message"]');
 
 	// события при нажатии кнопки отправить полей
-	$('.formBtn').on('click', function Info () {
+	$('.form-group .formBtn').on('click', function Info () {
 
 		// проверка на пустые поля
 		if(name.val() !="" && email.val() !="" && email.val() !=""){
