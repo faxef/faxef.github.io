@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
 			.append($('<div class="person__email">' + email.val() + '</div>'))
 			.append($('<div class="person__text">' + text.val() + '</div>'))
 
-			// alert('Ваш отзыв успешно отправлен')
+			alert('Ваш отзыв успешно отправлен')
 
 			// анимация при успешной отправке отзыва
 
@@ -34,7 +34,7 @@ jQuery(document).ready(function ($) {
 	})
 	// анимация при закрытии книги
 	$('.container .overlay').on('click',function(event){
-		$('.container .info')
+		$('.container .info').css('display', 'none')
 		.animate({opacity: 0}, 400, function(){
 			$('.container .overlay')
 			.css('visibility', 'hidden')
