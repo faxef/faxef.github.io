@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="container">
+		<for>
+			<fieldset>
+				<legend>Гостевая книга</legend>
+				<div class="form-group">
+					<label for="name">Введите имя</label>
+					<input placeholder="Имя" name="name" type="text">
+				</div>
+				
+				<div class="form-group">
+					<label for="email">Введите ваш email</label>
+					<input placeholder="Email" name="email" type="email">
+				</div>
+
+				<div class="form-group">
+					<label for="message">Введите ваш отзыв</label>
+					<textarea placeholder="Отзыв" name="message" type="text" row="2"></textarea>
+				</div>
+				<input class="formBtn" type="submit">
+			</fieldset>
+		</for>
+		<div class="overlay"></div>
+		<div class="info">
+			<h2>Отзывы всех гостей</h2>
+			<div class="info__title">
+				<div class="title name">Имя</div>
+				<div class="title email">E-mail</div>
+				<div class="title text">Отзыв</div>
+			</div>
+			<div class="info__items">
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
