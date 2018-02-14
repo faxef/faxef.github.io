@@ -25,7 +25,9 @@ body {
       background: #daeffb;
       padding: 3%;
       -webkit-box-shadow: 7px 8px 18px -7px;
-              box-shadow: 7px 8px 18px -7px; }
+              box-shadow: 7px 8px 18px -7px;
+      -webkit-border-radius: 7px;
+              border-radius: 7px; }
       .container for fieldset .form-group {
         display: -webkit-box;
         display: -webkit-flex;
@@ -45,6 +47,8 @@ body {
           margin: 5px;
           font-size: 12px;
           border: 1px solid #adacace6;
+          -webkit-border-radius: 7px;
+                  border-radius: 7px;
           font-family: 'Roboto', sans-serif;
           -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
           transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
