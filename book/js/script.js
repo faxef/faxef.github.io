@@ -1,18 +1,22 @@
 jQuery(document).ready(function ($) {
-	var info = []
-	console.log(info)
+	// переменные вытянутые из полей
 	var name = $('input[name="name"]');
 	var email = $('input[name="email"]');
 	var text = $('textarea[name="message"]');
-	
+
+	// события при нажатии кнопки отправить полей
 	$('.formBtn').on('click', function Info () {
+
+		// проверка на пустые поля
 		if(name.val() !="" && email.val() !="" && email.val() !=""){
 			var item = $('.info .info__items').append($('<div class="person"></div>'))
 			$('.person').last()
 			.append($('<div class="person__name">' + name.val() + '</div>'))
 			.append($('<div class="person__email">' + email.val() + '</div>'))
 			.append($('<div class="person__text">' + text.val() + '</div>'))
+
 			// alert('Ваш отзыв успешно отправлен')
+
 			// анимация при успешной отправке отзыва
 
 			$('.container .overlay')
@@ -28,6 +32,7 @@ jQuery(document).ready(function ($) {
 			})
 		}	
 	})
+	// анимация при закрытии книги
 	$('.container .overlay').on('click',function(event){
 		$('.container .info')
 		.animate({opacity: 0}, 400, function(){
@@ -41,6 +46,7 @@ jQuery(document).ready(function ($) {
 				.css('display', 'block')
 			})
 		})
+	// стирайние данных
 		name.val('')
 		email.val('')
 		text.val('')
