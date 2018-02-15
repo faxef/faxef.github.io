@@ -34,8 +34,7 @@ jQuery(document).ready(function ($) {
 
 			// анимация при успешной отправке отзыва
 
-			$('.container .overlay')
-			.css('visibility', 'visible')
+			$('.container .overlay').fadeIn(200)
 			.animate({
 				opacity: 0.8,
 			}, 400, function(){
@@ -74,15 +73,14 @@ jQuery(document).ready(function ($) {
 	})
 	// анимация при закрытии книги
 	$('.container .overlay').on('click',function(event){
-		$('.container .info')
+		$('.container .info').fadeOut(400)
 		.animate({opacity: 0}, 400, function(){
-			$('.container .overlay')
-			.css('visibility', 'hidden')
+			$('.container .overlay').fadeOut(400)
 			.animate({
 				opacity: 0,
-			}, 800, function(){
+			}, 200, function(){
 				$('.container for')
-				.animate({opacity: 1}, 600)
+				.animate({opacity: 1}, 0)
 				.css('display', 'block')
 			})
 		})

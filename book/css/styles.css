@@ -134,7 +134,7 @@ body {
   .container .overlay {
     z-index: 1998;
     opacity: 0;
-    visibility: hidden;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
