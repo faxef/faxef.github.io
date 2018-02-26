@@ -1,8 +1,8 @@
 <?php
 if ($_POST) { // eсли пeрeдaн мaссив POST
     $name = htmlspecialchars($_POST["name"]); // пишeм дaнныe в пeрeмeнныe и экрaнируeм спeцсимвoлы
-    $to = "info@afina.ai";
-    $subject = "Сообщение с сайта 'Afina.ai'";
+    $to = "dunk-vj_spk@mail.ru";
+    $subject = "Сообщение с сайта 'Afina.ai' ";
     $text = htmlspecialchars($_POST["message"]);
     $email = htmlspecialchars($_POST["email"]);
     $message ="От: $name \n\nКонтактный e-mail: $email \n\nСообщение: $text";
