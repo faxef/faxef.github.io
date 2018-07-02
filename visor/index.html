@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta content="ie=edge" http-equiv="x-ua-compatible">
+	<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport">
+	<meta content="Description of the page less than 150 characters" name="description">
+	<title>Visor</title>
+	<link rel="stylesheet" href="css/reset.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,700,700i" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body>
+	<section>
+		<div id="video" class="bg-video">
+			<div class="filter"></div>
+			<video id="videoPlayer" autoplay loop preload="auto" poster="img/background.png" muted>
+				<source src="video/video.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+				<source src="video/video.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser. 
+				<source src="video/video.ogv" type="video/ogg" />Your browser does not support the video tag. I suggest you upgrade your browser.
+			</video>
+		</div>
+		<header>
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="center-sm col-md-6">
+						<div class="logo"><a href=""><img src="img/logo.png" alt="visor"></a></div>
+					</div>
+					<div class="hidden-mob col-md-6">
+						<div class="another">
+							<div class="list">
+								<span>Другие вакансии<i class="fas fa-chevron-down"></i></span>
+								<ul class="sub-menu">
+									<li><a href="#">Checkout</a></li>
+									<li><a href="#">Пример страницы</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="vacancy">
+						<div class="vacancy__main">
+							<div class="vacancy__title">
+								<h1>UX Designer</h1>
+							</div>
+							<div class="border_bottom"></div>
+							<div class="vacancy__contact-form">
+								<h2>Если Вас интересует вакансия, пожалуйста заполните форму, чтобы мы могли с Вами связаться.</h2>
+								<form id="form" method="post" action="">
+									<input placeholder="Имя" required="" name="name" type="text">
+									<input placeholder="E-mail" required="" name="email" type="email">
+									<input placeholder="Телефон (не обязательно)" name="tel" type="tel">
+									<input class="formBtn" type="submit" value="ОТКЛИКНУТЬСЯ">
+								</form>
+							</div>
+							<div class="arrow_down"><i class="fas fa-chevron-down"></i></div>
+						</div>
+						<div class="vacancy__description">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="vacancy__description-tasks">
+											<div class="title">
+												<h3>Основные задачи</h3>
+											</div>
+											<div class="text">
+												<ul>
+													<li>Создание дизайн-макетов (wireframe) и их прототипирование на Unreal Engine 4;</li>
+													<li>Проведение A/B-тестирований интерфейсных решений;</li>
+													<li>Cоздание и интеграция финальных схем интерфейсов (GUI, HUD, Marketplace, т.п.) масштабного ММО - проекта на UE4;</li>
+												</ul>
+											</div>
+											<div class="border_bottom hidden-md"></div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="vacancy__description-requires">
+											<div class="title">
+												<h3>Требования</h3>
+											</div>
+											<div class="text">
+												<ul>
+													<li>От 2-х лет опыта на позиции UX/UI Designer в геймдеве; </li>
+													<li>Опыт создания интерфейсов для free-to-play ММО-проектов;</li>
+													<li>Понимание принципов ориентированного на пользователя (user-centric) дизайна;</li>
+												</ul>
+											</div>
+											<div class="border_bottom hidden-md"></div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="vacancy__description-recommended">
+											<div class="title">
+												<h3>Приветствуется</h3>
+											</div>
+											<div class="text">
+												<ul>
+													<li>Опыт работы на UE4;</li>
+													<li>Опыт работы с игровыми проектами на консолях (PS4, XBox One);</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="sound_off">
+											<i class="fas fa-volume-off"></i>
+										</div>											
+										<div class="sound_on hidden">
+											<i class="fas fa-volume-up"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mobile-video">
+				<video controls width="100%" height="auto" muted>
+					<div class="filter"></div>
+					<source src="video/video.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+					<source src="video/video.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser. 
+					<source src="video/video.ogv" type="video/ogg" />Your browser does not support the video tag. I suggest you upgrade your browser.
+				</video>
+			</div>
+		</main>
+		<footer><div class="logo"><a href=""><img src="img/logo.png" alt="visor"></a></div></footer>
+		<div class="pop-up">
+			<div class="overlay">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="center-sm col-md-6">
+							<div class="logo"><a href=""><img src="img/logo.png" alt="visor"></a></div>
+						</div>
+					</div>
+				</div>
+				<div class="tnx">
+					<h1>Спасибо!<br> Мы обязательно с Вами свяжемся.</h1>
+					<button href="#" id="close">На главную</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="js/libs.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

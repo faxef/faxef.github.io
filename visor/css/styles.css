@@ -1,0 +1,544 @@
+@charset "UTF-8";
+/* -------------------------- START FONTS ------------------------ */
+@font-face {
+  font-family: Proxima-Regular;
+  src: url(../fonts/Proxima/ProximaNova-Regular.eot);
+  src: url(../fonts/Proxima/ProximaNova-Regular.ttf);
+  src: url(../fonts/Proxima/ProximaNova-Regular.woff); }
+
+@font-face {
+  font-family: Proxima-Semibold;
+  src: url(../fonts/Proxima/ProximaNova-Semibold.eot);
+  src: url(../fonts/Proxima/ProximaNova-Semibold.ttf);
+  src: url(../fonts/Proxima/ProximaNova-Semibold.woff); }
+
+/* -------------------------- END FONTS ------------------------ */
+/* ---------- VARS ----------- */
+.hidden {
+  display: none !important; }
+
+.show {
+  display: block !important; }
+
+@-webkit-keyframes jump {
+  0% {
+    bottom: 0; }
+  5% {
+    bottom: 0.5px; }
+  10% {
+    bottom: 1px; }
+  15% {
+    bottom: 1.5px; }
+  20% {
+    bottom: 2px; }
+  25% {
+    bottom: 2.5px; }
+  30% {
+    bottom: 3px; }
+  35% {
+    bottom: 3.5px; }
+  40% {
+    bottom: 4px; }
+  45% {
+    bottom: 4.5px; }
+  50% {
+    bottom: 5px; }
+  55% {
+    bottom: 4.5px; }
+  60% {
+    bottom: 4px; }
+  65% {
+    bottom: 3.5px; }
+  70% {
+    bottom: 3px; }
+  75% {
+    bottom: 2.5px; }
+  80% {
+    bottom: 2px; }
+  85% {
+    bottom: 1.5px; }
+  90% {
+    bottom: 1px; }
+  100% {
+    bottom: 0; } }
+
+@keyframes jump {
+  0% {
+    bottom: 0; }
+  5% {
+    bottom: 0.5px; }
+  10% {
+    bottom: 1px; }
+  15% {
+    bottom: 1.5px; }
+  20% {
+    bottom: 2px; }
+  25% {
+    bottom: 2.5px; }
+  30% {
+    bottom: 3px; }
+  35% {
+    bottom: 3.5px; }
+  40% {
+    bottom: 4px; }
+  45% {
+    bottom: 4.5px; }
+  50% {
+    bottom: 5px; }
+  55% {
+    bottom: 4.5px; }
+  60% {
+    bottom: 4px; }
+  65% {
+    bottom: 3.5px; }
+  70% {
+    bottom: 3px; }
+  75% {
+    bottom: 2.5px; }
+  80% {
+    bottom: 2px; }
+  85% {
+    bottom: 1.5px; }
+  90% {
+    bottom: 1px; }
+  100% {
+    bottom: 0; } }
+
+/* ---------- VARS ----------- */
+/* -------------------------- Main styles ---------------- */
+/* Если есть поддержка object-fit (Chrome/Chrome для Android, Safari в iOS 8 и Opera), используем его: */
+body {
+  color: white; }
+
+section {
+  min-height: 100vh; }
+
+.bg-video {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  background: url(../img/background.jpg) no-repeat #848790;
+  background-size: cover; }
+  .bg-video .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.62);
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100vh; }
+  .bg-video > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto; }
+
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+header {
+  padding-top: 30px; }
+  header .logo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    header .logo img {
+      height: auto;
+      max-width: 100%; }
+  header .another {
+    text-align: right; }
+    header .another span {
+      font-size: 1em;
+      cursor: pointer;
+      padding: 20px 0 20px 0; }
+      header .another span i {
+        color: #1CB2F0;
+        padding-left: 15px;
+        font-size: 12px; }
+    header .another .sub-menu {
+      position: absolute;
+      right: 0px;
+      display: none;
+      margin-top: 10px;
+      width: 155px; }
+      header .another .sub-menu li {
+        text-align: left;
+        padding-bottom: 5px; }
+        header .another .sub-menu li a:hover {
+          color: #1CB2F0; }
+
+main .vacancy {
+  text-align: center;
+  padding-top: 60px; }
+  main .vacancy .vacancy__main .vacancy__title h1 {
+    font-family: 'Proxima-Semibold', sans-serif;
+    font-size: 2.25em;
+    line-height: 44px; }
+  main .vacancy .vacancy__main .border_bottom {
+    border-bottom: 2px solid #1cb2f0;
+    width: 70px;
+    margin: 28px auto; }
+  main .vacancy .vacancy__main .vacancy__contact-form {
+    width: 70%;
+    padding: 0px 25px;
+    margin: 0 auto; }
+    main .vacancy .vacancy__main .vacancy__contact-form h2 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 300;
+      letter-spacing: 0.85px; }
+    main .vacancy .vacancy__main .vacancy__contact-form form {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin: 60px 0; }
+      main .vacancy .vacancy__main .vacancy__contact-form form input {
+        width: 40%;
+        padding: 14px 15px 14px 30px;
+        background: #ffffff4d;
+        border: 1px solid white;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        background-color: transparent; }
+        main .vacancy .vacancy__main .vacancy__contact-form form input:-ms-input-placeholder {
+          color: white;
+          opacity: 1;
+          font-family: 'Roboto', sans-serif; }
+        main .vacancy .vacancy__main .vacancy__contact-form form input:-moz-placeholder {
+          color: white;
+          opacity: 1;
+          font-family: 'Roboto', sans-serif; }
+        main .vacancy .vacancy__main .vacancy__contact-form form input::-webkit-input-placeholder {
+          color: white;
+          opacity: 1;
+          font-family: 'Roboto', sans-serif; }
+        main .vacancy .vacancy__main .vacancy__contact-form form input::-moz-placeholder {
+          color: white;
+          opacity: 1;
+          font-family: 'Roboto', sans-serif; }
+      main .vacancy .vacancy__main .vacancy__contact-form form input:nth-child(2n+1) {
+        margin: 10px 15px 10px 0; }
+      main .vacancy .vacancy__main .vacancy__contact-form form input:nth-child(2n+2) {
+        margin: 10px 0 10px 15px; }
+      main .vacancy .vacancy__main .vacancy__contact-form form input[required=""] {
+        background: #ffffff4d; }
+      main .vacancy .vacancy__main .vacancy__contact-form form input[type="submit"] {
+        background: #1cb2f0;
+        background: -webkit-gradient(linear, left top, right top, from(#1cb2f0), to(#1688f2));
+        background: linear-gradient(to right, #1cb2f0 0%, #1688f2 100%);
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        letter-spacing: 0.65px;
+        padding: 0;
+        border: 0;
+        cursor: pointer;
+        -webkit-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in; }
+        main .vacancy .vacancy__main .vacancy__contact-form form input[type="submit"]:hover {
+          font-size: 15px;
+          background: #1688f2;
+          background: -webkit-gradient(linear, left top, right top, from(#1688f2), to(#1cb2f0));
+          background: linear-gradient(to right, #1688f2 0%, #1cb2f0 100%); }
+  main .vacancy .vacancy__main .arrow_down i {
+    position: relative;
+    -webkit-animation: jump 1s infinite;
+            animation: jump 1s infinite; }
+  main .vacancy .vacancy__description .vacancy__description-tasks,
+  main .vacancy .vacancy__description .vacancy__description-requires,
+  main .vacancy .vacancy__description .vacancy__description-recommended {
+    text-align: left;
+    margin-bottom: 30px; }
+    main .vacancy .vacancy__description .vacancy__description-tasks .border_bottom,
+    main .vacancy .vacancy__description .vacancy__description-requires .border_bottom,
+    main .vacancy .vacancy__description .vacancy__description-recommended .border_bottom {
+      border-bottom: 2px solid #1cb2f0;
+      width: 70px;
+      margin: 40px auto; }
+  main .vacancy .vacancy__description .title h3 {
+    font-family: 'Proxima-Semibold', sans-serif;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.85px;
+    padding-bottom: 20px; }
+  main .vacancy .vacancy__description .text ul li {
+    font-family: 'Proxima-Regular', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: white; }
+    main .vacancy .vacancy__description .text ul li::before {
+      content: '\2022';
+      color: #1cb2f0;
+      padding-right: 5px; }
+  main .vacancy .vacancy__description .sound_off,
+  main .vacancy .vacancy__description .sound_on {
+    position: absolute;
+    width: 35px;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    height: 35px;
+    bottom: 20%;
+    right: 5%;
+    background-color: #fff9;
+    opacity: 0.9; }
+    main .vacancy .vacancy__description .sound_off i,
+    main .vacancy .vacancy__description .sound_on i {
+      float: left;
+      font-size: 18px;
+      padding: 8px 0 8px 8px;
+      color: black; }
+  main .vacancy .vacancy__description .sound_off i {
+    color: #00000080; }
+  main .vacancy .vacancy__description .sound_on i {
+    color: black; }
+
+main .mobile-video {
+  width: 100%; }
+
+footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #22252F; }
+  footer .logo {
+    padding: 30px 0; }
+
+.pop-up {
+  position: fixed;
+  display: none;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #00000080; }
+  .pop-up .overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/background.jpg) no-repeat #848790;
+    background-size: cover; }
+    .pop-up .overlay .tnx {
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+      .pop-up .overlay .tnx h1 {
+        font-family: 'Proxima-Regular', sans-serif;
+        font-size: 36px;
+        line-height: 44px; }
+      .pop-up .overlay .tnx button {
+        width: 50%;
+        margin-top: 40px;
+        padding: 14px 15px 14px 30px;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        background: #1cb2f0;
+        background: -webkit-gradient(linear, left top, right top, from(#1cb2f0), to(#1688f2));
+        background: linear-gradient(to right, #1cb2f0 0%, #1688f2 100%);
+        text-transform: uppercase;
+        letter-spacing: 0.65px;
+        border: 0;
+        cursor: pointer;
+        -webkit-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in; }
+        .pop-up .overlay .tnx button:hover {
+          font-size: 15px;
+          background: #1688f2;
+          background: -webkit-gradient(linear, left top, right top, from(#1688f2), to(#1cb2f0));
+          background: linear-gradient(to right, #1688f2 0%, #1cb2f0 100%); }
+
+/* -------------------------- Main styles ------------------ */
+/* -------------------------- START MEDIA ------------------------ */
+/*==========  Desktop First Method  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  /**/ }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  main .vacancy .vacancy__main .vacancy__contact-form {
+    width: 90%; } }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .hidden-mob {
+    display: none; }
+  .bg-video {
+    position: absolute;
+    min-height: 645px;
+    max-height: 768px; }
+    .bg-video .filter {
+      display: none; }
+  .center-sm {
+    -ms-flex: 0 0 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%; }
+  .bg-video > video {
+    display: none; }
+  header .logo {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  main .vacancy {
+    padding-top: 20px; }
+    main .vacancy .vacancy__main .border_bottom {
+      margin: 15px auto 12px; }
+    main .vacancy .vacancy__main .vacancy__contact-form {
+      width: 285px;
+      padding: 0; }
+      main .vacancy .vacancy__main .vacancy__contact-form h2 {
+        font-size: 16px;
+        letter-spacing: 0.7px; }
+      main .vacancy .vacancy__main .vacancy__contact-form form {
+        margin: 10px 0 20px 0; }
+        main .vacancy .vacancy__main .vacancy__contact-form form input:nth-child(2n+1),
+        main .vacancy .vacancy__main .vacancy__contact-form form input:nth-child(2n+2) {
+          width: 100%;
+          margin: 14px 0px 0px 0px; }
+        main .vacancy .vacancy__main .vacancy__contact-form form input[type="submit"] {
+          padding: 13px 15px;
+          margin-top: 45px; }
+    main .vacancy .vacancy__description {
+      padding-top: 50px; }
+      main .vacancy .vacancy__description .vacancy__description-tasks,
+      main .vacancy .vacancy__description .vacancy__description-requires,
+      main .vacancy .vacancy__description .vacancy__description-recommended {
+        margin: 0px 30px 30px 30px; }
+        main .vacancy .vacancy__description .vacancy__description-tasks .title,
+        main .vacancy .vacancy__description .vacancy__description-requires .title,
+        main .vacancy .vacancy__description .vacancy__description-recommended .title {
+          color: black; }
+        main .vacancy .vacancy__description .vacancy__description-tasks .text ul li,
+        main .vacancy .vacancy__description .vacancy__description-requires .text ul li,
+        main .vacancy .vacancy__description .vacancy__description-recommended .text ul li {
+          color: black;
+          font-family: 'Roboto', sans-serif;
+          font-weight: 300; }
+  .sound_off,
+  .sound_on {
+    display: none !important; }
+  .pop-up .overlay .tnx {
+    width: 80%; }
+    .pop-up .overlay .tnx h1 {
+      font-size: 26px; }
+    .pop-up .overlay .tnx button {
+      font-size: 11px; }
+      .pop-up .overlay .tnx button:hover {
+        font-size: 10px; } }
+
+@media (max-width: 768px) and (max-height: 645px) {
+  .bg-video {
+    max-height: 645px; } }
+
+@media only screen and (max-width: 768px) {
+  main .vacancy .vacancy__main {
+    min-height: -webkit-calc(100vh - 160.5px);
+    min-height: calc(100vh - 160.5px); } }
+
+@media (max-width: 768px) and (min-height: 646px) {
+  main .vacancy .vacancy__main {
+    min-height: 607px; } }
+
+@media (min-height: 768px) and (max-height: 930px) {
+  header {
+    padding-top: 20px; }
+    header .logo {
+      width: 17%; }
+  main .vacancy {
+    padding-top: 0px; }
+    main .vacancy .vacancy__main .border_bottom {
+      margin: 10px auto; }
+    main .vacancy .vacancy__main .vacancy__contact-form form {
+      margin: 25px 0; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  /**/ }
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  /**/ }
+
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  /**/ }
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  /**/ }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 769px) {
+  .mobile-video > video,
+  .arrow_down,
+  .hidden-md,
+  footer {
+    display: none; } }
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  /**/ }
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  /**/ }
+
+/* -------------------------- END MEDIA ------------------------ */
