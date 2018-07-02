@@ -196,7 +196,7 @@ main .vacancy {
     font-size: 2.25em;
     line-height: 44px; }
   main .vacancy .vacancy__main .border_bottom {
-    border-bottom: 2px solid #1cb2f0;
+    border-bottom: 1px solid #1cb2f0;
     width: 70px;
     margin: 28px auto; }
   main .vacancy .vacancy__main .vacancy__contact-form {
@@ -284,7 +284,7 @@ main .vacancy {
     main .vacancy .vacancy__description .vacancy__description-tasks .border_bottom,
     main .vacancy .vacancy__description .vacancy__description-requires .border_bottom,
     main .vacancy .vacancy__description .vacancy__description-recommended .border_bottom {
-      border-bottom: 2px solid #1cb2f0;
+      border-bottom: 1px solid #1cb2f0;
       width: 70px;
       margin: 40px auto; }
   main .vacancy .vacancy__description .title h3 {
