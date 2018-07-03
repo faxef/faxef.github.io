@@ -171,7 +171,8 @@ header {
             align-items: center; }
     header .logo img {
       height: auto;
-      max-width: 100%; }
+      max-width: 100%;
+      width: 100px; }
   header .another {
     text-align: right; }
     header .another span {
