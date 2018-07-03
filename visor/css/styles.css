@@ -12,6 +12,12 @@
   src: url(../fonts/Proxima/ProximaNova-Semibold.ttf);
   src: url(../fonts/Proxima/ProximaNova-Semibold.woff); }
 
+@font-face {
+  font-family: Proxima-Light;
+  src: url(../fonts/Proxima/ProximaNova-Light.eot);
+  src: url(../fonts/Proxima/ProximaNova-Light.ttf);
+  src: url(../fonts/Proxima/ProximaNova-Light.woff); }
+
 /* -------------------------- END FONTS ------------------------ */
 /* ---------- VARS ----------- */
 .hidden {
@@ -171,7 +177,8 @@ header {
     header .another span {
       font-size: 1em;
       cursor: pointer;
-      padding: 20px 0 20px 0; }
+      padding: 20px 0 20px 0;
+      font-family: 'Proxima-Regular', sans-serif; }
       header .another span i {
         color: #1CB2F0;
         padding-left: 15px;
@@ -185,8 +192,10 @@ header {
       header .another .sub-menu li {
         text-align: left;
         padding-bottom: 5px; }
-        header .another .sub-menu li a:hover {
-          color: #1CB2F0; }
+        header .another .sub-menu li a {
+          font-family: 'Proxima-Light', sans-serif; }
+          header .another .sub-menu li a:hover {
+            color: #1CB2F0; }
 
 main .vacancy {
   text-align: center;
@@ -265,13 +274,14 @@ main .vacancy {
         padding: 0;
         border: 0;
         cursor: pointer;
-        -webkit-transition: all 0.2s ease-in;
-        transition: all 0.2s ease-in; }
+        background-position: 0 0;
+        -webkit-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in; }
         main .vacancy .vacancy__main .vacancy__contact-form form input[type="submit"]:hover {
-          font-size: 15px;
           background: #1688f2;
           background: -webkit-gradient(linear, left top, right top, from(#1688f2), to(#1cb2f0));
-          background: linear-gradient(to right, #1688f2 0%, #1cb2f0 100%); }
+          background: linear-gradient(to right, #1688f2 0%, #1cb2f0 100%);
+          background-position: 300px; }
   main .vacancy .vacancy__main .arrow_down i {
     position: relative;
     -webkit-animation: jump 1s infinite;
@@ -311,14 +321,10 @@ main .vacancy {
     height: 35px;
     bottom: 20%;
     right: 5%;
-    background-color: #fff9;
     opacity: 0.9; }
-    main .vacancy .vacancy__description .sound_off i,
-    main .vacancy .vacancy__description .sound_on i {
-      float: left;
-      font-size: 18px;
-      padding: 8px 0 8px 8px;
-      color: black; }
+    main .vacancy .vacancy__description .sound_off img,
+    main .vacancy .vacancy__description .sound_on img {
+      width: 30px; }
   main .vacancy .vacancy__description .sound_off i {
     color: #00000080; }
   main .vacancy .vacancy__description .sound_on i {

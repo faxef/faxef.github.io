@@ -16,7 +16,7 @@
 	<section>
 		<div id="video" class="bg-video">
 			<div class="filter"></div>
-			<video id="videoPlayer" autoplay loop preload="auto" poster="img/background.png" muted>
+			<video id="videoPlayer" autoplay loop preload="auto" poster="img/background.png">
 				<source src="video/video.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
 				<source src="video/video.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser. 
 				<source src="video/video.ogv" type="video/ogg" />Your browser does not support the video tag. I suggest you upgrade your browser.
@@ -109,11 +109,11 @@
 										</div>
 									</div>
 									<div class="col-md-6">
-										<div class="sound_off">
-											<i class="fas fa-volume-off"></i>
+										<div class="sound_off hidden">
+											<img src="img/speaker-off.png" alt="">
 										</div>											
-										<div class="sound_on hidden">
-											<i class="fas fa-volume-up"></i>
+										<div class="sound_on">
+											<img src="img/speaker-on.png" alt="">
 										</div>
 									</div>
 								</div>
@@ -123,7 +123,7 @@
 				</div>
 			</div>
 			<div class="mobile-video">
-				<video controls width="100%" height="auto" muted>
+				<video controls width="100%" height="auto">
 					<div class="filter"></div>
 					<source src="video/video.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
 					<source src="video/video.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser. 

@@ -3,9 +3,8 @@ jQuery(function( $ ) {
 		window.setTimeout('location.reload()', 500);
 	});
 	$('video').on('loadeddata', function(e) {
-		$(this).prop("muted", true);
 	});
-	var isMuted = true; 
+	var isMuted = false; 
 	$('.sound_on').on('click', function(){
 		isMuted = !isMuted;
 		$('video').prop("muted", isMuted);
