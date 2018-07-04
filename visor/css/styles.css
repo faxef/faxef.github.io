@@ -189,12 +189,16 @@ header {
       right: 0px;
       display: none;
       margin-top: 10px;
-      width: 155px; }
+      width: 155px;
+      margin-right: 40px; }
       header .another .sub-menu li {
-        text-align: left;
-        padding-bottom: 5px; }
+        text-align: right;
+        padding-bottom: 10px; }
         header .another .sub-menu li a {
-          font-family: 'Proxima-Light', sans-serif; }
+          font-family: 'Proxima-Light', sans-serif;
+          -webkit-column-rule: #ffffffe6;
+             -moz-column-rule: #ffffffe6;
+                  column-rule: #ffffffe6; }
           header .another .sub-menu li a:hover {
             color: #1CB2F0; }
 
@@ -350,6 +354,10 @@ footer {
   background-color: #22252F; }
   footer .logo {
     padding: 30px 0; }
+    footer .logo img {
+      height: auto;
+      max-width: 100%;
+      width: 100px; }
 
 .pop-up {
   position: fixed;
