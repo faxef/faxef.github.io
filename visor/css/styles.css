@@ -381,6 +381,10 @@ footer {
     height: 100vh;
     background: url(../img/background.jpg) no-repeat #848790;
     background-size: cover; }
+    .pop-up .overlay .logo img {
+      height: auto;
+      max-width: 100%;
+      width: 100px; }
     .pop-up .overlay .tnx {
       position: absolute;
       text-align: center;
