@@ -6404,6 +6404,12 @@ h6, .h6 {
     @media all and (max-width: 991px) {
       .embed-video-wrapper .embed-video {
         padding-bottom: 36.25%; } }
+    @media all and (max-width: 767px) {
+      .embed-video-wrapper .embed-video {
+        padding-bottom: 52.25%; } }
+    @media all and (max-width: 480px) {
+      .embed-video-wrapper .embed-video {
+        padding-bottom: 89.25%; } }
 
 .toggle {
   outline: none;
@@ -6477,6 +6483,10 @@ h6, .h6 {
         align-items: center; }
     @media all and (max-width: 1199px) {
       .logo-section .container .button-wrapper {
+        -ms-flex-direction: row;
+            flex-direction: row; } }
+    @media all and (max-width: 480px) {
+      .logo-section .container .button-wrapper {
         -ms-flex-direction: column;
             flex-direction: column; } }
   .logo-section .container .secondary-button {
@@ -6484,6 +6494,9 @@ h6, .h6 {
     height: 40px;
     font-size: 16px; }
     @media all and (max-width: 1199px) {
+      .logo-section .container .secondary-button {
+        margin-right: 15px; } }
+    @media all and (max-width: 767px) {
       .logo-section .container .secondary-button {
         margin-bottom: 15px; } }
     @media all and (min-width: 1200px) {
@@ -6527,6 +6540,14 @@ h6, .h6 {
             flex-direction: row;
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap; } }
+    @media all and (max-width: 1199px) {
+      .logo-section .container .menu-top-menu-container .menu-top-wrapper {
+        -ms-flex-direction: column;
+            flex-direction: column;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -ms-flex-pack: center;
+            justify-content: center; } }
     .logo-section .container .menu-top-menu-container .menu-top-wrapper .menu {
       list-style: none;
       -ms-flex-align: center;
@@ -6540,6 +6561,17 @@ h6, .h6 {
           width: 100%;
           -ms-flex-wrap: wrap;
               flex-wrap: wrap; } }
+      @media all and (max-width: 1199px) {
+        .logo-section .container .menu-top-menu-container .menu-top-wrapper .menu {
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          -ms-flex-pack: center;
+              justify-content: center;
+          -ms-flex-align: center;
+              align-items: center;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          margin-bottom: 20px; } }
       .logo-section .container .menu-top-menu-container .menu-top-wrapper .menu .menu-item {
         font-size: 16px;
         color: #FFF;
@@ -6579,7 +6611,11 @@ h6, .h6 {
         padding: 0 0 30px; }
         .logo-section .container #navCollapse .menu-item {
           padding-top: 15px;
-          padding-bottom: 15px; }
+          padding-bottom: 15px; } }
+    @media all and (max-width: 1199px) and (max-width: 767px) {
+      .logo-section .container #navCollapse .menu-item {
+        padding: 0px 10px; } }
+    @media all and (max-width: 1199px) {
         .logo-section .container #navCollapse .nav-link {
           display: block;
           text-align: center; } }
