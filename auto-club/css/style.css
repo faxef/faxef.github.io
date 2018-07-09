@@ -8197,6 +8197,9 @@ body.admin-bar .logo-section {
             .advisors-section .container .advisors-container .advisors-member .advisor-description {
               display: none;
               height: auto; } }
+          @media all and (min-width: 768px) {
+            .advisors-section .container .advisors-container .advisors-member .advisor-description {
+              display: block; } }
 
 .trackers-section {
   padding-top: 60px;
