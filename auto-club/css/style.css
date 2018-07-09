@@ -9368,7 +9368,8 @@ body.admin-bar .logo-section {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  z-index: 9999; }
   .pop-up.hidden {
     display: none; }
   .pop-up .pop-up_race {
