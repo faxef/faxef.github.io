@@ -7690,7 +7690,8 @@ body.admin-bar .logo-section {
       font-size: 18px; }
   .ico-finish-section .btn {
     width: 100%;
-    padding-top: 10px; }
+    padding-top: 10px;
+    box-shadow: none; }
     .ico-finish-section .btn a {
       width: 275px;
       padding: 12px 0;
