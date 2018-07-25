@@ -1,5 +1,6 @@
 jQuery(function( $ ) {
 	var isMuted = false; 
+	$('video').prop("muted", isMuted);
 	$('.sound_on').on('click', function(){
 		isMuted = !isMuted;
 		$('video').prop("muted", isMuted);
