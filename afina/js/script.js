@@ -50,6 +50,7 @@ var overlay = document.querySelector('.overlay')
 function showModal()
 {
 	modal.style.opacity = "1";
+	modal.style.left = "50%";
 	form.style.display = "block";
 	h1.innerHTML = "Keep in touch!"
 	form.style.opacity = "1";
@@ -60,7 +61,7 @@ function hideModal()
 	modal.style.opacity = "0";
 	setTimeout(function() { 
 		overlay.style.display = "none";
-	},1000)
+	},100)
 } 
 show.onclick = showModal
 overlay.onclick = hideModal
