@@ -48,7 +48,7 @@ $('#slick-thumbs').slick({
 		}
 	},
 	{
-		breakpoint: 769,
+		breakpoint: 768,
 		settings: {
 			slidesToShow: 2,
 			slidesToScroll: 2
@@ -156,9 +156,9 @@ $(window).load(function() {
 // Инициализация parallax
 var tween = new TimelineMax ()
 .add([
-	TweenMax.fromTo("#wreath img.first", 1, {scale: 1, autoAlpha: 1, left: "50%"}, {left: "-150%", ease: Linear.easeNone}),
-	TweenMax.fromTo("#wreath img.wreath", 1, {scale: 1, autoAlpha: 1, top: "50%"}, {top: "-250%", ease: Linear.easeNone}),
-	TweenMax.fromTo("#wreath img.second", 1, {scale: 1, autoAlpha: 1, left: "50%"}, {left: "200%", ease: Linear.easeNone}),
+	TweenMax.fromTo("#wreath img.first", 1, {scale: 1, autoAlpha: 1, top: "50%"}, {top: "50%", ease: Linear.easeNone}),
+	TweenMax.fromTo("#wreath img.wreath", 1, {scale: 1, autoAlpha: 1, top: "50%"}, {top: "50%", ease: Linear.easeNone}),
+	TweenMax.fromTo("#wreath img.second", 1, {scale: 1, autoAlpha: 1, top: "50%"}, {top: "50%", ease: Linear.easeNone}),
 	]);
 
 
@@ -189,6 +189,15 @@ $(document).on("click", "a[href^='#']", function (e) {
 		}
 	}
 });
+
+// 
+var main_screen__height = $('.main_screen').outerHeight()
+var header = $('header').outerHeight()
+$('.main_screen').css({paddingTop: header})
+$('.main_screen #wreath').css({minHeight: '100vh'}).css({minHeight: '-=' + header*2})
+main_screen__height = $('.main_screen').outerHeight()
+$('main').css({paddingTop: main_screen__height})
+console.log(header)
 
 // Инициализация parallax
 // ===========================//
