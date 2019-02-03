@@ -68,7 +68,7 @@ header {
       header .navbar .main-menu > ul li > a {
         font-size: 24px;
         font-weight: 700;
-        color: #ffffff;
+        color: #8db9f6;
         letter-spacing: 2.03px;
         text-decoration: none; }
         @media all and (max-width: 767px) {
@@ -76,15 +76,15 @@ header {
             font-size: 18px;
             letter-spacing: 1.52px; } }
         header .navbar .main-menu > ul li > a:hover, header .navbar .main-menu > ul li > a:active {
-          color: #8db9f6; }
+          color: #ffffff; }
       @media all and (max-width: 480px) {
         header .navbar .main-menu > ul {
           -ms-flex-pack: center;
               justify-content: center;
           -ms-flex-wrap: wrap;
               flex-wrap: wrap;
-          -ms-flex-pack: space-evenly;
-              justify-content: space-evenly; }
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
           header .navbar .main-menu > ul li {
             margin: 10px; } }
     header .navbar .contact {
@@ -107,7 +107,7 @@ header {
         @media all and (max-width: 480px) {
           header .navbar .contact span {
             font-size: 18px;
-            width: 100%; } }
+            width: 85%; } }
     header .navbar .logo {
       text-align: center; }
       @media all and (max-width: 480px) {
