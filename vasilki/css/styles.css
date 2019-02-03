@@ -104,8 +104,15 @@ header {
             display: block;
             width: 45%;
             margin: 10px auto; } }
+        @media all and (max-width: 480px) {
+          header .navbar .contact span {
+            font-size: 18px;
+            width: 100%; } }
     header .navbar .logo {
       text-align: center; }
+      @media all and (max-width: 480px) {
+        header .navbar .logo img {
+          width: 90px; } }
 
 .main_screen {
   background-image: url("../img/bg-main_screen.png");
@@ -400,6 +407,8 @@ main {
           main .sorting_screen .sorting_screen__bottom .slick-thumbs .slick-list .slick-track .slick-slide .milk_img img {
             margin: 0 auto; }
         main .sorting_screen .sorting_screen__bottom .slick-thumbs .slick-list .slick-track .slick-slide .text {
+          width: 50%;
+          margin: 0 auto;
           text-align: center;
           color: #1f62ba;
           font-size: 18px;
