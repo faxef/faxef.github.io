@@ -148,7 +148,7 @@ $(window).load(function() {
 		$('.preloader-wrap').fadeOut('slow',function(){
 			$(this).remove();
 		});
-	}, 1000);
+	}, 100);
 
 });
 
