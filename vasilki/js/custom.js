@@ -168,6 +168,11 @@ controller.scrollTo(function (newpos) {
 });
 
 $(document).on("click", "a[href^='#']", function (e) {
+
+	if ($(this).parent().hasClass('')) {
+		$('header .navbar .main-menu > ul li').attr('class', '');
+		$(this).parent().attr('class', 'active');
+	}
 	var id = $(this).attr("href");
 	if ($(id).length > 0) {
 		e.preventDefault();
