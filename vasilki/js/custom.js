@@ -166,21 +166,22 @@ var scene = new ScrollMagic.Scene({duration: 300})
 controller.scrollTo(function (newpos) {
 	TweenMax.to(window, 1.5, {scrollTo: {y: newpos}});
 });
+var currentHash = "#initial_hash"
+$(document).on("click","a[href^='#']", function (event) {
+	
+	event.preventDefault();
 
-$(document).on("click", "a[href^='#']", function (e) {
+	var id  = $(this).attr('href'),
 
+	top = $(id).offset().top;
+	$('body,html').animate({scrollTop: top}, 1000);
+	if (top < 30 && top > -30 && currentHash != id) {
+		window.location.id = (id);
+		currentHash = id;
+	}
 	if ($(this).parent().hasClass('')) {
 		$('header .navbar .main-menu > ul li').attr('class', '');
 		$(this).parent().attr('class', 'active');
-	}
-	var id = $(this).attr("href");
-	if ($(id).length > 0) {
-		e.preventDefault();
-		controller.scrollTo(id);
-
-		if (window.history && window.history.pushState) {
-			history.pushState("", document.title, id);
-		}
 	}
 });
 
@@ -192,10 +193,10 @@ $('.main_screen').css({paddingTop: header})
 
 if(window.matchMedia('(min-width: 768px)').matches)
 {
-$('.main_screen #wreath').css({minHeight: '100vh'}).css({minHeight: '-=' + header*2})
-main_screen__height = $('.main_screen').outerHeight()
-$('main').css({paddingTop: main_screen__height})
-$('.main_screen').css({position: 'fixed'})
+	$('.main_screen #wreath').css({minHeight: '100vh'}).css({minHeight: '-=' + header*2})
+	main_screen__height = $('.main_screen').outerHeight()
+	$('main').css({paddingTop: main_screen__height})
+	$('.main_screen').css({position: 'fixed'})
 }
 // инициализация наезда блока
 
