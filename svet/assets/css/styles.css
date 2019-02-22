@@ -4481,7 +4481,10 @@ flex-direction: column; } }
     .search__input:-ms-input-placeholder {
 
       color: #969696; }
-
+#SearchActionForm {
+  display: flex;
+align-items: center;
+}
   .search__submit {
 
     width: 17px;
@@ -4492,11 +4495,11 @@ flex-direction: column; } }
 
     padding: 0;
 
-    position: absolute;
+    position: relative;
 
-    top: 4px;
+    top: 0px;
 
-    right: 8px;
+    right: 25px;
 
     background: none; }
 
