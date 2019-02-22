@@ -19,12 +19,27 @@ $(document).ready(function(){
         getTypesHeight();
 
     });
+// Мобильный показ фильтра товаров
 
+var arr = ['Скрыть фильтр', 'Показать фильтр'],
+i = 0;
+var btnFilter = $('a.btn_filter');
+btnFilter.on('click', function(e){
+    $(this).html(arr[i++ % 2])
+        $(this).siblings('.layout__sidebar').toggleClass('active');
+        e.preventDefault()
+        return false;
+    })
 
+if(window.matchMedia('(min-width: 993px)').matches)
+{
+	$(window).resize(function(){
     $(".filter").sticky({
         bottomSpacing: 342,
         topSpacing: 106
     })
+ })
+}
     $("header").sticky({
         zIndex :  9999 
     })
