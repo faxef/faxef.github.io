@@ -4494,12 +4494,7 @@ flex-direction: column; } }
     border: 0;
 
     padding: 0;
-
-    position: relative;
-
-    top: 0px;
-
-    right: 25px;
+    transform: translateX(-150%);
 
     background: none; }
 
