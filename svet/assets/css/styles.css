@@ -4456,9 +4456,7 @@ flex-direction: column; } }
 
     padding: 0 5px;
 
-    border: 1px solid #bbd897;
-
-    border-radius: 5px;
+    border: none;
 
     font-size: 14px;
 
@@ -4484,6 +4482,8 @@ flex-direction: column; } }
       #SearchActionForm {
         display: flex;
         align-items: center;
+        border: 1px solid #bbd897;
+      border-radius: 20px;
       }
   .search__submit {
 
@@ -4494,7 +4494,6 @@ flex-direction: column; } }
     border: 0;
 
     padding: 0;
-    transform: translateX(-150%);
 
     background: none; }
 
