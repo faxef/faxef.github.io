@@ -4459,8 +4459,10 @@ flex-direction: column; } }
     border: none;
 
     font-size: 14px;
+    border-radius: 20px;
+    color: #222; 
 
-    color: #222; }
+  }
     .search > p.search__worktime {
     	margin-bottom: 0;
     }
@@ -4484,6 +4486,7 @@ flex-direction: column; } }
         align-items: center;
         border: 1px solid #bbd897;
       border-radius: 20px;
+      padding: 0px 10px;
       }
   .search__submit {
 
