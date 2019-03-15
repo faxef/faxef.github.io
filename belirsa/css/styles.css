@@ -39,6 +39,19 @@ header {
   width: 100%;
   top: 0px;
   z-index: 9999; }
+  header .lang_box {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 99999; }
+    header .lang_box a {
+      display: block;
+      padding: 6px;
+      background: #3C3A40;
+      border-radius: 10px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px; }
   header .logo {
     display: -ms-flexbox;
     display: flex;
@@ -421,21 +434,22 @@ main {
         z-index: 316; }
         main .second_screen .tabs_gallery .gallery .gallery__block {
           position: absolute;
+          display: none;
           top: 0;
           opacity: 0;
           width: 100%;
           padding: 30px;
           background-color: #08507b;
-          display: -moz-flex;
-          display: -ms-flex;
-          display: -o-flex;
-          display: -ms-flexbox;
-          display: flex;
           -ms-flex-wrap: wrap;
               flex-wrap: wrap;
           transition: opacity 0.7s ease;
           z-index: -1; }
           main .second_screen .tabs_gallery .gallery .gallery__block.active {
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: -ms-flexbox;
+            display: flex;
             opacity: 1;
             margin-top: 0%;
             position: relative; }
@@ -552,6 +566,7 @@ main {
         padding: 30px 15px 0; } }
     main .fourth_screen .title {
       margin-bottom: 40px;
+      min-height: 60px;
       line-height: 43px;
       text-align: center;
       font-size: 36px;
@@ -577,10 +592,10 @@ main {
             width: calc(100% / 3 - 15px); } }
         @media all and (max-width: 991px) {
           main .fourth_screen .items .item {
-            width: calc(100%/2 - 10px); } }
+            width: calc(100%/2); } }
         @media all and (max-width: 576px) {
           main .fourth_screen .items .item {
-            width: calc(100%/1 - 10px); } }
+            width: calc(100%/1); } }
         main .fourth_screen .items .item .image {
           width: 100%;
           height: 205px; }
@@ -878,3 +893,95 @@ footer {
         color: #FFFFFF;
         font-family: open-sans, sans-serif;
         font-weight: 400; }
+
+body.overlay:before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 8;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 3s;
+  z-index: 9999; }
+
+#callback {
+  transform: translateY(-300%);
+  transition: all 1100ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999; }
+  @media all and (max-width: 576px) {
+    #callback {
+      margin: 0 auto;
+      width: 100%; } }
+  #callback h2 {
+    line-height: 29px;
+    text-align: center;
+    font-size: 24px;
+    color: #FFFFFF;
+    font-family: open-sans, sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px; }
+  #callback form {
+    background: #a1b6c9;
+    padding: 20px;
+    width: 30%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+    @media all and (max-width: 1199px) {
+      #callback form {
+        width: 40%; } }
+    @media all and (max-width: 767px) {
+      #callback form {
+        width: 60%; } }
+    @media all and (max-width: 576px) {
+      #callback form {
+        width: 80%; } }
+    #callback form .field {
+      position: relative;
+      margin: 10px 0; }
+      #callback form .field input {
+        padding-left: 10px;
+        width: 100%;
+        height: 30px;
+        border: 1px solid #ffa3a3; }
+        #callback form .field input:focus + label {
+          display: none; }
+      #callback form .field label {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(10px, -50%); }
+    #callback form .field__button {
+      margin-top: 40px; }
+      #callback form .field__button button {
+        width: 100%;
+        border-color: transparent;
+        background-color: #C83649;
+        border-radius: 2px;
+        line-height: 16px;
+        text-align: center;
+        font-size: 16px;
+        color: #E4CAA5;
+        font-family: open-sans, sans-serif;
+        font-weight: 600;
+        padding: 5px 15px;
+        transition: all 0.4s ease;
+        cursor: pointer; }
+        #callback form .field__button button:hover {
+          color: #C83649;
+          background-color: #E4CAA5; }
+    #callback form .close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translate(-10px, 10px);
+      cursor: pointer;
+      font-size: 25px; }
