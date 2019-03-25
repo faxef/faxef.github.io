@@ -5,8 +5,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>To do</title>
-	<link rel="stylesheet" href="css/grid24.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/grid24.css">
+	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
@@ -40,115 +42,261 @@
 									<h2>Список звонков</h2>
 								</div>
 							</div>
+							<div class="column_tabs call_tabs">
+								<div class="tab active">Входящие</div>
+								<div class="tab">Исходящие</div>
+								<div class="tab">Общие</div>
+							</div>
 							<div class="column_body">
-								<div class="call_tabs tabs">
-									<div class="tab active">Входящие (21)</div>
-									<div class="tab">Исходящие</div>
-									<div class="tab">Общие</div>
-								</div>
 								<div class="call_lists lists">
 									<div class="call_list list active">
 										<div class="call">
-											<div class="call_title">Номер первый</div>
+											<div class="call_title">
+												<div class="phone">+375(25)123-45-56</div>
+												<div class="date">23.04.19 на 16-30</div>
+											</div>
 											<div class="call_content">
-												<div class="content_option article">
-													<div class="title">Артикул: </div>
-													<div class="content">11111111</div>
-												</div>
-												<div class="content_option toy_name">
-													<div class="title">Название игрушки: </div>
-													<div class="content">Игрушка 21</div>
-												</div>
+												<div class="content_option edit"><i class="far fa-edit"></i></div>
 												<div class="content_option record">
 													<div class="title">Запись разговора: </div>
 													<div class="content">---------------</div>
 												</div>
+												<div class="content_option article">
+													<div class="title">Артикул: </div>
+													<div class="content">14FB894</div>
+												</div>
+												<div class="content_option toy_name">
+													<div class="title">Название игрушки: </div>
+													<div class="content">Мягкая игрушка</div>
+												</div>
 												<div class="content_option phone">
 													<div class="title">Телефон: </div>
-													<div class="content">+375 25 169 99 89</div>
+													<div class="content"><i class="fas fa-sms"></i> +375 25 169 99 89</div>
 												</div>
 												<div class="content_option call_time">
-													<div class="title">Время: </div>
-													<div class="content">23.04.2011</div>
+													<div class="title">Дата и время <br> доставки: </div>
+													<div class="content">23.04.19 на 16-30</div>
+												</div>
+												<div class="content_option price">
+													<div class="title">Цена</div>
+													<div class="content">190 BYN</div>
+												</div>
+												<div class="content_option comment">
+													<div class="title">Комментарий</div>
+													<div class="content"></div>
+												</div>
+												<div class="content_option comment_input">
+													<textarea class="" name="comment" cols="30" rows="3" placeholder="Оставьте комментарий к звонку"></textarea>
+													<a href="">Сохранить</a>
+												</div>
+											</div>
+										</div>
+										<div class="call">
+											<div class="call_title">
+												<div class="phone">+375(25)123-45-56</div>
+												<div class="date">23.04.19 на 16-30</div>
+											</div>
+											<div class="call_content">
+												<div class="content_option edit"><i class="far fa-edit"></i></div>
+												<div class="content_option record">
+													<div class="title">Запись разговора: </div>
+													<div class="content">---------------</div>
+												</div>
+												<div class="content_option article">
+													<div class="title">Артикул: </div>
+													<div class="content">14FB894</div>
+												</div>
+												<div class="content_option toy_name">
+													<div class="title">Название игрушки: </div>
+													<div class="content">Мягкая игрушка</div>
+												</div>
+												<div class="content_option phone">
+													<div class="title">Телефон: </div>
+													<div class="content"><i class="fas fa-sms"></i> +375 25 169 99 89</div>
+												</div>
+												<div class="content_option call_time">
+													<div class="title">Дата и время <br> доставки: </div>
+													<div class="content">23.04.19 на 16-30</div>
+												</div>
+												<div class="content_option price">
+													<div class="title">Цена</div>
+													<div class="content">190 BYN</div>
+												</div>
+												<div class="content_option comment">
+													<div class="title">Комментарий</div>
+													<div class="content"></div>
+												</div>
+												<div class="content_option comment_input">
+													<textarea class="" name="comment" cols="30" rows="3" placeholder="Оставьте комментарий к звонку"></textarea>
+													<a href="">Сохранить</a>
+												</div>
+											</div>
+										</div>
+										<div class="call">
+											<div class="call_title">
+												<div class="phone">+375(25)123-45-56</div>
+												<div class="date">23.04.19 на 16-30</div>
+											</div>
+											<div class="call_content">
+												<div class="content_option edit"><i class="far fa-edit"></i></div>
+												<div class="content_option record">
+													<div class="title">Запись разговора: </div>
+													<div class="content">---------------</div>
+												</div>
+												<div class="content_option article">
+													<div class="title">Артикул: </div>
+													<div class="content">14FB894</div>
+												</div>
+												<div class="content_option toy_name">
+													<div class="title">Название игрушки: </div>
+													<div class="content">Мягкая игрушка</div>
+												</div>
+												<div class="content_option phone">
+													<div class="title">Телефон: </div>
+													<div class="content"><i class="fas fa-sms"></i> +375 25 169 99 89</div>
+												</div>
+												<div class="content_option call_time">
+													<div class="title">Дата и время <br> доставки: </div>
+													<div class="content">23.04.19 на 16-30</div>
+												</div>
+												<div class="content_option price">
+													<div class="title">Цена</div>
+													<div class="content">190 BYN</div>
+												</div>
+												<div class="content_option comment">
+													<div class="title">Комментарий</div>
+													<div class="content"></div>
+												</div>
+												<div class="content_option comment_input">
+													<textarea class="" name="comment" cols="30" rows="3" placeholder="Оставьте комментарий к звонку"></textarea>
+													<a href="">Сохранить</a>
 												</div>
 											</div>
 										</div>
 									</div>
 									<div class="call_list list">
 										<div class="call">
-											<div class="call_title">Номер второй</div>
+											<div class="call_title">
+												<div class="phone">+375(25)123-45-56</div>
+												<div class="date">23.04.19 на 16-30</div>
+											</div>
 											<div class="call_content">
-												<div class="content_option article">
-													<div class="title">Артикул: </div>
-													<div class="content">00000000</div>
-												</div>
-												<div class="content_option toy_name">
-													<div class="title">Название игрушки: </div>
-													<div class="content">Игрушка 1</div>
-												</div>
+												<div class="content_option edit"><i class="far fa-edit"></i></div>
 												<div class="content_option record">
 													<div class="title">Запись разговора: </div>
 													<div class="content">---------------</div>
 												</div>
+												<div class="content_option article">
+													<div class="title">Артикул: </div>
+													<div class="content">14FB894</div>
+												</div>
+												<div class="content_option toy_name">
+													<div class="title">Название игрушки: </div>
+													<div class="content">Мягкая игрушка</div>
+												</div>
 												<div class="content_option phone">
 													<div class="title">Телефон: </div>
-													<div class="content">+375 999 99 99</div>
+													<div class="content"><i class="fas fa-sms"></i> +375 25 169 99 89</div>
 												</div>
 												<div class="content_option call_time">
-													<div class="title">Время: </div>
-													<div class="content">13.04.2019</div>
+													<div class="title">Дата и время <br> доставки: </div>
+													<div class="content">23.04.19 на 16-30</div>
+												</div>
+												<div class="content_option price">
+													<div class="title">Цена</div>
+													<div class="content">190 BYN</div>
+												</div>
+												<div class="content_option comment">
+													<div class="title">Комментарий</div>
+													<div class="content"></div>
+												</div>
+												<div class="content_option comment_input">
+													<textarea class="" name="comment" cols="30" rows="3" placeholder="Оставьте комментарий к звонку"></textarea>
+													<a href="">Сохранить</a>
 												</div>
 											</div>
 										</div>
 									</div>
 									<div class="call_list list">
 										<div class="call">
-											<div class="call_title">Номер первый</div>
-											<div class="call_content show">
-												<div class="content_option article">
-													<div class="title">Артикул: </div>
-													<div class="content">11111111</div>
-												</div>
-												<div class="content_option toy_name">
-													<div class="title">Название игрушки: </div>
-													<div class="content">Игрушка 21</div>
-												</div>
+											<div class="call_title">
+												<div class="phone">+375(25)123-45-56</div>
+												<div class="date">23.04.19 на 16-30</div>
+											</div>
+											<div class="call_content">
+												<div class="content_option edit"><i class="far fa-edit"></i></div>
 												<div class="content_option record">
 													<div class="title">Запись разговора: </div>
 													<div class="content">---------------</div>
 												</div>
+												<div class="content_option article">
+													<div class="title">Артикул: </div>
+													<div class="content">14FB894</div>
+												</div>
+												<div class="content_option toy_name">
+													<div class="title">Название игрушки: </div>
+													<div class="content">Мягкая игрушка</div>
+												</div>
 												<div class="content_option phone">
 													<div class="title">Телефон: </div>
-													<div class="content">+375 25 169 99 89</div>
+													<div class="content"><i class="fas fa-sms"></i> +375 25 169 99 89</div>
 												</div>
 												<div class="content_option call_time">
-													<div class="title">Время: </div>
-													<div class="content">23.04.2011</div>
+													<div class="title">Дата и время <br> доставки: </div>
+													<div class="content">23.04.19 на 16-30</div>
+												</div>
+												<div class="content_option price">
+													<div class="title">Цена</div>
+													<div class="content">190 BYN</div>
+												</div>
+												<div class="content_option comment">
+													<div class="title">Комментарий</div>
+													<div class="content"></div>
+												</div>
+												<div class="content_option comment_input">
+													<textarea class="" name="comment" cols="30" rows="3" placeholder="Оставьте комментарий к звонку"></textarea>
+													<a href="">Сохранить</a>
 												</div>
 											</div>
 										</div>
 										<div class="call">
-											<div class="call_title">Номер второй</div>
+											<div class="call_title">
+												<div class="phone">+375(25)123-45-56</div>
+												<div class="date">23.04.19 на 16-30</div>
+											</div>
 											<div class="call_content">
-												<div class="content_option article">
-													<div class="title">Артикул: </div>
-													<div class="content">00000000</div>
-												</div>
-												<div class="content_option toy_name">
-													<div class="title">Название игрушки: </div>
-													<div class="content">Игрушка 1</div>
-												</div>
+												<div class="content_option edit"><i class="far fa-edit"></i></div>
 												<div class="content_option record">
 													<div class="title">Запись разговора: </div>
 													<div class="content">---------------</div>
 												</div>
+												<div class="content_option article">
+													<div class="title">Артикул: </div>
+													<div class="content">14FB894</div>
+												</div>
+												<div class="content_option toy_name">
+													<div class="title">Название игрушки: </div>
+													<div class="content">Мягкая игрушка</div>
+												</div>
 												<div class="content_option phone">
 													<div class="title">Телефон: </div>
-													<div class="content">+375 999 99 99</div>
+													<div class="content"><i class="fas fa-sms"></i> +375 25 169 99 89</div>
 												</div>
 												<div class="content_option call_time">
-													<div class="title">Время: </div>
-													<div class="content">13.04.2019</div>
+													<div class="title">Дата и время <br> доставки: </div>
+													<div class="content">23.04.19 на 16-30</div>
+												</div>
+												<div class="content_option price">
+													<div class="title">Цена</div>
+													<div class="content">190 BYN</div>
+												</div>
+												<div class="content_option comment">
+													<div class="title">Комментарий</div>
+													<div class="content"></div>
+												</div>
+												<div class="content_option comment_input">
+													<textarea class="" name="comment" cols="30" rows="3" placeholder="Оставьте комментарий к звонку"></textarea>
+													<a href="">Сохранить</a>
 												</div>
 											</div>
 										</div>
@@ -164,12 +312,14 @@
 									<h2>Заказы</h2>
 								</div>
 							</div>
+							<div class="column_tabs date_tabs">
+								<div class="prev_yesterday_date tab">11.05.2019</div>
+								<div class="yesterday_date tab">12.05.2019</div>
+								<div class="current_date tab active">13.05.2019</div>
+								<div class="tomorrow_date tab">14.05.2019</div>
+								<div class="next_tomorrow_date tab">15.05.2019</div>
+							</div>
 							<div class="column_body">
-								<div class="date_tabs tabs">
-									<div class="yesterday_date tab">12.05.2019</div>
-									<div class="current_date tab active">13.05.2019</div>
-									<div class="tomorrow_date tab">14.05.2019</div>
-								</div>
 								<div class="delivery_lists lists">
 									<div class="delivery_time_title">
 										<div class="time_title">
@@ -181,49 +331,179 @@
 									</div>
 									<div class="yestarday_delivery delivery_list list">
 										<div class="delivery_after delivery_time">
-											<div class="call">
-												<div class="call_title">Номер второй</div>
-												<div class="call_content">
-													<div class="content_option article">
-														<div class="text">Артикул: </div>
-														<div class="content">11111111</div>
-													</div>
-													<div class="content_option toy_name">
-														<div class="text">Название игрушки: </div>
-														<div class="content">Игрушка 21</div>
-													</div>
-													<div class="content_option phone">
-														<div class="text">Телефон: </div>
-														<div class="content">+375 25 169 99 89</div>
-													</div>
-													<div class="content_option adress">
-														<div class="text">Адрес</div>
-														<div class="content">г.Минск, ул.Улица, д.22</div>
-													</div>
-												</div>
-											</div>
 										</div>
 									</div>
 									<div class="today_delivery delivery_list list active">
 										<div class="delivery_before delivery_time">
 											<div class="call">
-												<div class="call_title">Номер первый</div>
+												<div class="call_title">
+													<div class="phone">+375(25)123-45-56</div>
+													<div class="date">23.04.19 на 16-30</div>
+													<div class="adress">г.Минск, ул. Уличная, д.29</div>
+													<div class="price">190 BYN</div>
+												</div>
 												<div class="call_content">
+													<div class="content_option edit"><i class="far fa-edit"></i></div>
+													<div class="content_option record">
+														<div class="title">Запись разговора: </div>
+														<div class="content">---------------</div>
+													</div>
 													<div class="content_option article">
-														<div class="text">Артикул: </div>
-														<div class="content">11111111</div>
+														<div class="title">Артикул: </div>
+														<div class="content">14FB894</div>
 													</div>
 													<div class="content_option toy_name">
-														<div class="text">Название игрушки: </div>
-														<div class="content">Игрушка 21</div>
+														<div class="title">Название игрушки: </div>
+														<div class="content">Мягкая игрушка</div>
 													</div>
 													<div class="content_option phone">
-														<div class="text">Телефон: </div>
-														<div class="content">+375 25 169 99 89</div>
+														<div class="title">Телефон: </div>
+														<div class="content"><i class="fas fa-sms"></i> +375 25 169 99 89</div>
 													</div>
-													<div class="content_option adress">
-														<div class="text">Адрес</div>
-														<div class="content">г.Минск, ул.Улица, д.22</div>
+													<div class="content_option call_time">
+														<div class="title">Дата и время <br> доставки: </div>
+														<div class="content">23.04.19 на 16-30</div>
+													</div>
+													<div class="content_option price">
+														<div class="title">Цена</div>
+														<div class="content">190 BYN</div>
+													</div>
+													<div class="content_option comment">
+														<div class="title">Комментарий</div>
+														<div class="content"></div>
+													</div>
+													<div class="content_option comment_input">
+														<textarea class="" name="comment" cols="30" rows="3" placeholder="Оставьте комментарий к звонку"></textarea>
+														<a href="">Сохранить</a>
+													</div>
+												</div>
+											</div>
+											<div class="call">
+												<div class="call_title">
+													<div class="phone">+375(25)123-45-56</div>
+													<div class="date">23.04.19 на 16-30</div>
+													<div class="adress">г.Минск, ул. Уличная, д.29</div>
+													<div class="price">190 BYN</div>
+												</div>
+												<div class="call_content">
+													<div class="content_option edit"><i class="far fa-edit"></i></div>
+													<div class="content_option record">
+														<div class="title">Запись разговора: </div>
+														<div class="content">---------------</div>
+													</div>
+													<div class="content_option article">
+														<div class="title">Артикул: </div>
+														<div class="content">14FB894</div>
+													</div>
+													<div class="content_option toy_name">
+														<div class="title">Название игрушки: </div>
+														<div class="content">Мягкая игрушка</div>
+													</div>
+													<div class="content_option phone">
+														<div class="title">Телефон: </div>
+														<div class="content"><i class="fas fa-sms"></i> +375 25 169 99 89</div>
+													</div>
+													<div class="content_option call_time">
+														<div class="title">Дата и время <br> доставки: </div>
+														<div class="content">23.04.19 на 16-30</div>
+													</div>
+													<div class="content_option price">
+														<div class="title">Цена</div>
+														<div class="content">190 BYN</div>
+													</div>
+													<div class="content_option comment">
+														<div class="title">Комментарий</div>
+														<div class="content"></div>
+													</div>
+													<div class="content_option comment_input">
+														<textarea class="" name="comment" cols="30" rows="3" placeholder="Оставьте комментарий к звонку"></textarea>
+														<a href="">Сохранить</a>
+													</div>
+												</div>
+											</div>
+											<div class="call">
+												<div class="call_title">
+													<div class="phone">+375(25)123-45-56</div>
+													<div class="date">23.04.19 на 16-30</div>
+													<div class="adress">г.Минск, ул. Уличная, д.29</div>
+													<div class="price">190 BYN</div>
+												</div>
+												<div class="call_content">
+													<div class="content_option edit"><i class="far fa-edit"></i></div>
+													<div class="content_option record">
+														<div class="title">Запись разговора: </div>
+														<div class="content">---------------</div>
+													</div>
+													<div class="content_option article">
+														<div class="title">Артикул: </div>
+														<div class="content">14FB894</div>
+													</div>
+													<div class="content_option toy_name">
+														<div class="title">Название игрушки: </div>
+														<div class="content">Мягкая игрушка</div>
+													</div>
+													<div class="content_option phone">
+														<div class="title">Телефон: </div>
+														<div class="content"><i class="fas fa-sms"></i> +375 25 169 99 89</div>
+													</div>
+													<div class="content_option call_time">
+														<div class="title">Дата и время <br> доставки: </div>
+														<div class="content">23.04.19 на 16-30</div>
+													</div>
+													<div class="content_option price">
+														<div class="title">Цена</div>
+														<div class="content">190 BYN</div>
+													</div>
+													<div class="content_option comment">
+														<div class="title">Комментарий</div>
+														<div class="content"></div>
+													</div>
+													<div class="content_option comment_input">
+														<textarea class="" name="comment" cols="30" rows="3" placeholder="Оставьте комментарий к звонку"></textarea>
+														<a href="">Сохранить</a>
+													</div>
+												</div>
+											</div>
+											<div class="call">
+												<div class="call_title">
+													<div class="phone">+375(25)123-45-56</div>
+													<div class="date">23.04.19 на 16-30</div>
+													<div class="adress">г.Минск, ул. Уличная, д.29</div>
+													<div class="price">190 BYN</div>
+												</div>
+												<div class="call_content">
+													<div class="content_option edit"><i class="far fa-edit"></i></div>
+													<div class="content_option record">
+														<div class="title">Запись разговора: </div>
+														<div class="content">---------------</div>
+													</div>
+													<div class="content_option article">
+														<div class="title">Артикул: </div>
+														<div class="content">14FB894</div>
+													</div>
+													<div class="content_option toy_name">
+														<div class="title">Название игрушки: </div>
+														<div class="content">Мягкая игрушка</div>
+													</div>
+													<div class="content_option phone">
+														<div class="title">Телефон: </div>
+														<div class="content"><i class="fas fa-sms"></i> +375 25 169 99 89</div>
+													</div>
+													<div class="content_option call_time">
+														<div class="title">Дата и время <br> доставки: </div>
+														<div class="content">23.04.19 на 16-30</div>
+													</div>
+													<div class="content_option price">
+														<div class="title">Цена</div>
+														<div class="content">190 BYN</div>
+													</div>
+													<div class="content_option comment">
+														<div class="title">Комментарий</div>
+														<div class="content"></div>
+													</div>
+													<div class="content_option comment_input">
+														<textarea class="" name="comment" cols="30" rows="3" placeholder="Оставьте комментарий к звонку"></textarea>
+														<a href="">Сохранить</a>
 													</div>
 												</div>
 											</div>
@@ -231,50 +511,8 @@
 									</div>
 									<div class="tomorrow_delivery delivery_list list">
 										<div class="delivery_after delivery_time">
-											<div class="call">
-												<div class="call_title">Номер первый</div>
-												<div class="call_content">
-													<div class="content_option article">
-														<div class="text">Артикул: </div>
-														<div class="content">11111111</div>
-													</div>
-													<div class="content_option toy_name">
-														<div class="text">Название игрушки: </div>
-														<div class="content">Игрушка 21</div>
-													</div>
-													<div class="content_option phone">
-														<div class="text">Телефон: </div>
-														<div class="content">+375 25 169 99 89</div>
-													</div>
-													<div class="content_option adress">
-														<div class="text">Адрес</div>
-														<div class="content">г.Минск, ул.Улица, д.22</div>
-													</div>
-												</div>
-											</div>
 										</div>
 										<div class="delivery_before delivery_time">
-											<div class="call">
-												<div class="call_title">Номер второй</div>
-												<div class="call_content">
-													<div class="content_option article">
-														<div class="text">Артикул: </div>
-														<div class="content">11111111</div>
-													</div>
-													<div class="content_option toy_name">
-														<div class="text">Название игрушки: </div>
-														<div class="content">Игрушка 21</div>
-													</div>
-													<div class="content_option phone">
-														<div class="text">Телефон: </div>
-														<div class="content">+375 25 169 99 89</div>
-													</div>
-													<div class="content_option adress">
-														<div class="text">Адрес</div>
-														<div class="content">г.Минск, ул.Улица, д.22</div>
-													</div>
-												</div>
-											</div>
 										</div>
 									</div>
 								</div>
@@ -291,31 +529,36 @@
 							<div class="column_body">
 								<div class="call_lists lists">
 									<div class="call_list list active">
-										<div class="call">
-											<div class="call_title">Номер первый</div>
-											<div class="call_content">
-												<div class="content_option article">
-													<div class="title">Артикул: </div>
-													<div class="content">11111111</div>
-												</div>
-												<div class="content_option toy_name">
-													<div class="title">Название игрушки: </div>
-													<div class="content">Игрушка 21</div>
-												</div>
-												<div class="content_option record">
-													<div class="title">Запись разговора: </div>
-													<div class="content">---------------</div>
-												</div>
-												<div class="content_option phone">
-													<div class="title">Телефон: </div>
-													<div class="content">+375 25 169 99 89</div>
-												</div>
-												<div class="content_option call_time">
-													<div class="title">Время: </div>
-													<div class="content">23.04.2011</div>
-												</div>
-											</div>
-										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="column_wrapper">
+							<div class="column_header">	
+								<div class="column_title">
+									<h2>Выполнено</h2>
+								</div>
+							</div>
+							<div class="column_body">
+								<div class="call_lists lists">
+									<div class="call_list list active">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="column_wrapper">
+							<div class="column_header">	
+								<div class="column_title">
+									<h2>Архив</h2>
+								</div>
+							</div>
+							<div class="column_body">
+								<div class="call_lists lists">
+									<div class="call_list list active">
 									</div>
 								</div>
 							</div>
@@ -326,6 +569,7 @@
 		</div>
 	</div>
 	<script src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script src="js/custom.js"></script>
 </body>
 </html>
