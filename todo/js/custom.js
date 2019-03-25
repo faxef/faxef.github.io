@@ -1,6 +1,11 @@
 $(document).ready(function(){
 	// Открытие вкладок(табов)
-	$('.column_tabs .tab').on('click', function (){
+	$('.call_tabs .tab').on('click', function (){
+		$(this).addClass('active').siblings().removeClass('active')
+		$(this).closest('.column_tabs').siblings('.column_body').find('.list').removeClass('active').eq($(this).index()).addClass('active');
+	});
+	// Открытие вкладок(табов) календаря
+	$('.date_tabs .tab').on('click', function (){
 		console.log($(this).data("slick-index"))
 		$(this).addClass('active').siblings().removeClass('active')
 		$(this).closest('.column_tabs').siblings('.column_body').find('.list').removeClass('active').eq($(this).data("slick-index")).addClass('active');
