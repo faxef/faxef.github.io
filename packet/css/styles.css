@@ -235,9 +235,8 @@ body .body_wrapper {
             body .body_wrapper .base_creation .products .products_header form fieldset + fieldset {
               margin-top: 10px; }
             body .body_wrapper .base_creation .products .products_header form fieldset input[type="text"] {
-              width: 100%;
-              padding: 5px;
-              text-align: center; }
+              width: 90%;
+              padding: 5px; }
             body .body_wrapper .base_creation .products .products_header form fieldset select {
               width: 85%;
               padding: 5px;
@@ -257,7 +256,9 @@ body .body_wrapper {
         background: #e3ffc9; }
       body .body_wrapper .base_creation .products .products_body .search_results .product_lists {
         border: 1px solid #dfe3e6;
-        padding: 10px 0; }
+        padding: 10px 0;
+        overflow-y: scroll;
+        max-height: 210px; }
         body .body_wrapper .base_creation .products .products_body .search_results .product_lists .product {
           padding: 5px 25px;
           border-bottom: 1px solid #dfe3e6;

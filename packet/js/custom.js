@@ -20,4 +20,10 @@ $(document).ready(function(){
 	$('.products .product_lists .product').on('click', function(){
 		$(this).toggleClass('selected')
 	})
+	$('a.product_select').on('click', function(){
+		console.log($(this).siblings('.products_body').find('.product.selected'))
+		var selected = $(this).siblings('.products_body').find('.product.selected').clone();
+		selected.appendTo('.group.active');
+		
+	})
 })
