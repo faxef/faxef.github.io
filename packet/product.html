@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>To do</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="body_wrapper">
+		<div class="base_creation">
+			<div class="markets">
+				<div class="markets_header">
+					<form>
+						<fieldset class="marketTitle">
+							<label for="marketName">Название рынка:</label>
+							<input type="text" id="marketName" name="marketName">
+						</fieldset>
+						<fieldset class="marketDescription">
+							<label for="description">Описание рынка:</label>
+							<textarea name="description" id="description" cols="30" rows="4"></textarea>
+						</fieldset>
+						<input class="btn_red" type="submit" value="Добавить рынок">
+					</form>
+				</div>
+				<div class="markets_body">
+					<div class="market">
+						<div class="market_title">
+							<div class="wrench icon"><i class="fas fa-wrench"></i></div>
+							<h2>Название рынка</h2>
+							<div class="delete icon"><i class="fas fa-trash-alt"></i></div>
+						</div>
+						<div class="market_content">
+							<div class="market_description">Описание рынкаОписание рынкаОписание рынкаОписание рынкаОписание рынкаОписание рынкаОписание рынкаОписание рынкаОписание рынкаОписание рынка</div>
+							<div class="market_groups">
+								<div class="groups_header">
+									<form>
+										<label for="groupName">Название группы:</label>
+										<input type="text" id="groupName" name="groupName"><input class="btn_red" type="submit" value="Добавить группу">
+									</form>
+								</div>
+								<div class="groups_content">
+									<div class="groups_content_tabs">
+										<div class="tab active">Группа 1</div>
+										<div class="tab">Группа 2</div>
+										<div class="tab">Группа 3</div>
+									</div>
+									<div class="groups">
+										<div class="group active">Группа 1</div>
+										<div class="group">Группа 2</div>
+										<div class="group">Группа 3</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="products">
+				<div class="products_header">
+					<h2>Продукты</h2>
+					<form>
+						<fieldset>
+							<label for="region">Регион:</label>
+							<select name="region" id="region">
+								<option selected size="2" disabled>Выберите регион</option>
+								<option value="Регион 1">Регион 1</option>
+								<option value="Регион 2">Регион 2</option>
+								<option value="Регион 3">Регион 3</option>
+								<option value="Регион 4">Регион 4</option>
+								<option value="Регион 5">Регион 5</option>
+							</select>
+						</fieldset>
+						<fieldset>
+							<label for="supplier">Производитель:</label>
+							<select name="supplier" id="supplier">
+								<option selected size="2" disabled>Выберите производителя</option>
+								<option value="Производитель 1">Производитель 1</option>
+								<option value="Производитель 2">Производитель 2</option>
+								<option value="Производитель 3">Производитель 3</option>
+								<option value="Производитель 4">Производитель 4</option>
+								<option value="Производитель 5">Производитель 5</option>
+							</select>
+						</fieldset>
+						<fieldset>
+							<label for="productName">Фильтр:</label>
+							<select name="productName" id="productName">
+								<option selected size="2" disabled>Выберите совпадение:</option>
+								<option value="like">Имя должно включать</option>
+								<option value="notLike">Имя не должно включать</option>
+							</select>
+						</fieldset>
+						<input type="submit" class="btn_red" value="Применить">
+					</form>
+				</div>
+				<div class="products_body">
+					<div class="search_results">
+						<div class="resuts_count">
+							<div class="old">Найдено продуктов: 1298</div>
+							<div class="new">Новых продуктов: 189</div>
+						</div>
+						<div class="product_lists">
+							<div class="product selected">АптекаN12 - Атпека ООО, Минск, ул. Уличная, д.67</div>	
+							<div class="product">АптекаN12 - Атпека ООО, Минск, ул. Уличная, д.67</div>	
+							<div class="product">АптекаN12 - Атпека ООО, Минск, ул. Уличная, д.67</div>	
+							<div class="product">АптекаN12 - Атпека ООО, Минск, ул. Уличная, д.67</div>	
+						</div>
+					</div>
+				</div>
+				<a class="product_select btn_red">Выбрать</a>
+			</div>
+		</div>
+		<div class="btns">
+			<a href="#" class="createReport btn_red">Создать отчет</a>
+			<a href="#" class="createReport btn_red">Сохранить отчет</a>
+		</div>
+	</div>
+	<script src="js/scripts.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+</html>

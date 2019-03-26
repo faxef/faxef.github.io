@@ -16,6 +16,15 @@ img {
 html, body {
   height: 100%; }
 
+.btn_red {
+  cursor: pointer;
+  margin-left: 10px;
+  color: white;
+  background-color: #d76666;
+  border: none;
+  box-shadow: 3px 3px 4px -2px black;
+  padding: 5px 10px; }
+
 body.overlay:before {
   content: '';
   position: fixed;
@@ -26,7 +35,8 @@ body.overlay:before {
 
 body .body_wrapper {
   background-color: #cbd1cd;
-  height: 100%; }
+  height: 100%;
+  padding: 1px; }
   body .body_wrapper .packets_content {
     background-image: url(../img/wrapper.jpg);
     padding: 45px 10px;
@@ -74,6 +84,200 @@ body .body_wrapper {
             left: 0px; }
           body .body_wrapper .packets_content .packet .packet_body .packet_list .delete {
             right: 0px; }
+  body .body_wrapper .base_creation {
+    margin: 40px 40px 0px;
+    border: 1px solid #b9b9b9;
+    background-color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center; }
+    body .body_wrapper .base_creation .markets {
+      background: #fff;
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #dfe3e6;
+      margin: 10px; }
+      body .body_wrapper .base_creation .markets .markets_header {
+        padding: 20px;
+        background: #dfe3e6; }
+        body .body_wrapper .base_creation .markets .markets_header form {
+          display: -moz-flex;
+          display: -ms-flex;
+          display: -o-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+          body .body_wrapper .base_creation .markets .markets_header form .btn_red {
+            margin-left: 0; }
+          body .body_wrapper .base_creation .markets .markets_header form fieldset {
+            width: 100%;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+                align-items: center; }
+            body .body_wrapper .base_creation .markets .markets_header form fieldset + fieldset {
+              margin: 10px 0; }
+            body .body_wrapper .base_creation .markets .markets_header form fieldset label {
+              width: 20%; }
+            body .body_wrapper .base_creation .markets .markets_header form fieldset textarea,
+            body .body_wrapper .base_creation .markets .markets_header form fieldset input[type="text"] {
+              width: 80%;
+              padding: 5px;
+              margin-left: 10px; }
+      body .body_wrapper .base_creation .markets .markets_body .market {
+        margin: 20px 0;
+        overflow: hidden; }
+        body .body_wrapper .base_creation .markets .markets_body .market .market_title {
+          position: relative;
+          cursor: pointer;
+          padding: 10px 50px;
+          background-color: #8f8f8f; }
+          body .body_wrapper .base_creation .markets .markets_body .market .market_title .icon {
+            position: absolute;
+            cursor: pointer;
+            color: white;
+            background-color: #d76666;
+            padding: 9px;
+            top: 50%;
+            transform: translateY(-50%); }
+            body .body_wrapper .base_creation .markets .markets_body .market .market_title .icon.wrench {
+              left: 0; }
+            body .body_wrapper .base_creation .markets .markets_body .market .market_title .icon.delete {
+              right: 0; }
+        body .body_wrapper .base_creation .markets .markets_body .market .market_content {
+          background-color: #dfe3e6;
+          min-height: 0;
+          max-height: 0;
+          opacity: 0;
+          transition: all 0.8s ease; }
+          body .body_wrapper .base_creation .markets .markets_body .market .market_content.show {
+            min-height: 50px;
+            max-height: 100vh;
+            opacity: 1; }
+          body .body_wrapper .base_creation .markets .markets_body .market .market_content .market_description {
+            padding: 10px 30px; }
+          body .body_wrapper .base_creation .markets .markets_body .market .market_content .market_groups {
+            padding: 10px 30px; }
+            body .body_wrapper .base_creation .markets .markets_body .market .market_content .market_groups .groups_header {
+              padding: 10px 0; }
+              body .body_wrapper .base_creation .markets .markets_body .market .market_content .market_groups .groups_header form {
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+                -ms-flex-align: center;
+                    align-items: center; }
+                body .body_wrapper .base_creation .markets .markets_body .market .market_content .market_groups .groups_header form input#groupName {
+                  width: 50%;
+                  padding: 5px; }
+            body .body_wrapper .base_creation .markets .markets_body .market .market_content .market_groups .groups_content .groups_content_tabs {
+              display: -moz-flex;
+              display: -ms-flex;
+              display: -o-flex;
+              display: -ms-flexbox;
+              display: flex; }
+              body .body_wrapper .base_creation .markets .markets_body .market .market_content .market_groups .groups_content .groups_content_tabs .tab {
+                background: #d76666;
+                cursor: pointer;
+                padding: 5px 20px;
+                color: white;
+                box-shadow: 2px 2px 5px -1px black; }
+                body .body_wrapper .base_creation .markets .markets_body .market .market_content .market_groups .groups_content .groups_content_tabs .tab.active {
+                  box-shadow: 1px 1px 8px -1px inset black; }
+                body .body_wrapper .base_creation .markets .markets_body .market .market_content .market_groups .groups_content .groups_content_tabs .tab + .tab {
+                  margin-left: 10px; }
+            body .body_wrapper .base_creation .markets .markets_body .market .market_content .market_groups .groups_content .groups .group {
+              display: none; }
+              body .body_wrapper .base_creation .markets .markets_body .market .market_content .market_groups .groups_content .groups .group.active {
+                display: block;
+                margin: 20px 0px;
+                background: white;
+                padding: 20px; }
+    body .body_wrapper .base_creation .products {
+      border: 1px solid #dfe3e6;
+      margin: 10px;
+      padding: 15px;
+      background: #fff;
+      width: 100%; }
+      body .body_wrapper .base_creation .products .products_header {
+        background-color: #dfe3e6;
+        padding: 20px; }
+        body .body_wrapper .base_creation .products .products_header h2 {
+          width: 100%;
+          padding: 5px;
+          text-align: center;
+          color: #d76666; }
+        body .body_wrapper .base_creation .products .products_header form {
+          margin-top: 10px;
+          display: -moz-flex;
+          display: -ms-flex;
+          display: -o-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+          -ms-flex-direction: column;
+          flex-direction: column; }
+          body .body_wrapper .base_creation .products .products_header form fieldset {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+                align-items: center;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+            body .body_wrapper .base_creation .products .products_header form fieldset + fieldset {
+              margin-top: 10px; }
+            body .body_wrapper .base_creation .products .products_header form fieldset input[type="text"] {
+              width: 100%;
+              padding: 5px;
+              text-align: center; }
+            body .body_wrapper .base_creation .products .products_header form fieldset select {
+              width: 85%;
+              padding: 5px;
+              margin-left: 10px; }
+          body .body_wrapper .base_creation .products .products_header form input.btn_red {
+            margin-top: 10px;
+            margin-left: 0; }
+      body .body_wrapper .base_creation .products .products_body .search_results .resuts_count {
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+        padding: 5px 25px;
+        background: #e3ffc9; }
+      body .body_wrapper .base_creation .products .products_body .search_results .product_lists {
+        border: 1px solid #dfe3e6;
+        padding: 10px 0; }
+        body .body_wrapper .base_creation .products .products_body .search_results .product_lists .product {
+          padding: 5px 25px;
+          border-bottom: 1px solid #dfe3e6;
+          cursor: pointer; }
+          body .body_wrapper .base_creation .products .products_body .search_results .product_lists .product.selected {
+            background-color: #e7e7e7; }
+          body .body_wrapper .base_creation .products .products_body .search_results .product_lists .product:last-child {
+            border: none; }
+      body .body_wrapper .base_creation .products a.product_select {
+        display: inline-block;
+        margin-left: 0;
+        margin-top: 10px; }
+  body .body_wrapper .btns {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    padding: 20px 0px; }
 
 body .load_popup {
   position: absolute;
