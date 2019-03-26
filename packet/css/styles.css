@@ -1,0 +1,157 @@
+@charset "UTF-8";
+/* google font */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
+/* стили*/
+body {
+  line-height: 1.4em;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+  font-size: 14px; }
+
+img {
+  max-width: 100%;
+  height: 100%; }
+
+html, body {
+  height: 100%; }
+
+body.overlay:before {
+  content: '';
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #7a7a7aad;
+  z-index: 9999; }
+
+body .body_wrapper {
+  background-color: #cbd1cd;
+  height: 100%; }
+  body .body_wrapper .packets_content {
+    background-image: url(../img/wrapper.jpg);
+    padding: 45px 10px;
+    height: 100%;
+    box-sizing: border-box; }
+    body .body_wrapper .packets_content .packet {
+      height: 100%; }
+      body .body_wrapper .packets_content .packet .packet_header {
+        background-color: #eaeaea;
+        padding: 30px 0;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+            justify-content: center;
+        -ms-flex-align: center;
+            align-items: center; }
+        body .body_wrapper .packets_content .packet .packet_header button {
+          cursor: pointer;
+          margin-left: 10px;
+          color: white;
+          background-color: #d76666;
+          border: none;
+          box-shadow: 3px 3px 4px -2px black;
+          padding: 5px 10px; }
+      body .body_wrapper .packets_content .packet .packet_body {
+        background: white;
+        padding: 10px 20px; }
+        body .body_wrapper .packets_content .packet .packet_body .packet_list {
+          position: relative;
+          padding: 10px 50px;
+          background-color: #8f8f8f;
+          margin: 10px 0; }
+          body .body_wrapper .packets_content .packet .packet_body .packet_list h2 {
+            color: white;
+            text-transform: uppercase; }
+          body .body_wrapper .packets_content .packet .packet_body .packet_list .icon {
+            position: absolute;
+            cursor: pointer;
+            color: white;
+            background-color: #d76666;
+            padding: 10px;
+            top: 50%;
+            transform: translateY(-50%); }
+          body .body_wrapper .packets_content .packet .packet_body .packet_list .wrench {
+            left: 0px; }
+          body .body_wrapper .packets_content .packet .packet_body .packet_list .delete {
+            right: 0px; }
+
+body .load_popup {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 700px;
+  height: auto;
+  opacity: 0;
+  margin-left: -300%;
+  transition: all 0.6s ease; }
+  body .load_popup.show {
+    margin-left: 0;
+    opacity: 1;
+    z-index: 9999; }
+  body .load_popup form {
+    margin: 20px;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    border: 1px solid #ccccccd4;
+    padding: 10px; }
+    body .load_popup form input#add_file {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1; }
+      body .load_popup form input#add_file + label {
+        width: 170px;
+        font-size: 1.25em;
+        font-weight: 700;
+        color: white;
+        background-color: #d76666;
+        display: inline-block;
+        transition: all 0.5s ease;
+        padding: 5px 10px; }
+      body .load_popup form input#add_file:focus + label,
+      body .load_popup form input#add_file + label:hover {
+        background-color: #677bd5; }
+      body .load_popup form input#add_file + label {
+        cursor: pointer;
+        /* "hand" cursor */ }
+    body .load_popup form input[type="text"] {
+      width: calc(100% - 170px*2);
+      border: 1px solid #ccccccd4; }
+    body .load_popup form input[type="submit"] {
+      width: 170px;
+      font-size: 1.25em;
+      font-weight: 700;
+      color: white;
+      background-color: #d76666;
+      display: inline-block;
+      transition: all 0.5s ease;
+      padding: 5px 10px;
+      cursor: pointer; }
+      body .load_popup form input[type="submit"]:hover {
+        background-color: #677bd5; }
+  body .load_popup .bottom_part {
+    padding: 10px 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    background-color: #eaeaea; }
+    body .load_popup .bottom_part a.close {
+      cursor: pointer;
+      text-align: center;
+      font-size: 1.25em;
+      font-weight: 700;
+      color: white;
+      background-color: #d76666;
+      display: inline-block;
+      transition: all 0.5s ease;
+      padding: 5px 10px; }
