@@ -23,7 +23,9 @@ $(document).ready(function(){
 	$('a.product_select').on('click', function(){
 		console.log($(this).siblings('.products_body').find('.product.selected'))
 		var selected = $(this).siblings('.products_body').find('.product.selected').clone();
-		selected.appendTo('.group.active');
-		
+		selected.appendTo('.group.active');		
+	})
+	$('table thead th').on('click',function(){
+		$(this).closest('.group').find('tbody').toggleClass('hide');
 	})
 })

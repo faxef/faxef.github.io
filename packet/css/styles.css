@@ -279,6 +279,125 @@ body .body_wrapper {
     -ms-flex-align: center;
         align-items: center;
     padding: 20px 0px; }
+  body .body_wrapper .report_wrapper table, body .body_wrapper .report_wrapper th, body .body_wrapper .report_wrapper td {
+    border-collapse: collapse;
+    border: 1px solid black; }
+  body .body_wrapper .report_wrapper table {
+    table-layout: fixed;
+    width: 100%;
+    border: 1px solid purple; }
+    body .body_wrapper .report_wrapper table thead th {
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 600; }
+    body .body_wrapper .report_wrapper table caption {
+      text-align: center;
+      border: 1px solid gray; }
+    body .body_wrapper .report_wrapper table tr {
+      background-color: white;
+      height: 30px;
+      border: 1px solid gray; }
+  body .body_wrapper .report_wrapper .report_all {
+    margin-bottom: 45px; }
+    body .body_wrapper .report_wrapper .report_all table tbody tr td {
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 600;
+      color: white;
+      background-color: #d76666; }
+  body .body_wrapper .report_wrapper .filter_report {
+    padding: 20px 0px; }
+    body .body_wrapper .report_wrapper .filter_report form > fieldset {
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      body .body_wrapper .report_wrapper .filter_report form > fieldset fieldset {
+        margin: 15px 0; }
+      body .body_wrapper .report_wrapper .filter_report form > fieldset legend {
+        margin: 10px auto; }
+      body .body_wrapper .report_wrapper .filter_report form > fieldset input,
+      body .body_wrapper .report_wrapper .filter_report form > fieldset select {
+        padding: 5px; }
+    body .body_wrapper .report_wrapper .filter_report form input.btn_red {
+      margin: 10px auto 0;
+      display: block; }
+  body .body_wrapper .report_wrapper .groups_report {
+    white-space: nowrap;
+    overflow-x: scroll;
+    display: -ms-grid;
+    display: grid;
+    -ms-flex-direction: column;
+        flex-direction: column; }
+    body .body_wrapper .report_wrapper .groups_report .report_header {
+      display: -moz-inline-flex;
+      display: -ms-inline-flex;
+      display: -o-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -ms-flex-align: center;
+          align-items: center; }
+      body .body_wrapper .report_wrapper .groups_report .report_header .report_header_name {
+        min-width: 600px; }
+      body .body_wrapper .report_wrapper .groups_report .report_header .report_header_informations {
+        width: calc(100% - 400px);
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: -ms-flexbox;
+        display: flex; }
+        body .body_wrapper .report_wrapper .groups_report .report_header .report_header_informations .month {
+          display: -ms-flexbox;
+          display: flex;
+          width: calc(100% - 500px); }
+        body .body_wrapper .report_wrapper .groups_report .report_header .report_header_informations .info {
+          width: 500px; }
+    body .body_wrapper .report_wrapper .groups_report .group {
+      display: -moz-inline-flex;
+      display: -ms-inline-flex;
+      display: -o-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -ms-flex-align: center;
+          align-items: center; }
+      body .body_wrapper .report_wrapper .groups_report .group table thead th {
+        background: #d76666;
+        cursor: pointer;
+        vertical-align: middle;
+        text-align: center;
+        font-weight: 500;
+        color: white; }
+      body .body_wrapper .report_wrapper .groups_report .group table tbody td {
+        vertical-align: middle;
+        padding-left: 10px; }
+      body .body_wrapper .report_wrapper .groups_report .group table tbody.hide {
+        display: none;
+        opacity: 0; }
+      body .body_wrapper .report_wrapper .groups_report .group .group_name {
+        min-width: 600px; }
+      body .body_wrapper .report_wrapper .groups_report .group .group_informations {
+        width: calc(100% - 400px);
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: -ms-flexbox;
+        display: flex; }
+        body .body_wrapper .report_wrapper .groups_report .group .group_informations .month {
+          display: -moz-flex;
+          display: -ms-flex;
+          display: -o-flex;
+          display: -ms-flexbox;
+          display: flex;
+          width: calc(100% - 500px); }
+          body .body_wrapper .report_wrapper .groups_report .group .group_informations .month .info {
+            display: inline-block; }
+        body .body_wrapper .report_wrapper .groups_report .group .group_informations .info {
+          width: 500px; }
 
 body .load_popup {
   position: absolute;
