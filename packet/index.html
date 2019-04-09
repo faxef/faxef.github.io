@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>To do</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="body_wrapper">
+		<div class="packets_content">
+			<div class="packet">
+				<div class="packet_header">
+					<h1>Пакеты ЛС</h1>
+					<button class="btn add_new"><i class="fas fa-plus"></i> Новый пакет</button>
+				</div>
+				<div class="packet_body">
+					<div class="packet_list">
+						<div class="wrench icon"><i class="fas fa-wrench"></i></div>
+						<h2>Меналид</h2>
+						<div class="delete icon"><i class="fas fa-trash-alt"></i></div>
+					</div>
+					<div class="packet_list">
+						<div class="wrench icon"><i class="fas fa-wrench"></i></div>
+						<h2>Перчатки</h2>
+						<div class="delete icon"><i class="fas fa-trash-alt"></i></div>
+					</div>
+					<div class="packet_list">
+						<div class="wrench icon"><i class="fas fa-wrench"></i></div>
+						<h2>Что-то другое</h2>
+						<div class="delete icon"><i class="fas fa-trash-alt"></i></div>
+					</div>
+					<div class="packet_list">
+						<div class="wrench icon"><i class="fas fa-wrench"></i></div>
+						<h2>Совсем новое</h2>
+						<div class="delete icon"><i class="fas fa-trash-alt"></i></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="load_popup">
+		<form>
+			<fieldset class="files">
+				<input type="file" id="add_file" name="add_file">
+				<label for="add_file"><i class="fas fa-upload"></i> Загрузите пакет:</label>
+				<input type="text">
+				<input type="submit" value="Сохранить">
+			</fieldset>
+			<fieldset class="checkboxes">
+				<input type="checkbox" name="pharmacy" id="pharmacy"/>
+				<label for="pharmacy">аптечный справочник</label>
+				<input type="checkbox" name="report7days" id="report7days"/>
+				<label for="report7days">отчет за 7 дней</label>
+				<input type="checkbox" name="report11regions" id="report11regions"/>
+				<label for="report11regions">отчет на 11 регионов</label>
+				<input type="checkbox" name="report20regions" id="report20regions"/>
+				<label for="report20regions">отчет на 20 регионов</label>
+			</fieldset>
+		</form>
+		<div class="bottom_part"><a class="close">Закрыть</a></div>
+	</div>
+	<script src="js/scripts.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+</html>
