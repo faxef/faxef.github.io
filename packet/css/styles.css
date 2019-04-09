@@ -5,7 +5,7 @@
 body {
   line-height: 1.4em;
   overflow-x: hidden;
-  font-family: "Roboto", sans-serif;
+  font-family: "Arial", sans-serif;
   text-align: left;
   font-size: 14px; }
 
@@ -16,14 +16,18 @@ img {
 html, body {
   height: 100%; }
 
-.btn_red {
+.btn {
   cursor: pointer;
-  margin-left: 10px;
   color: white;
-  background-color: #d76666;
   border: none;
   box-shadow: 3px 3px 4px -2px black;
   padding: 5px 10px; }
+
+.btn_red {
+  background-color: #d76666; }
+
+.btn_blue {
+  background-color: #6391bf; }
 
 body.overlay:before {
   content: '';
@@ -35,7 +39,6 @@ body.overlay:before {
 
 body .body_wrapper {
   background-color: #cbd1cd;
-  height: 100%;
   padding: 1px; }
   body .body_wrapper .packets_content {
     background-image: url(../img/wrapper.jpg);
@@ -47,6 +50,9 @@ body .body_wrapper {
       body .body_wrapper .packets_content .packet .packet_header {
         background-color: #eaeaea;
         padding: 30px 0;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-pack: center;
@@ -57,7 +63,7 @@ body .body_wrapper {
           cursor: pointer;
           margin-left: 10px;
           color: white;
-          background-color: #d76666;
+          background-color: #6391bf;
           border: none;
           box-shadow: 3px 3px 4px -2px black;
           padding: 5px 10px; }
@@ -76,7 +82,7 @@ body .body_wrapper {
             position: absolute;
             cursor: pointer;
             color: white;
-            background-color: #d76666;
+            background-color: #6391bf;
             padding: 10px;
             top: 50%;
             transform: translateY(-50%); }
@@ -134,16 +140,18 @@ body .body_wrapper {
       body .body_wrapper .base_creation .markets .markets_body .market {
         margin: 20px 0;
         overflow: hidden; }
+        body .body_wrapper .base_creation .markets .markets_body .market.market_skillet {
+          display: none; }
         body .body_wrapper .base_creation .markets .markets_body .market .market_title {
           position: relative;
           cursor: pointer;
           padding: 10px 50px;
-          background-color: #8f8f8f; }
+          background-color: #e3ffc9; }
           body .body_wrapper .base_creation .markets .markets_body .market .market_title .icon {
             position: absolute;
             cursor: pointer;
             color: white;
-            background-color: #d76666;
+            background-color: #6391bf;
             padding: 9px;
             top: 50%;
             transform: translateY(-50%); }
@@ -182,17 +190,20 @@ body .body_wrapper {
               display: -ms-flex;
               display: -o-flex;
               display: -ms-flexbox;
-              display: flex; }
+              display: flex;
+              -ms-flex-wrap: wrap;
+                  flex-wrap: wrap;
+              -ms-flex-align: center;
+                  align-items: center; }
               body .body_wrapper .base_creation .markets .markets_body .market .market_content .market_groups .groups_content .groups_content_tabs .tab {
-                background: #d76666;
+                margin: 10px;
+                background: #6391bf;
                 cursor: pointer;
                 padding: 5px 20px;
                 color: white;
                 box-shadow: 2px 2px 5px -1px black; }
                 body .body_wrapper .base_creation .markets .markets_body .market .market_content .market_groups .groups_content .groups_content_tabs .tab.active {
                   box-shadow: 1px 1px 8px -1px inset black; }
-                body .body_wrapper .base_creation .markets .markets_body .market .market_content .market_groups .groups_content .groups_content_tabs .tab + .tab {
-                  margin-left: 10px; }
             body .body_wrapper .base_creation .markets .markets_body .market .market_content .market_groups .groups_content .groups .group {
               display: none; }
               body .body_wrapper .base_creation .markets .markets_body .market .market_content .market_groups .groups_content .groups .group.active {
@@ -200,6 +211,16 @@ body .body_wrapper {
                 margin: 20px 0px;
                 background: white;
                 padding: 20px; }
+                body .body_wrapper .base_creation .markets .markets_body .market .market_content .market_groups .groups_content .groups .group.active .product.selected {
+                  display: -ms-flexbox;
+                  display: flex;
+                  -ms-flex-align: center;
+                      align-items: center;
+                  -ms-flex-pack: justify;
+                      justify-content: space-between; }
+                  body .body_wrapper .base_creation .markets .markets_body .market .market_content .market_groups .groups_content .groups .group.active .product.selected i {
+                    color: #6391bf;
+                    cursor: pointer; }
     body .body_wrapper .base_creation .products {
       border: 1px solid #dfe3e6;
       margin: 10px;
@@ -213,7 +234,7 @@ body .body_wrapper {
           width: 100%;
           padding: 5px;
           text-align: center;
-          color: #d76666; }
+          color: #6391bf; }
         body .body_wrapper .base_creation .products .products_header form {
           margin-top: 10px;
           display: -moz-flex;
@@ -271,6 +292,20 @@ body .body_wrapper {
         display: inline-block;
         margin-left: 0;
         margin-top: 10px; }
+  body .body_wrapper .market_date {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    margin: 20px auto 0; }
+  body .body_wrapper .market_date input {
+    text-align: center;
+    border: 1px solid #b9b9b9c2;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0px 5px; }
   body .body_wrapper .btns {
     display: -ms-flexbox;
     display: flex;
@@ -304,7 +339,7 @@ body .body_wrapper {
       text-align: center;
       font-weight: 600;
       color: white;
-      background-color: #d76666; }
+      background-color: #6391bf; }
   body .body_wrapper .report_wrapper .filter_report {
     padding: 20px 0px; }
     body .body_wrapper .report_wrapper .filter_report form > fieldset {
@@ -366,7 +401,7 @@ body .body_wrapper {
       -ms-flex-align: center;
           align-items: center; }
       body .body_wrapper .report_wrapper .groups_report .group table thead th {
-        background: #d76666;
+        background: #6391bf;
         cursor: pointer;
         vertical-align: middle;
         text-align: center;
@@ -436,7 +471,7 @@ body .load_popup {
           font-size: 1.25em;
           font-weight: 700;
           color: white;
-          background-color: #d76666;
+          background-color: #6391bf;
           display: inline-block;
           transition: all 0.5s ease;
           padding: 5px 10px; }
@@ -454,7 +489,7 @@ body .load_popup {
         font-size: 1.25em;
         font-weight: 700;
         color: white;
-        background-color: #d76666;
+        background-color: #6391bf;
         display: inline-block;
         transition: all 0.5s ease;
         padding: 5px 10px;
@@ -485,7 +520,7 @@ body .load_popup {
       font-size: 1.25em;
       font-weight: 700;
       color: white;
-      background-color: #d76666;
+      background-color: #6391bf;
       display: inline-block;
       transition: all 0.5s ease;
       padding: 5px 10px; }
