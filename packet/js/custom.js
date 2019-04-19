@@ -18,7 +18,6 @@ $(document).ready(function(){
 	$('table thead th').on('click',function(){
 		$(this).closest('.group').find('tbody').toggleClass('hide');
 	})
-
 	// Формирование объекта на выход
 	var markets ={
 		markets : [ ]
@@ -135,7 +134,7 @@ $(document).ready(function(){
 		var zLists = []
 
 		selected.each(function(index){
-			var value = $(this).attr('id');
+			var value = parseInt($(this).attr('id'),10);
 			zLists.push(value);
 		})
 		markets.markets[indexMarket].groups[indexGroup].products = zLists
@@ -154,51 +153,32 @@ $(document).ready(function(){
 		filteringProduct($this)
 		return false;
 	})
-	var data = [
-	{
-		"uid": 234242, 
-		"name":"Презики"
-	}, 
-	{
-		"uid": 2342436456, 
-		"name":"Таблетка"
-	}, 
-	{
-		"uid": 26, 
-		"name":"Пластырь"
-	}, 
-	{
-		"uid": 212, 
-		"name":"Гель"
-	}, 
-	{
-		"uid": 314456, 
-		"name":"Черный гель"
-	}, 
-	{
-		"uid": 234, 
-		"name":"Мазь"
-	}
-	]
-	for (var i = 0; i < data.length; i++) {
-		$('.product_lists').append("<div class='product' id='" + data[i].uid + "'>" + data[i].name + "</div>")
-	}
 	function filteringProduct($this){
 		var form_data = $this.serialize();
+		console.log(form_data)
 		$.ajax({
 			type: 'GET',
 			url: 'http://localhost:3000/products.html',
 			data: form_data,
-			error : function(e) {
-				console.log("ERROR: ", e);
+			dataType: 'json',
+			contentType: 'application/json; charset=utf-8',
+			error: function (response) {
+				var r = jQuery.parseJSON(response.responseText);
+				console.log("Full errror", response)
+				console.log("-------------", response)
+				console.log("Message: " + r.Message);
+				console.log("-------------", response)
+				console.log("StackTrace: " + r.StackTrace);
+				console.log("-------------", response)
+				console.log("ExceptionType: " + r.ExceptionType);
 			},
-			success: function (data, textStatus) { 
+			success: function (response, textStatus) { 
 				$('.product_lists').html('')
-				var data = jQuery.parseJSON;
-				$.each(data, function(i, val) {  
+				console.log(JSON.stringify(response))
+				$.each(response, function(i, val) {  
 					$('.product_lists').html('');
-					for (var i = 0; i < data.length; i++) {
-						$('.product_lists').append("<div class='product' id='" + data[i].uid + "'>" + data[i].name + "</div>")
+					for (var i = 0; i < response.length; i++) {
+						$('.product_lists').append("<div class='product' id='" + response[i].uid + "'>" + response[i].name + "</div>")
 					}
 				});
 			}
@@ -221,12 +201,6 @@ $(document).ready(function(){
 	// Создание и передача объекта на бэк
 	function send(markets) {
 		console.log(markets)
-		var startDate = $('#startDate').val()
-		var finishDate = $('#finishDate').val()
-
-		markets.dateStart = startDate;
-		markets.dateEnd = finishDate;
-
 		$.ajax({
 			headers: { 
 				Accept : "application/json"
@@ -253,4 +227,23 @@ $(document).ready(function(){
 		send(markets);
 	})
 
+	// Страница отчета 
+
+	$('select[name="market"]').on('change', function(){
+		send(filteringReport);
+		console.log($(this))
+	})
+
+	function filteringReport($this){
+		var market = $this.val()
+		console.log(market)
+		$.ajax({
+			type: 'GET',
+			url: 'http://localhost:3000/products.html',
+			data: form_data,
+			success: function ( data ) {
+				myDynamoSelect.empty().html(data);
+			}
+		});
+	}
 })

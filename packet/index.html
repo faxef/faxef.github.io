@@ -10,6 +10,21 @@
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+	<header>
+		<div class="menu">
+			<ul>
+				<li><a href="https://faxef.github.io/packet/">Добавить пакет</a></li>
+				<li><a href="https://faxef.github.io/packet/market.index">Соотвествия</a></li>
+				<li class="dropdown">
+					<a href="https://faxef.github.io/packet/report.index">Отчет 1.1</a>
+					<ul class="submenu">
+						<li><a href="https://faxef.github.io/packet/report.index"></a>Отчет 1.2</li>
+					</ul>
+				</li>
+				<li><a href="https://faxef.github.io/packet/report.index">Отчет 2</a></li>
+			</ul>
+		</div>
+	</header>
 	<div class="body_wrapper">
 		<div class="packets_content">
 			<div class="packet">
@@ -18,26 +33,28 @@
 					<button class="btn add_new"><i class="fas fa-plus"></i> Новый пакет</button>
 				</div>
 				<div class="packet_body">
-					<div class="packet_list">
-						<div class="wrench icon"><i class="fas fa-wrench"></i></div>
-						<h2>Меналид</h2>
-						<div class="delete icon"><i class="fas fa-trash-alt"></i></div>
-					</div>
-					<div class="packet_list">
-						<div class="wrench icon"><i class="fas fa-wrench"></i></div>
-						<h2>Перчатки</h2>
-						<div class="delete icon"><i class="fas fa-trash-alt"></i></div>
-					</div>
-					<div class="packet_list">
-						<div class="wrench icon"><i class="fas fa-wrench"></i></div>
-						<h2>Что-то другое</h2>
-						<div class="delete icon"><i class="fas fa-trash-alt"></i></div>
-					</div>
-					<div class="packet_list">
-						<div class="wrench icon"><i class="fas fa-wrench"></i></div>
-						<h2>Совсем новое</h2>
-						<div class="delete icon"><i class="fas fa-trash-alt"></i></div>
-					</div>
+					<ul>
+						<li class="packet_list">
+							<div class="wrench icon"><i class="fas fa-wrench"></i></div>
+							<h2>Меналид</h2>
+							<div class="delete icon"><i class="fas fa-trash-alt"></i></div>
+						</li>
+						<li class="packet_list">
+							<div class="wrench icon"><i class="fas fa-wrench"></i></div>
+							<h2>Перчатки</h2>
+							<div class="delete icon"><i class="fas fa-trash-alt"></i></div>
+						</li>
+						<li class="packet_list">
+							<div class="wrench icon"><i class="fas fa-wrench"></i></div>
+							<h2>Что-то другое</h2>
+							<div class="delete icon"><i class="fas fa-trash-alt"></i></div>
+						</li>
+						<li class="packet_list">
+							<div class="wrench icon"><i class="fas fa-wrench"></i></div>
+							<h2>Совсем новое</h2>
+							<div class="delete icon"><i class="fas fa-trash-alt"></i></div>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>

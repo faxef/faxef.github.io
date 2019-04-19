@@ -11,6 +11,21 @@
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+	<header>
+		<div class="menu">
+			<ul>
+				<li><a href="https://faxef.github.io/packet/">Добавить пакет</a></li>
+				<li><a href="https://faxef.github.io/packet/market.index">Соотвествия</a></li>
+				<li class="dropdown">
+					<a href="https://faxef.github.io/packet/report.index">Отчет 1.1</a>
+					<ul class="submenu">
+						<li><a href="https://faxef.github.io/packet/report.index"></a>Отчет 1.2</li>
+					</ul>
+				</li>
+				<li><a href="https://faxef.github.io/packet/report.index">Отчет 2</a></li>
+			</ul>
+		</div>
+	</header>
 	<div class="body_wrapper">
 		<div class="base_creation">
 			<div class="markets">
@@ -62,7 +77,7 @@
 						<fieldset>
 							<label for="regionId">Регион:</label>
 							<select name="regionId" id="regionId">
-								<option selected size="2" disabled>Выберите регион</option>
+								<option selected size="2" value="">Выберите регион</option>
 								<option value="1">Брестская обл</option>
 								<option value="2">Могилевская обл</option>
 								<option value="3">Минская обл</option>
@@ -86,7 +101,7 @@
 						<fieldset>
 							<label for="supplierId">Производитель:</label>
 							<select name="supplierId" id="supplierId">
-								<option selected size="2" disabled>Выберите производителя</option>
+								<option selected size="2" value="">Выберите производителя</option>
 								<option value="4">Лаборатория натуральной косметики Farmona</option>
 								<option value="1">Николь Лаборатория</option>
 								<option value="2">ОАО Аромат</option>
@@ -120,14 +135,6 @@
 				</div>
 				<a class="product_select btn_blue btn">Выбрать</a>
 			</div>
-		</div>
-		<div class="market_date">
-			<fieldset>
-				<input id="startDate" name="startDate" value="" type="text" placeholder="Начальная дата:">
-			</fieldset>
-			<fieldset>
-				<input id="finishDate" name="finishDate" value="" type="text" placeholder="Коненая дата:">
-			</fieldset>
 		</div>
 		<div class="btns">
 			<a href="#" class="createReport btn_blue btn">Создать отчет</a><!-- 

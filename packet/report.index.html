@@ -10,27 +10,37 @@
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+	<header>
+		<div class="menu">
+			<ul>
+				<li><a href="">Добавить пакет</a></li>
+				<li><a href="">Соотвествия</a></li>
+				<li class="dropdown">
+					<a href="">Отчет 1.1</a>
+					<ul class="submenu">
+						<li>Отчет 1.2</li>
+					</ul>
+				</li>
+				<li><a href="">Отчет 2</a></li>
+			</ul>
+		</div>
+	</header>
 	<div class="body_wrapper">
 		<div class="report_wrapper">
 			<div class="filter_report">
 				<form>
 					<fieldset>
-						<legend>Фильтр</legend>
 						<fieldset>
-							<label for="name">Название, код</label>
-							<input type="text" id="name" value="Введите название\код">
-						</fieldset>			
-						<fieldset>
-							<label for="manufacturer">Производитель</label>
-							<select name="manufacturer" id="manufacturer">
-								<option selected disabled>Выберите производителя</option>
+							<label for="market">Рынок</label>
+							<select name="market" id="market">
+								<option selected disabled>Выберите рынок</option>
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
 							</select>
 						</fieldset>	
 						<fieldset>
-							<label for="product_brand">Брэнд</label>
+							<label for="product_brand">Группа</label>
 							<select name="product_brand" id="product_brand">
 								<option selected disabled>Выберите</option>
 								<option value="1">1</option>
@@ -39,49 +49,22 @@
 							</select>
 						</fieldset>				
 						<fieldset>
-							<label for="product_group">Группа товара</label>
+							<label for="product_group">Производитель</label>
 							<select name="product_group" id="product_group">
-								<option selected disabled>Выберите группу</option>
+								<option selected disabled>Выберите производителя</option>
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
 							</select>
 						</fieldset>				
 						<fieldset>
-							<label for="product_row">Ряд</label>
-							<select name="product_row" id="product_row">
-								<option selected disabled>Выберите ряд</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-							</select>
+							<label for="product_row">Дата с</label>
+							<input type="text">
 						</fieldset>				
 						<fieldset>
-							<label for="product_status">Статус</label>
-							<select name="product_status" id="product_status">
-								<option selected disabled>Выберите статус</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-							</select>
+							<label for="product_row">Дата с</label>
+							<input type="text">
 						</fieldset>				
-						<fieldset>
-							<label for="group_atc">Группа АТС</label>
-							<select name="group_atc" id="group_atc">
-								<option selected disabled>Выберите группу АТС</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-							</select>
-						</fieldset>
-						<fieldset>
-							<label for="base_status">Статус в базе</label>
-							<select name="base_status" id="base_status">
-								<option selected disabled></option>
-								<option value="1">Активен</option>
-								<option value="2">Не активен</option>
-							</select>
-						</fieldset>
 					</fieldset>
 					<input type="submit" value="Поиск" class="btn_red">
 				</form>
@@ -824,6 +807,6 @@
 			</div>
 		</div>
 		<script src="js/scripts.js"></script>
-		<script src="js/custom.js"></script>
+		<script src="js/report.js"></script>
 	</body>
 	</html>
