@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Обработка файлов</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<nav class="full">
+		<div class="nav_close">
+			<div class="close"><i class="fas fa-chevron-left"></i></div>
+		</div>
+		<div class="nav_account">
+			<a href=""><i class="fas fa-user"></i>
+				<span>
+					<p>Мой профиль</p>
+				</span>
+				<i class="fas fa-edit"></i>
+			</a>
+		</div>
+		<div class="nav_menu">
+			<ul>
+				<li class="active"><a href="http://localhost:3000/users.html"><i class="fas fa-users"></i>Пользователи</a></li>
+				<li><a href="http://localhost:3000/"><i class="fas fa-file-export"></i>Экспорт/импорт</a></li>
+				<li class="parentMenu">
+					<a href=""><i class="fas fa-tasks"></i>Соответствия<i class="fas fa-angle-down"></i></a>
+					<ul class="subMenu">
+						<li><a href="http://localhost:3000/matching_prices.html">Прайс-лист</a></li>
+						<li><a href="http://localhost:3000/matching_holdings.html">Холдинг ассортимент</a></li>
+						<li><a href="http://localhost:3000/matching_bases.html">Базы ТП</a></li>
+					</ul>
+				</li>
+				<li><a href=""><i class="fas fa-hospital-alt"></i>Холдинги</a></li>
+				<li><a href=""><i class="fas fa-clinic-medical"></i>Аптеки</a></li>
+				<li><a href=""><i class="fas fa-book-open"></i>Отчеты</a></li>
+			</ul>
+		</div>
+		<div class="nav_settings">
+			<a href=""><i class="fas fa-cog"></i>Настройки</a>
+		</div>	
+	</nav>
+	<nav class="part active">
+		<div class="nav_open">
+			<div class="open"><i class="fas fa-bars"></i></div>
+		</div>
+		<div class="nav_account">
+			<a href=""><i class="fas fa-user"></i>
+			</a>
+		</div>
+		<div class="nav_menu">
+			<ul>
+				<li class="active"><a href="http://localhost:3000/users.html"><i class="fas fa-users"></i></a></li>
+				<li><a href="http://localhost:3000"><i class="fas fa-file-export"></i></a></li>
+				<li><a href=""><i class="fas fa-tasks"></i></a></li>
+				<li><a href=""><i class="fas fa-hospital-alt"></i></a></li>
+				<li><a href=""><i class="fas fa-clinic-medical"></i></a></li>
+				<li><a href=""><i class="fas fa-book-open"></i></a></li>
+			</ul>
+		</div>
+		<div class="nav_settings">
+			<a href=""><i class="fas fa-cog"></i></a>
+		</div>	
+	</nav>
+	<main>
+		<div class="title">
+			<h2><a href="http://localhost:3000/users.html">Пользователи</a> > <a href="http://localhost:3000/user_add.html">Добавить пользователя</a></h2>
+		</div>
+		<div class="adding_user">
+			<ul class="tabs_menu">
+				<li class="active">Основная информация</li>
+				<li>Карьера</li>
+				<li>Автомобиль</li>
+			</ul>
+			<div class="tabs_content">
+				<div class="content mainInfo active">
+					<form action="">
+						<fieldset class="inputs">
+							<fieldset class="Fleft">
+								<fieldset class="input_default">
+									<label for="userName">Ф.И.О</label>
+									<input type="text" id="userName" name="userName">
+								</fieldset>
+								<fieldset class="group_input">
+									<fieldset class="input_default">
+										<label for="userName">Рабочий телефон</label>
+										<input type="text" id="userName" name="userName">
+									</fieldset>
+									<fieldset class="input_default">
+										<label for="userName">Личный телефон</label>
+										<input type="text" id="userName" name="userName">
+									</fieldset>
+								</fieldset>
+								<fieldset class="group_input">
+									<fieldset class="input_default">
+										<label for="userName">E-mail</label>
+										<input type="text" id="userName" name="userName">
+									</fieldset>
+									<fieldset class="input_default">
+										<label for="userName">Дата рождения</label>
+										<input type="text" id="userName" name="userName">
+									</fieldset>
+								</fieldset>
+								<fieldset class="input_default">
+									<label for="userName">Адрес проживания</label>
+									<input type="text" id="userName" name="userName">
+								</fieldset>
+							</fieldset>
+							<fieldset class="Fright">
+								<fieldset class="input_default">
+									<label for="code">Код сотрудника</label>
+									<input type="text" id="code" name="code">
+								</fieldset>
+								<fieldset class="select">
+									<select name="podrazdelenie" id="podrazdelenie">
+										<option value="0" selected>Подразделение</option>
+										<option value="1">Подразделение</option>
+										<option value="2">Подразделение</option>
+									</select>
+									<i class="fas fa-angle-down"></i>
+								</fieldset>
+								<fieldset class="select">
+									<select name="bases" id="bases">
+										<option value="0" selected disabled>Пол</option>
+										<option value="1">М</option>
+										<option value="2">Ж</option>
+									</select>
+									<i class="fas fa-angle-down"></i>
+								</fieldset>
+							</fieldset>
+						</fieldset>
+						<fieldset>
+							<input type="submit" value="Далее">
+						</fieldset>
+					</form>
+				</div>
+				<div class="content career">
+					<form action="">
+						<fieldset class="inputs">
+							<fieldset class="group_input">
+								<fieldset class="input_default">
+									<label for="userName">Дата принятия на работу</label>
+									<input type="text" id="userName" name="userName">
+								</fieldset>
+								<fieldset class="input_default">
+									<label for="userName">КРI</label>
+									<input type="text" id="userName" name="userName">
+								</fieldset>
+							</fieldset>
+							<fieldset class="group_input">
+								<fieldset class="input_default">
+									<label for="userName">Испытательный срок до</label>
+									<input type="text" id="userName" name="userName">
+								</fieldset>
+								<fieldset class="input_default">
+									<label for="userName">Уволен</label>
+									<input type="text" id="userName" name="userName">
+								</fieldset>
+							</fieldset>								
+							<fieldset class="group_input">
+								<fieldset class="input_default">
+									<label for="code">Рейтинг</label>
+									<input type="text" id="code" name="code">
+								</fieldset>
+								<fieldset class="select">
+									<select name="podrazdelenie" id="podrazdelenie">
+										<option value="0" selected>Причина увольнения</option>
+										<option value="1">Причина увольнения</option>
+										<option value="2">Причина увольнения</option>
+									</select>
+									<i class="fas fa-angle-down"></i>
+								</fieldset>
+							</fieldset>
+						</fieldset>
+						<fieldset>
+							<input type="submit" value="Далее">
+						</fieldset>
+					</form>
+				</div>
+				<div class="content auto">
+					<form action="">
+						<fieldset class="inputs">
+							<fieldset class="group_input">
+								<fieldset class="input_default">
+									<label for="userName">Марка автомобиля</label>
+									<input type="text" id="userName" name="userName">
+								</fieldset>
+								<fieldset class="input_default">
+									<label for="userName">Регистрационный номер</label>
+									<input type="text" id="userName" name="userName">
+								</fieldset>
+							</fieldset>
+							<fieldset class="group_input">
+								<fieldset class="input_default">
+									<label for="userName">Водительское удостоверение</label>
+									<input type="text" id="userName" name="userName">
+								</fieldset>
+							</fieldset>								
+							<fieldset class="group_input">
+								<fieldset class="input_default">
+									<label for="code">Линейная норма расхода топлива</label>
+									<input type="text" id="code" name="code">
+								</fieldset>
+							</fieldset>
+						</fieldset>
+						<fieldset>
+							<input type="submit" value="Готово">
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="js/scripts.js"></script>
+	<script src="js/import_export.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,86 +1,167 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>To do</title>
+	<title>Обработка файлов</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<header>
-		<div class="menu">
+	<nav class="full">
+		<div class="nav_close">
+			<div class="close"><i class="fas fa-chevron-left"></i></div>
+		</div>
+		<div class="nav_account">
+			<a href=""><i class="fas fa-user"></i>
+				<span>
+					<p>Мой профиль</p>
+				</span>
+				<i class="fas fa-edit"></i>
+			</a>
+		</div>
+		<div class="nav_menu">
 			<ul>
-				<li><a href="https://faxef.github.io/packet/">Добавить пакет</a></li>
-				<li><a href="https://faxef.github.io/packet/market.index">Соотвествия</a></li>
-				<li class="dropdown">
-					<a href="https://faxef.github.io/packet/report.index">Отчет 1.1</a>
-					<ul class="submenu">
-						<li><a href="https://faxef.github.io/packet/report.index">Отчет 1.2</a></li>
+				<li><a href="http://localhost:3000/users.html"><i class="fas fa-users"></i>Пользователи</a></li>
+				<li class="active"><a href="http://localhost:3000/"><i class="fas fa-file-export"></i>Экспорт/импорт</a></li>
+				<li class="parentMenu">
+					<a href=""><i class="fas fa-tasks"></i>Соответствия<i class="fas fa-angle-down"></i></a>
+					<ul class="subMenu">
+						<li><a href="http://localhost:3000/matching_prices.html">Прайс-лист</a></li>
+						<li><a href="http://localhost:3000/matching_holdings.html">Холдинг ассортимент</a></li>
+						<li><a href="http://localhost:3000/matching_bases.html">Базы ТП</a></li>
 					</ul>
 				</li>
-				<li><a href="https://faxef.github.io/packet/report.index">Отчет 2</a></li>
+				<li><a href=""><i class="fas fa-hospital-alt"></i>Холдинги</a></li>
+				<li><a href=""><i class="fas fa-clinic-medical"></i>Аптеки</a></li>
+				<li><a href=""><i class="fas fa-book-open"></i>Отчеты</a></li>
 			</ul>
 		</div>
-	</header>
-	<div class="body_wrapper">
-		<div class="packets_content">
-			<div class="packet">
-				<div class="packet_header">
-					<h1>Пакеты ЛС</h1>
-					<button class="btn add_new"><i class="fas fa-plus"></i> Новый пакет</button>
+		<div class="nav_settings">
+			<a href=""><i class="fas fa-cog"></i>Настройки</a>
+		</div>	
+	</nav>
+	<nav class="part active">
+		<div class="nav_open">
+			<div class="open"><i class="fas fa-bars"></i></div>
+		</div>
+		<div class="nav_account">
+			<a href=""><i class="fas fa-user"></i>
+			</a>
+		</div>
+		<div class="nav_menu">
+			<ul>
+				<li><a href="http://localhost:3000/users.html"><i class="fas fa-users"></i></a></li>
+				<li class="active"><a href="http://localhost:3000/"><i class="fas fa-file-export"></i></a></li>
+				<li><a href=""><i class="fas fa-tasks"></i></a></li>
+				<li><a href=""><i class="fas fa-hospital-alt"></i></a></li>
+				<li><a href=""><i class="fas fa-clinic-medical"></i></a></li>
+				<li><a href=""><i class="fas fa-book-open"></i></a></li>
+			</ul>
+		</div>
+		<div class="nav_settings">
+			<a href=""><i class="fas fa-cog"></i></a>
+		</div>	
+	</nav>
+	<main>
+		<div class="title">
+			<h2>Экспорт/импорт</h2>
+		</div>
+		<div class="export_import">
+			<ul class="tabs_menu">
+				<li class="active">Импорт данных по товару</li>
+				<li>Экспорт данных</li>
+				<li>Загрузить прайс-лист из 1С</li>
+				<li>Импорт данных</li>
+			</ul>
+			<div class="tabs_content">
+				<div class="content import active">
+					<form>
+						<fieldset class="files">
+							<input type="file" id="add_file" name="file">
+							<div class="adding_files">
+								<div class="bases_block">
+									<select name="bases" id="bases">
+										<option value="0" selected>База продаж по рынку</option>
+										<option value="1">База продаж по компании</option>
+										<option value="2">База аудит наличия</option>
+									</select>
+									<i class="fas fa-angle-down"></i>
+								</div>
+								<div class="add_file_block">
+									<i class="fas fa-file-import"></i>
+									<span>Перетяните файл сюда</span>
+									<label for="add_file">Обзор</label>
+								</div>
+								<div class="file_name_block">
+									<p>Файл не выбран</p>
+								</div>
+							</div>
+						</fieldset>
+						<input type="submit" value="Импортировать">
+					</form>
+					<div class="bases">
+						<div class="base_accordeon base_market">
+							<div class="title">
+								<i class="fas fa-angle-down"></i>
+								<h2>База продаж по рынку (включая конкурентную среду)</h2>							
+							</div>
+							<ul class="files_list">
+							</ul>
+						</div>
+						<div class="base_accordeon base_company">
+							<div class="title">
+								<i class="fas fa-angle-down"></i>
+								<h2>База продаж по компании (Медилюкс Фарм)</h2>							
+							</div>
+							<ul class="files_list">
+							</ul>
+						</div>
+						<div class="base_accordeon base_audit">
+							<div class="title">
+								<i class="fas fa-angle-down"></i>
+								<h2>База аудит наличия</h2>							
+							</div>
+							<ul class="files_list">
+<!-- 								<li th:each="file : ${files}">
+									<div class="file"><a th:href="${file}" th:text="${file}">название</a></div>
+									<div class="date">
+										<span class="d">25.03.2019</span><span class="t">15:59</span>
+									</div>
+									<div class="icons">
+										<i class="fas fa-pencil-alt"></i>
+										<i class="fas fa-trash-alt"></i>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+					</div>
 				</div>
-				<div class="packet_body">
-					<ul>
-						<li class="packet_list">
-							<div class="wrench icon"><i class="fas fa-wrench"></i></div>
-							<h2>Меналид</h2>
-							<div class="delete icon"><i class="fas fa-trash-alt"></i></div>
-						</li>
-						<li class="packet_list">
-							<div class="wrench icon"><i class="fas fa-wrench"></i></div>
-							<h2>Перчатки</h2>
-							<div class="delete icon"><i class="fas fa-trash-alt"></i></div>
-						</li>
-						<li class="packet_list">
-							<div class="wrench icon"><i class="fas fa-wrench"></i></div>
-							<h2>Что-то другое</h2>
-							<div class="delete icon"><i class="fas fa-trash-alt"></i></div>
-						</li>
-						<li class="packet_list">
-							<div class="wrench icon"><i class="fas fa-wrench"></i></div>
-							<h2>Совсем новое</h2>
-							<div class="delete icon"><i class="fas fa-trash-alt"></i></div>
-						</li>
-					</ul>
+				<div class="content export">
+					<form>
+						<fieldset class="files">
+							<input type="file" id="save_file" name="file">
+							<div class="saving_files">
+								<div class="bases_block">
+									<select name="bases" id="bases">
+										<option value="0" selected>Отчет 1</option>
+										<option value="1">Отчет 2</option>
+										<option value="2">Отчет 3</option>
+									</select>
+									<i class="fas fa-angle-down"></i>
+								</div>
+							</div>
+						</fieldset>
+						<input type="submit" value="Экспортировать">
+					</form>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="load_popup">
-		<form>
-			<fieldset class="files">
-				<input type="file" id="add_file" name="add_file">
-				<label for="add_file"><i class="fas fa-upload"></i> Загрузите пакет:</label>
-				<input type="text">
-				<input type="submit" value="Сохранить">
-			</fieldset>
-			<fieldset class="checkboxes">
-				<input type="checkbox" name="pharmacy" id="pharmacy"/>
-				<label for="pharmacy">аптечный справочник</label>
-				<input type="checkbox" name="report7days" id="report7days"/>
-				<label for="report7days">отчет за 7 дней</label>
-				<input type="checkbox" name="report11regions" id="report11regions"/>
-				<label for="report11regions">отчет на 11 регионов</label>
-				<input type="checkbox" name="report20regions" id="report20regions"/>
-				<label for="report20regions">отчет на 20 регионов</label>
-			</fieldset>
-		</form>
-		<div class="bottom_part"><a class="close">Закрыть</a></div>
-	</div>
+	</main>
 	<script src="js/scripts.js"></script>
-	<script src="js/custom.js"></script>
+	<script src="js/import_export.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
