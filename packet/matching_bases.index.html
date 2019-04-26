@@ -24,14 +24,14 @@
 		</div>
 		<div class="nav_menu">
 			<ul>
-				<li class="active"><a href="https://faxef.github.io/packet/users.index.html"><i class="fas fa-users"></i>Пользователи</a></li>
+				<li><a href="https://faxef.github.io/packet/users.index.html"><i class="fas fa-users"></i>Пользователи</a></li>
 				<li><a href="https://faxef.github.io/packet/"><i class="fas fa-file-export"></i>Экспорт/импорт</a></li>
-				<li class="parentMenu">
+				<li class="parentMenu active">
 					<a href="https://faxef.github.io/packet/matching_prices.index.html"><i class="fas fa-tasks"></i>Соответствия<i class="fas fa-angle-down"></i></a>
-					<ul class="subMenu">
+					<ul class="subMenu active">
 						<li><a href="https://faxef.github.io/packet/matching_prices.index.html">Прайс-лист</a></li>
 						<li><a href="https://faxef.github.io/packet/matching_holdings.index.html">Холдинг ассортимент</a></li>
-						<li><a href="https://faxef.github.io/packet/matching_bases.index.html">Базы ТП</a></li>
+						<li class="active"><a href="/">Базы ТП</a></li>
 					</ul>
 				</li>
 				<li><a href=""><i class="fas fa-hospital-alt"></i>Холдинги</a></li>
@@ -43,7 +43,7 @@
 			<a href=""><i class="fas fa-cog"></i>Настройки</a>
 		</div>	
 	</nav>
-	<nav class="part">
+	<nav class="part active">
 		<div class="nav_open">
 			<div class="open"><i class="fas fa-bars"></i></div>
 		</div>
@@ -53,9 +53,9 @@
 		</div>
 		<div class="nav_menu">
 			<ul>
-				<li class="active"><a href="https://faxef.github.io/packet/users.index.html"><i class="fas fa-users"></i></a></li>
-				<li><a href="https://faxef.github.io/packet/"><i class="fas fa-file-export"></i></a></li>
-				<li><a href="https://faxef.github.io/packet/matching_prices.index.html"><i class="fas fa-tasks"></i></a></li>
+				<li><a href="http://localhost:3000/users.html"><i class="fas fa-users"></i></a></li>
+				<li><a href="http://localhost:3000/"><i class="fas fa-file-export"></i></a></li>
+				<li class="active"><a href=""><i class="fas fa-tasks"></i></a></li>
 				<li><a href=""><i class="fas fa-hospital-alt"></i></a></li>
 				<li><a href=""><i class="fas fa-clinic-medical"></i></a></li>
 				<li><a href=""><i class="fas fa-book-open"></i></a></li>
@@ -67,26 +67,25 @@
 	</nav>
 	<main>
 		<div class="title">
-			<h2>Пользователи</h2>
+			<h2><a href="">Соответствия</a> > <a href="">База ТП</a></h2>
 		</div>
-		<div class="users">
-			<div class="users_find">
+		<div class="matching_bases">
+			<div class="bases_find">
 				<form action="">
 					<fieldset class="group_input">
-						<input type="search" q="googlesearch" placeholder="Введите Ф.И.О">
-						<a href="https://faxef.github.io/packet/user_add.index.html">Добавить пользователя</a>
+						<input type="search" q="googlesearch" placeholder="Введите Ф.И.О ТП">
 					</fieldset>
 					<fieldset class="group_select">
 						<fieldset class="select">
-							<select name="podrazdelenie" id="podrazdelenie">
-								<option value="0" selected>Тип</option>
-								<option value="1">Тип</option>
-								<option value="2">Тип</option>
+							<select name="holdings" id="holdings">
+								<option value="0" selected>Холдинг</option>
+								<option value="1">Холдинг</option>
+								<option value="2">Холдинг</option>
 							</select>
 							<i class="fas fa-angle-down"></i>
 						</fieldset>
 						<fieldset class="select">
-							<select name="podrazdelenie" id="podrazdelenie">
+							<select name="region" id="region">
 								<option value="0" selected>Регион</option>
 								<option value="1">Регион</option>
 								<option value="2">Регион</option>
@@ -94,25 +93,26 @@
 							<i class="fas fa-angle-down"></i>
 						</fieldset>
 						<fieldset class="select">
-							<select name="podrazdelenie" id="podrazdelenie">
-								<option value="0" selected>Подразделение</option>
-								<option value="1">Подразделение</option>
-								<option value="2">Подразделение</option>
+							<select name="claster" id="claster">
+								<option value="0" selected>Кластер</option>
+								<option value="1">Кластер</option>
+								<option value="2">Кластер</option>
 							</select>
 							<i class="fas fa-angle-down"></i>
 						</fieldset>
 						<fieldset class="select">
-							<select name="podrazdelenie" id="podrazdelenie">
-								<option value="0" selected>Статус</option>
-								<option value="1">Статус</option>
-								<option value="2">Статус</option>
+							<select name="owner" id="owner">
+								<option value="0" selected>Owner</option>
+								<option value="1">Owner</option>
+								<option value="2">Owner</option>
 							</select>
 							<i class="fas fa-angle-down"></i>
 						</fieldset>
 					</fieldset>
 				</form>
 			</div>
-			<ul class="users_lists">
+			<ul class="bases_lists">
+				<li class="title"><span>Константинопольский Константин Константинович</span><span>info</span><span>info</span><span>info</span></li>
 				<li>
 					<span>Константинопольский Константин Константинович</span><span>info</span><span>info</span><span>info</span>
 				</li>

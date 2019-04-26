@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Обработка файлов</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<nav class="full">
+		<div class="nav_close">
+			<div class="close"><i class="fas fa-chevron-left"></i></div>
+		</div>
+		<div class="nav_account">
+			<a href=""><i class="fas fa-user"></i>
+				<span>
+					<p>Мой профиль</p>
+				</span>
+				<i class="fas fa-edit"></i>
+			</a>
+		</div>
+		<div class="nav_menu">
+			<ul>
+				<li><a href="https://faxef.github.io/packet/users.index.html"><i class="fas fa-users"></i>Пользователи</a></li>
+				<li><a href="https://faxef.github.io/packet/"><i class="fas fa-file-export"></i>Экспорт/импорт</a></li>
+				<li class="parentMenu">
+					<a href="https://faxef.github.io/packet/matching_prices.index.html"><i class="fas fa-tasks"></i>Соответствия<i class="fas fa-angle-down"></i></a>
+					<ul class="subMenu active">
+						<li><a href="https://faxef.github.io/packet/matching_prices.index.html">Прайс-лист</a></li>
+						<li><a href="https://faxef.github.io/packet/matching_holdings.index.html">Холдинг ассортимент</a></li>
+						<li class="active"><a href="https://faxef.github.io/packet/matching_bases.index.html">Базы ТП</a></li>
+					</ul>
+				</li>
+				<li><a href=""><i class="fas fa-hospital-alt"></i>Холдинги</a></li>
+				<li class="active"><a href="/"><i class="fas fa-clinic-medical"></i>Аптеки</a></li>
+				<li><a href=""><i class="fas fa-book-open"></i>Отчеты</a></li>
+			</ul>
+		</div>
+		<div class="nav_settings">
+			<a href=""><i class="fas fa-cog"></i>Настройки</a>
+		</div>	
+	</nav>
+	<nav class="part active">
+		<div class="nav_open">
+			<div class="open"><i class="fas fa-bars"></i></div>
+		</div>
+		<div class="nav_account">
+			<a href=""><i class="fas fa-user"></i>
+			</a>
+		</div>
+		<div class="nav_menu">
+			<ul>
+				<li><a href="http://localhost:3000/users.html"><i class="fas fa-users"></i></a></li>
+				<li><a href="http://localhost:3000/"><i class="fas fa-file-export"></i></a></li>
+				<li class="active"><a href=""><i class="fas fa-tasks"></i></a></li>
+				<li><a href=""><i class="fas fa-hospital-alt"></i></a></li>
+				<li><a href=""><i class="fas fa-clinic-medical"></i></a></li>
+				<li><a href=""><i class="fas fa-book-open"></i></a></li>
+			</ul>
+		</div>
+		<div class="nav_settings">
+			<a href=""><i class="fas fa-cog"></i></a>
+		</div>	
+	</nav>
+	<main>
+		<div class="title">
+			<h2><a href="">Аптеки</a> > <a href="">Анализ рынка</a></h2>
+		</div>
+		<div class="analysis">
+			<div class="analysis_filter">
+				<form action="">
+					<fieldset class="group_select">
+						<fieldset class="select">
+							<select name="holdings" id="holdings">
+								<option value="0" selected>Рынок</option>
+								<option value="1">Рынок</option>
+								<option value="2">Рынок</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</fieldset>
+						<fieldset class="select">
+							<select name="region" id="region">
+								<option value="0" selected>Группа</option>
+								<option value="1">Группа</option>
+								<option value="2">Группа</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</fieldset>
+						<fieldset class="select">
+							<select name="claster" id="claster">
+								<option value="0" selected>Производитель</option>
+								<option value="1">Производитель</option>
+								<option value="2">Производитель</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</fieldset>
+						<fieldset class="select">
+							<select name="owner" id="owner">
+								<option value="0" selected>Товар</option>
+								<option value="1">Товар</option>
+								<option value="2">Товар</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</fieldset>
+					</fieldset>
+					<fieldset class="group_select">
+						<fieldset class="select">
+							<select name="holdings" id="holdings">
+								<option value="0" selected>Регион</option>
+								<option value="1">Регион</option>
+								<option value="2">Регион</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</fieldset>
+						<fieldset class="select">
+							<select name="region" id="region">
+								<option value="0" selected>kg</option>
+								<option value="1">kg</option>
+								<option value="2">kg</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</fieldset>
+						<fieldset class="select">
+							<select name="claster" id="claster">
+								<option value="0" selected>sumnat</option>
+								<option value="1">sumnat</option>
+								<option value="2">sumnat</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</fieldset>
+						<fieldset class="select">
+							<select name="owner" id="owner">
+								<option value="0" selected>sumrnat</option>
+								<option value="1">sumrnat</option>
+								<option value="2">sumrnat</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</fieldset>
+					</fieldset>
+					<fieldset class="group_input">
+						<fieldset class="input_default">
+							<label for="userName">Дата c</label>
+							<input type="text" id="userName" name="userName">
+						</fieldset>
+						<fieldset class="input_default">
+							<label for="userName">Дата по</label>
+							<input type="text" id="userName" name="userName">
+						</fieldset>
+						<input type="submit" value="Сформировать отчет">
+					</fieldset>
+				</form>
+			</div>
+			<div class="analysis_block">
+				<div class="report_all">
+					<table>
+						<thead>
+							<tr>
+								<th colspan="5">Итого по всем группам:</th>
+							</tr>
+							<tr>
+								<th>kg</th>
+								<th>sumnat</th>
+								<th>D%, уп.</th>
+								<th>D$$, уп.</th>
+								<th></th>
+							</tr>	
+						</thead>
+						<tbody>
+							<tr>
+								<td>533 990</td>
+								<td>705 710</td>
+								<td>68.05%</td>
+								<td>55.86%</td>
+								<td>Сред. цена</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="groups_report">
+					<div class="report_header">
+						<div class="report_header_name">
+							<table>
+								<thead>
+									<tr>
+										<th colspan="3"></th>
+									</tr>
+									<tr>
+										<th colspan="3"></th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="report_header_informations">
+							<div class="total info">
+								<table>
+									<thead>
+										<tr>
+											<th colspan="5">Итого</th>
+										</tr>
+										<tr>
+											<th>УП</th>
+											<th>$$$$</th>
+											<th>D%,уп</th>
+											<th>D$$,уп</th>
+											<th></th>
+										</tr>	
+									</thead>
+								</table>
+							</div>
+							<div class="month">
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th colspan="5">15/12/2018</th>
+											</tr>
+											<tr>
+												<th>УП</th>
+												<th>$$$$</th>
+												<th>D%,уп</th>
+												<th>D$$,уп</th>
+												<th></th>
+											</tr>	
+										</thead>
+									</table>
+								</div>
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th colspan="5">15/12/2018</th>
+											</tr>
+											<tr>
+												<th>УП</th>
+												<th>$$$$</th>
+												<th>D%,уп</th>
+												<th>D$$,уп</th>
+												<th></th>
+											</tr>	
+										</thead>
+									</table>
+								</div>
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th colspan="5">15/12/2018</th>
+											</tr>
+											<tr>
+												<th>УП</th>
+												<th>$$$$</th>
+												<th>D%,уп</th>
+												<th>D$$,уп</th>
+												<th></th>
+											</tr>	
+										</thead>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="group">
+						<div class="group_name">
+							<table>
+								<thead>
+									<tr class="product_group_title">
+										<th colspan="1">Frautest</th>
+									</tr>
+								</thead>
+								<tbody class="hide">
+									<tr class="product">
+										<td class="product_name">Frautest</td>
+									</tr>
+									<tr class="product">
+										<td class="product_name">Frautest Double</td>
+									</tr>
+									<tr class="product">
+										<td class="product_name">Frautest Comfort</td>
+									</tr>
+									<tr class="product">
+										<td class="product_name">Frautest Expert</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="group_informations">
+							<div class="total info">
+								<table>
+									<thead>
+										<tr>
+											<th>266 995</th>
+											<th>352 855</th>
+											<th>48.05%</th>
+											<th>50.86%</th>
+											<th>Сред. цена</th>
+										</tr>
+									</thead>
+									<tbody class="hide">
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>															
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="month">
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>266 995</th>
+												<th>352 855</th>
+												<th>48.05%</th>
+												<th>50.86%</th>
+												<th>Сред. цена</th>
+											</tr>
+										</thead>
+										<tbody class="hide">
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>															
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>266 995</th>
+												<th>352 855</th>
+												<th>48.05%</th>
+												<th>50.86%</th>
+												<th>Сред. цена</th>
+											</tr>
+										</thead>
+										<tbody class="hide">
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>															
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>266 995</th>
+												<th>352 855</th>
+												<th>48.05%</th>
+												<th>50.86%</th>
+												<th>Сред. цена</th>
+											</tr>
+										</thead>
+										<tbody class="hide">
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>															
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>			
+					<div class="group">
+						<div class="group_name">
+							<table>
+								<thead>
+									<tr class="product_group_title">
+										<th colspan="1">Frautest</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="product">
+										<td class="product_name">Frautest 1</td>
+									</tr>
+									<tr class="product">
+										<td class="product_name">Frautest 1</td>
+									</tr>
+									<tr class="product">
+										<td class="product_name">Frautest 1</td>
+									</tr>
+									<tr class="product">
+										<td class="product_name">Frautest 1</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="group_informations">
+							<div class="total info">
+								<table>
+									<thead>
+										<tr>
+											<th>266 995</th>
+											<th>352 855</th>
+											<th>48.05%</th>
+											<th>50.86%</th>
+											<th>Сред. цена</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>															
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="month">
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>266 995</th>
+												<th>352 855</th>
+												<th>48.05%</th>
+												<th>50.86%</th>
+												<th>Сред. цена</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>															
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>266 995</th>
+												<th>352 855</th>
+												<th>48.05%</th>
+												<th>50.86%</th>
+												<th>Сред. цена</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>															
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>266 995</th>
+												<th>352 855</th>
+												<th>48.05%</th>
+												<th>50.86%</th>
+												<th>Сред. цена</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>															
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="group">
+						<div class="group_name">
+							<table>
+								<thead>
+									<tr class="product_group_title">
+										<th colspan="1">Frautest</th>
+									</tr>
+								</thead>
+								<tbody class="hide">
+									<tr class="product">
+										<td class="product_name">Frautest</td>
+									</tr>
+									<tr class="product">
+										<td class="product_name">Frautest Double</td>
+									</tr>
+									<tr class="product">
+										<td class="product_name">Frautest Comfort</td>
+									</tr>
+									<tr class="product">
+										<td class="product_name">Frautest Expert</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="group_informations">
+							<div class="total info">
+								<table>
+									<thead>
+										<tr>
+											<th>266 995</th>
+											<th>352 855</th>
+											<th>48.05%</th>
+											<th>50.86%</th>
+											<th>Сред. цена</th>
+										</tr>
+									</thead>
+									<tbody class="hide">
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>															
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="month">
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>266 995</th>
+												<th>352 855</th>
+												<th>48.05%</th>
+												<th>50.86%</th>
+												<th>Сред. цена</th>
+											</tr>
+										</thead>
+										<tbody class="hide">
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>															
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>266 995</th>
+												<th>352 855</th>
+												<th>48.05%</th>
+												<th>50.86%</th>
+												<th>Сред. цена</th>
+											</tr>
+										</thead>
+										<tbody class="hide">
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>															
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>266 995</th>
+												<th>352 855</th>
+												<th>48.05%</th>
+												<th>50.86%</th>
+												<th>Сред. цена</th>
+											</tr>
+										</thead>
+										<tbody class="hide">
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>															
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="js/scripts.js"></script>
+	<script src="js/import_export.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
