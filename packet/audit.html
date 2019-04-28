@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Обработка файлов</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<nav class="full active">
+		<div class="nav_close">
+			<div class="close"><i class="fas fa-chevron-left"></i></div>
+		</div>
+		<div class="nav_account">
+			<a href=""><i class="fas fa-user"></i>
+				<span>
+					<p>Мой профиль</p>
+				</span>
+				<i class="fas fa-edit"></i>
+			</a>
+		</div>
+		<div class="nav_menu">
+			<ul>
+				<li><a href="http://localhost:3000/users.html"><i class="fas fa-users"></i>Пользователи</a></li>
+				<li><a href="http://localhost:3000/"><i class="fas fa-file-export"></i>Экспорт/импорт</a></li>
+				<li class="parentMenu">
+					<a href=""><i class="fas fa-tasks"></i>Соответствия<i class="fas fa-angle-down"></i></a>
+					<ul class="subMenu">
+						<li><a href="http://localhost:3000/matching_prices.html">Прайс-лист</a></li>
+						<li><a href="http://localhost:3000/matching_holdings.html">Холдинг ассортимент</a></li>
+						<li class="active"><a href="/">Базы ТП</a></li>
+					</ul>
+				</li>
+				<li><a href=""><i class="fas fa-hospital-alt"></i>Холдинги</a></li>
+				<li class="parentMenu active">
+					<a href=""><i class="fas fa-book-open"></i>Отчеты<i class="fas fa-angle-down"></i></a>
+					<ul class="subMenu active">
+						<li><a href="http://localhost:3000/analysis.html">Анализ рынка</a></li>
+						<li class="active"><a href="/">Аудит наличия</a></li>
+						<li><a href="http://localhost:3000/analysis.html">Анализ продаж МРН</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="nav_settings">
+			<a href=""><i class="fas fa-cog"></i>Настройки</a>
+		</div>	
+	</nav>
+	<nav class="part">
+		<div class="nav_open">
+			<div class="open"><i class="fas fa-bars"></i></div>
+		</div>
+		<div class="nav_account">
+			<a href=""><i class="fas fa-user"></i>
+			</a>
+		</div>
+		<div class="nav_menu">
+			<ul>
+				<li><a href="http://localhost:3000/users.html"><i class="fas fa-users"></i></a></li>
+				<li><a href="http://localhost:3000/"><i class="fas fa-file-export"></i></a></li>
+				<li><a href=""><i class="fas fa-tasks"></i></a></li>
+				<li><a href=""><i class="fas fa-hospital-alt"></i></a></li>
+				<li class="active"><a href=""><i class="fas fa-book-open"></i></a></li>
+			</ul>
+		</div>
+		<div class="nav_settings">
+			<a href=""><i class="fas fa-cog"></i></a>
+		</div>	
+	</nav>
+	<main>
+		<div class="title">
+			<h2><a href="">Отчеты</a> > <a href="">Аудит наличия</a></h2>
+		</div>
+
+		<div class="analysis audit">
+			<div class="analysis_filter">
+				<form action="">
+					<div class="group_select">
+						<fieldset class="select">
+							<select name="holdings" id="holdings">
+								<option value="0" selected>Рынок</option>
+								<option value="1">Рынок</option>
+								<option value="2">Рынок</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</fieldset>
+						<fieldset class="select">
+							<select name="region" id="region">
+								<option value="0" selected>Сотрудник</option>
+								<option value="1">Сотрудник</option>
+								<option value="2">Сотрудник</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</fieldset>
+						<fieldset class="select">
+							<select name="claster" id="claster">
+								<option value="0" selected>Холдинг</option>
+								<option value="1">Холдинг</option>
+								<option value="2">Холдинг</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</fieldset>
+						<fieldset class="select">
+							<select name="owner" id="owner">
+								<option value="0" selected>Категория аптеки</option>
+								<option value="1">Категория аптеки</option>
+								<option value="2">Категория аптеки</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</fieldset>
+					</div>
+					<div class="group_select">
+						<fieldset class="select">
+							<select name="holdings" id="holdings">
+								<option value="0" selected>Аптека</option>
+								<option value="1">Аптека</option>
+								<option value="2">Аптека</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</fieldset>
+						<fieldset class="select">
+							<select name="region" id="region">
+								<option value="0" selected>Группа</option>
+								<option value="1">Группа</option>
+								<option value="2">Группа</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</fieldset>
+					</div>
+					<div class="group_input">
+						<fieldset class="input_default">
+							<label for="userName">Дата c</label>
+							<input type="text" id="userName" name="userName">
+						</fieldset>
+						<fieldset class="input_default">
+							<label for="userName">Дата по</label>
+							<input type="text" id="userName" name="userName">
+						</fieldset>
+						<input type="submit" value="Сформировать отчет">
+					</div>
+				</form>
+			</div>
+			<div class="analysis_block">
+				<div class="groups_report">
+					<div class="report_header">
+						<div class="report_header_name">
+							<table>
+								<thead>
+									<tr>
+										<th colspan="1">Категория аптеки МРН</th>
+										<th colspan="1">Купленная полка</th>
+										<th colspan="1">Название</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="report_header_informations">
+							<div class="month">
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>1</th>
+											</tr>	
+										</thead>
+									</table>
+								</div>
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>2</th>
+											</tr>	
+										</thead>
+									</table>
+								</div>
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>3</th>
+											</tr>	
+										</thead>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="group">
+						<div class="group_name">
+							<table>
+								<thead>
+									<tr class="product_group_title">
+										<th>Frautest</th>
+										<th>Frautest</th>
+										<th>Frautest</th>
+									</tr>
+								</thead>
+								<tbody class="hide">
+									<tr class="product">
+										<td class="product_name">Frautest</td>
+										<td class="product_name">Frautest</td>
+										<td class="product_name">Frautest</td>
+									</tr>
+									<tr class="product">
+										<td class="product_name">Frautest Double</td>
+										<td class="product_name">Frautest Double</td>
+										<td class="product_name">Frautest Double</td>
+									</tr>
+									<tr class="product">
+										<td class="product_name">Frautest Comfort</td>
+										<td class="product_name">Frautest Comfort</td>
+										<td class="product_name">Frautest Comfort</td>
+									</tr>
+									<tr class="product">
+										<td class="product_name">Frautest Expert</td>
+										<td class="product_name">Frautest Expert</td>
+										<td class="product_name">Frautest Expert</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="group_informations">
+							<div class="month">
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>266 995</th>
+											</tr>
+										</thead>
+										<tbody class="hide">
+											<tr>
+												<td>1</td>
+											</tr>															
+											<tr>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>266 995</th>
+											</tr>
+										</thead>
+										<tbody class="hide">
+											<tr>
+												<td>1</td>
+											</tr>															
+											<tr>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>266 995</th>
+											</tr>
+										</thead>
+										<tbody class="hide">
+											<tr>
+												<td>1</td>
+											</tr>															
+											<tr>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>	
+					<div class="group">
+						<div class="group_name">
+							<table>
+								<thead>
+									<tr class="product_group_title">
+										<th>Frautest</th>
+										<th>Frautest</th>
+										<th>Frautest</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="product">
+										<td class="product_name">Frautest</td>
+										<td class="product_name">Frautest</td>
+										<td class="product_name">Frautest</td>
+									</tr>
+									<tr class="product">
+										<td class="product_name">Frautest Double</td>
+										<td class="product_name">Frautest Double</td>
+										<td class="product_name">Frautest Double</td>
+									</tr>
+									<tr class="product">
+										<td class="product_name">Frautest Comfort</td>
+										<td class="product_name">Frautest Comfort</td>
+										<td class="product_name">Frautest Comfort</td>
+									</tr>
+									<tr class="product">
+										<td class="product_name">Frautest Expert</td>
+										<td class="product_name">Frautest Expert</td>
+										<td class="product_name">Frautest Expert</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="group_informations">
+							<div class="month">
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>266 995</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+											</tr>															
+											<tr>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>266 995</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+											</tr>															
+											<tr>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>266 995</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+											</tr>															
+											<tr>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="group">
+						<div class="group_name">
+							<table>
+								<thead>
+									<tr class="product_group_title">
+										<th>Frautest</th>
+										<th>Frautest</th>
+										<th>Frautest</th>
+									</tr>
+								</thead>
+								<tbody class="hide">
+									<tr class="product">
+										<td class="product_name">Frautest</td>
+										<td class="product_name">Frautest</td>
+										<td class="product_name">Frautest</td>
+									</tr>
+									<tr class="product">
+										<td class="product_name">Frautest Double</td>
+										<td class="product_name">Frautest Double</td>
+										<td class="product_name">Frautest Double</td>
+									</tr>
+									<tr class="product">
+										<td class="product_name">Frautest Comfort</td>
+										<td class="product_name">Frautest Comfort</td>
+										<td class="product_name">Frautest Comfort</td>
+									</tr>
+									<tr class="product">
+										<td class="product_name">Frautest Expert</td>
+										<td class="product_name">Frautest Expert</td>
+										<td class="product_name">Frautest Expert</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="group_informations">
+							<div class="month">
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>266 995</th>
+											</tr>
+										</thead>
+										<tbody class="hide">
+											<tr>
+												<td>1</td>
+											</tr>															
+											<tr>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>266 995</th>
+											</tr>
+										</thead>
+										<tbody class="hide">
+											<tr>
+												<td>1</td>
+											</tr>															
+											<tr>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="info">
+									<table>
+										<thead>
+											<tr>
+												<th>266 995</th>
+											</tr>
+										</thead>
+										<tbody class="hide">
+											<tr>
+												<td>1</td>
+											</tr>															
+											<tr>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>		
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="js/scripts.js"></script>
+	<script src="js/import_export.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

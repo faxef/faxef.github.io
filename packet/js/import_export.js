@@ -13,7 +13,9 @@ $(document).ready(function(){
    var filename = fn.match(/[^\\/]*$/)[0]; // remove C:\fakename
    return filename;
 }
-
+	$('table thead th').on('click',function(){
+		$(this).closest('.group').find('tbody').toggleClass('hide');
+	})
 	// Переключение вкладок(импорт\экспорт)
 	$('main .tabs_menu li').on('click', function (){
 		$(this).addClass('active').siblings().removeClass('active')
