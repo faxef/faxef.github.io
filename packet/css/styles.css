@@ -207,7 +207,8 @@ main {
         border: solid 1.3px #e5e5e5;
         padding: 8px 10px;
         display: block;
-        margin-right: 20px; }
+        margin-right: 20px;
+        background: white; }
         main form div.adding_files .add_file_block span,
         main form div.adding_files .save_file_block span,
         main form div.saving_files .add_file_block span,
@@ -399,7 +400,7 @@ main {
         display: flex;
         -ms-flex-pack: justify;
             justify-content: space-between; }
-        main .adding_user .content form .inputs fieldset.input_default {
+        main .adding_user .content form .inputs div.input_default {
           display: -moz-flex;
           display: -ms-flex;
           display: -o-flex;
@@ -408,139 +409,212 @@ main {
           -ms-flex-direction: column;
               flex-direction: column;
           margin-bottom: 15px; }
-          main .adding_user .content form .inputs fieldset.input_default label {
+          main .adding_user .content form .inputs div.input_default label {
             margin-bottom: 15px;
             font-size: 14px; }
-          main .adding_user .content form .inputs fieldset.input_default input {
+          main .adding_user .content form .inputs div.input_default input {
             border: solid 1px #c5c9cc;
             background-color: #f5f5f5;
             padding: 5px 20px; }
-        main .adding_user .content form .inputs fieldset.group_input {
+        main .adding_user .content form .inputs div.group_input {
           display: -ms-flexbox;
           display: flex;
           -ms-flex-pack: justify;
               justify-content: space-between; }
-          main .adding_user .content form .inputs fieldset.group_input .input_default {
+          main .adding_user .content form .inputs div.group_input .input_default {
             -ms-flex: 1 0 auto;
                 flex: 1 0 auto;
             margin-right: 20px; }
-            main .adding_user .content form .inputs fieldset.group_input .input_default + .input_default {
+            main .adding_user .content form .inputs div.group_input .input_default + .input_default {
               margin-left: 20px;
               margin-right: 0; }
-        main .adding_user .content form .inputs fieldset.Fleft {
+        main .adding_user .content form .inputs div.Fleft {
           margin-right: 60px;
           -ms-flex: 1 0 auto;
               flex: 1 0 auto; }
-      main .adding_user .content.mainInfo fieldset.select {
+      main .adding_user .content.mainInfo div.select {
         margin-top: 51px; }
       main .adding_user .content.career form {
         width: 100%; }
-        main .adding_user .content.career form .inputs fieldset.group_input {
+        main .adding_user .content.career form .inputs div.group_input {
           -ms-flex: 1 0 auto;
               flex: 1 0 auto;
           -ms-flex-direction: column;
               flex-direction: column; }
-          main .adding_user .content.career form .inputs fieldset.group_input + .group_input {
+          main .adding_user .content.career form .inputs div.group_input + .group_input {
             margin-left: 60px; }
-          main .adding_user .content.career form .inputs fieldset.group_input .input_default {
+          main .adding_user .content.career form .inputs div.group_input .input_default {
             margin: 0;
             margin-bottom: 10px; }
-          main .adding_user .content.career form .inputs fieldset.group_input .select {
+          main .adding_user .content.career form .inputs div.group_input .select {
             margin-bottom: 10px; }
       main .adding_user .content.auto form {
         width: 100%; }
-        main .adding_user .content.auto form .inputs fieldset.group_input {
+        main .adding_user .content.auto form .inputs div.group_input {
           -ms-flex: 1 0 auto;
               flex: 1 0 auto;
           -ms-flex-direction: column;
               flex-direction: column; }
-          main .adding_user .content.auto form .inputs fieldset.group_input + .group_input {
+          main .adding_user .content.auto form .inputs div.group_input + .group_input {
             margin-left: 60px; }
-          main .adding_user .content.auto form .inputs fieldset.group_input .input_default {
+          main .adding_user .content.auto form .inputs div.group_input .input_default {
             margin: 0;
             margin-bottom: 10px; }
-          main .adding_user .content.auto form .inputs fieldset.group_input .select {
+          main .adding_user .content.auto form .inputs div.group_input .select {
             margin-bottom: 10px; }
   main .users .users_find {
     padding: 20px;
     background-color: #fff; }
-    main .users .users_find form fieldset.group_input {
-      margin-bottom: 20px;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-align: center;
-          align-items: center; }
-      main .users .users_find form fieldset.group_input a {
-        border-radius: 3px;
-        background-color: #e39855;
-        font-size: 14px;
-        padding: 6px 20px;
-        color: #ffffff; }
-    main .users .users_find form div.group_select {
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      display: -moz-flex;
-      display: -ms-flex;
-      display: -o-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-      main .users .users_find form div.group_select .select {
-        min-width: 200px; }
+    main .users .users_find form {
+      padding: 20px 0px 30px 0px; }
+      main .users .users_find form div.group_input {
+        margin-bottom: 20px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+            align-items: center; }
+        main .users .users_find form div.group_input input {
+          max-width: 645px;
+          margin-right: 22px; }
+        main .users .users_find form div.group_input a {
+          border-radius: 3px;
+          background-color: #e39855;
+          font-size: 14px;
+          padding: 6px 20px;
+          color: #ffffff; }
+      main .users .users_find form div.group_select {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: -ms-flexbox;
+        display: flex; }
+        main .users .users_find form div.group_select .select {
+          min-width: 200px; }
+          main .users .users_find form div.group_select .select + .select {
+            margin-left: 20px; }
   main .users .users_lists {
     margin-top: 10px;
-    background-color: #fff; }
+    background-color: #fff;
+    overflow-x: scroll; }
     main .users .users_lists li {
       display: -moz-flex;
       display: -ms-flex;
       display: -o-flex;
       display: -ms-flexbox;
       display: flex; }
+      main .users .users_lists li.title {
+        color: white; }
+        main .users .users_lists li.title span {
+          background-color: #3b4662; }
       main .users .users_lists li span {
+        width: 100px;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
         border: 1px solid #e5e5e5;
         padding: 20px 35px; }
+        main .users .users_lists li span.name {
+          width: 400px;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-align: center;
+              align-items: center;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+          main .users .users_lists li span.name .icons {
+            display: -ms-flexbox;
+            display: flex; }
+            main .users .users_lists li span.name .icons a + a {
+              margin-left: 10px; }
+            main .users .users_lists li span.name .icons a i {
+              display: -moz-flex;
+              display: -ms-flex;
+              display: -o-flex;
+              display: -ms-flexbox;
+              display: flex;
+              -ms-flex-align: center;
+                  align-items: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+              padding: 5px;
+              border-radius: 3px;
+              border: solid 1px #c5c9cc;
+              color: #c5c9cc; }
+        main .users .users_lists li span.code {
+          width: 80px; }
+        main .users .users_lists li span.adress {
+          width: 150px; }
+        main .users .users_lists li span.podr {
+          width: 100px; }
+  main .user_info .tabs_content .content {
+    padding: 20px;
+    background-color: #fff; }
+    main .user_info .tabs_content .content.active {
+      -ms-flex-direction: column;
+          flex-direction: column; }
+    main .user_info .tabs_content .content ul li {
+      padding: 15px 20px;
+      display: -ms-flexbox;
+      display: flex; }
+      main .user_info .tabs_content .content ul li.u div {
+        color: #c4c4c4; }
+      main .user_info .tabs_content .content ul li div {
+        min-width: 225px;
+        max-width: 225px; }
+        main .user_info .tabs_content .content ul li div + div {
+          margin-left: 20px;
+          color: #4b4b4b; }
+    main .user_info .tabs_content .content .btn {
+      margin: 20px; }
+      main .user_info .tabs_content .content .btn a.edit {
+        margin-top: 25px;
+        border-radius: 3px;
+        background-color: #3b4662;
+        padding: 8px 20px;
+        color: white; }
   main .matching_bases .bases_find {
     padding: 20px;
     background-color: #fff; }
-    main .matching_bases .bases_find form fieldset.group_input {
-      margin-bottom: 20px;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-align: center;
-          align-items: center; }
-      main .matching_bases .bases_find form fieldset.group_input input[type="search"] {
-        max-width: 615px;
-        margin-right: 40px;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
-        border-radius: 3px;
-        border: solid 1.3px #c5c9cc;
-        background-color: #ffffff;
-        padding: 5px 20px; }
-      main .matching_bases .bases_find form fieldset.group_input a {
-        border-radius: 3px;
-        background-color: #e39855;
-        font-size: 14px;
-        padding: 6px 20px;
-        color: #ffffff; }
-    main .matching_bases .bases_find form div.group_select {
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      display: -moz-flex;
-      display: -ms-flex;
-      display: -o-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-      main .matching_bases .bases_find form div.group_select .select {
-        min-width: 200px; }
+    main .matching_bases .bases_find form {
+      padding: 20px 0px 30px 0px; }
+      main .matching_bases .bases_find form div.group_input {
+        margin-bottom: 20px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+            align-items: center; }
+        main .matching_bases .bases_find form div.group_input input[type="search"] {
+          max-width: 615px;
+          margin-right: 40px;
+          -ms-flex: 1 0 auto;
+              flex: 1 0 auto;
+          border-radius: 3px;
+          border: solid 1.3px #c5c9cc;
+          background-color: #ffffff;
+          padding: 5px 20px; }
+        main .matching_bases .bases_find form div.group_input a {
+          border-radius: 3px;
+          background-color: #e39855;
+          font-size: 14px;
+          padding: 6px 20px;
+          color: #ffffff; }
+      main .matching_bases .bases_find form div.group_select {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: -ms-flexbox;
+        display: flex; }
+        main .matching_bases .bases_find form div.group_select .select {
+          min-width: 200px; }
+          main .matching_bases .bases_find form div.group_select .select + .select {
+            margin-left: 20px; }
   main .matching_bases .bases_lists {
     margin-top: 10px;
-    background-color: #fff; }
+    background-color: #fff;
+    overflow-x: scroll; }
     main .matching_bases .bases_lists li {
       display: -moz-flex;
       display: -ms-flex;
@@ -548,13 +622,48 @@ main {
       display: -ms-flexbox;
       display: flex; }
       main .matching_bases .bases_lists li.title {
-        background-color: #3b4662;
         color: white; }
+        main .matching_bases .bases_lists li.title span {
+          background-color: #3b4662; }
       main .matching_bases .bases_lists li span {
+        width: 100px;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
         border: 1px solid #e5e5e5;
         padding: 20px 35px; }
+        main .matching_bases .bases_lists li span.name {
+          width: 400px;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-align: center;
+              align-items: center;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+          main .matching_bases .bases_lists li span.name .icons {
+            display: -ms-flexbox;
+            display: flex; }
+            main .matching_bases .bases_lists li span.name .icons i {
+              display: -moz-flex;
+              display: -ms-flex;
+              display: -o-flex;
+              display: -ms-flexbox;
+              display: flex;
+              -ms-flex-align: center;
+                  align-items: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+              padding: 5px;
+              border-radius: 3px;
+              border: solid 1px #c5c9cc;
+              color: #c5c9cc; }
+              main .matching_bases .bases_lists li span.name .icons i + i {
+                margin-left: 10px; }
+        main .matching_bases .bases_lists li span.code {
+          width: 80px; }
+        main .matching_bases .bases_lists li span.adress {
+          width: 150px; }
+        main .matching_bases .bases_lists li span.podr {
+          width: 100px; }
   main .matching_prices .matching_blocks {
     display: -moz-flex;
     display: -ms-flex;
@@ -623,7 +732,8 @@ main {
         background-color: white; }
         main .matching_prices .matching_blocks .block .lists ul.block_lists li {
           position: relative;
-          padding: 15px 20px; }
+          padding: 15px 20px;
+          color: #3b4662; }
           main .matching_prices .matching_blocks .block .lists ul.block_lists li i {
             color: #e5e5e5;
             position: absolute;
@@ -772,7 +882,8 @@ main {
           background-color: white; }
           main .matching_holdings .matching_blocks .block .lists ul.block_lists li {
             position: relative;
-            padding: 15px 20px; }
+            padding: 15px 20px;
+            color: #3b4662; }
             main .matching_holdings .matching_blocks .block .lists ul.block_lists li i {
               color: #e5e5e5;
               position: absolute;
@@ -968,6 +1079,8 @@ main {
           display: -ms-flexbox;
           display: flex;
           width: calc(100% - 500px); }
+          main .analysis .analysis_block .groups_report .report_header .report_header_informations .month .info {
+            width: 250px; }
         main .analysis .analysis_block .groups_report .report_header .report_header_informations .info {
           width: 500px; }
     main .analysis .analysis_block .groups_report .group {
@@ -1008,7 +1121,8 @@ main {
           display: flex;
           width: calc(100% - 500px); }
           main .analysis .analysis_block .groups_report .group .group_informations .month .info {
-            display: inline-block; }
+            display: inline-block;
+            width: 250px; }
         main .analysis .analysis_block .groups_report .group .group_informations .info {
           width: 500px; }
   main .audit .analysis_block .groups_report .group .group_name {
@@ -1023,3 +1137,124 @@ main {
     width: auto; }
     main .audit .analysis_block .groups_report .report_header .report_header_informations .month .info {
       width: 80px; }
+  main .pharma .pharma_find {
+    padding: 20px;
+    background-color: #fff; }
+    main .pharma .pharma_find form {
+      padding: 20px 0px 30px 0px; }
+      main .pharma .pharma_find form div.group_input {
+        margin-bottom: 20px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+            align-items: center; }
+        main .pharma .pharma_find form div.group_input input {
+          max-width: 645px;
+          margin-right: 22px; }
+        main .pharma .pharma_find form div.group_input a {
+          border-radius: 3px;
+          background-color: #e39855;
+          font-size: 14px;
+          padding: 6px 20px;
+          color: #ffffff; }
+      main .pharma .pharma_find form div.group_select {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: -ms-flexbox;
+        display: flex; }
+        main .pharma .pharma_find form div.group_select .select {
+          min-width: 200px;
+          margin: 20px;
+          margin-left: 0; }
+  main .pharma .pharma_lists {
+    margin-top: 10px;
+    background-color: #fff;
+    overflow-x: scroll; }
+    main .pharma .pharma_lists li {
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      main .pharma .pharma_lists li.title {
+        color: white; }
+        main .pharma .pharma_lists li.title span {
+          background-color: #3b4662; }
+      main .pharma .pharma_lists li span {
+        width: 100px;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+        border: 1px solid #e5e5e5;
+        padding: 20px 35px; }
+        main .pharma .pharma_lists li span.name {
+          width: 450px;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-align: center;
+              align-items: center;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+          main .pharma .pharma_lists li span.name .icons {
+            display: -ms-flexbox;
+            display: flex; }
+            main .pharma .pharma_lists li span.name .icons a + a {
+              margin-left: 10px; }
+            main .pharma .pharma_lists li span.name .icons a i {
+              display: -moz-flex;
+              display: -ms-flex;
+              display: -o-flex;
+              display: -ms-flexbox;
+              display: flex;
+              -ms-flex-align: center;
+                  align-items: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+              padding: 5px;
+              border-radius: 3px;
+              border: solid 1px #c5c9cc;
+              color: #c5c9cc; }
+        main .pharma .pharma_lists li span.holding {
+          width: 80px; }
+        main .pharma .pharma_lists li span.adress {
+          width: 220px; }
+        main .pharma .pharma_lists li span.phone {
+          width: 150px; }
+        main .pharma .pharma_lists li span.region {
+          width: 80px; }
+  main .pharma_info .content {
+    padding: 20px;
+    background-color: #fff; }
+    main .pharma_info .content.active {
+      -ms-flex-direction: column;
+          flex-direction: column; }
+    main .pharma_info .content ul {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+      main .pharma_info .content ul li {
+        padding: 15px 20px;
+        display: -ms-flexbox;
+        display: flex;
+        width: calc(50% - 40px); }
+        main .pharma_info .content ul li.u div {
+          color: #c4c4c4; }
+        main .pharma_info .content ul li div {
+          min-width: 200px;
+          max-width: 200px; }
+          main .pharma_info .content ul li div + div {
+            margin-left: 20px;
+            color: #4b4b4b; }
+    main .pharma_info .content .btn {
+      margin: 20px; }
+      main .pharma_info .content .btn a.edit {
+        margin-top: 25px;
+        border-radius: 3px;
+        background-color: #3b4662;
+        padding: 8px 20px;
+        color: white; }

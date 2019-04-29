@@ -24,7 +24,7 @@
 		</div>
 		<div class="nav_menu">
 			<ul>
-				<li class="active"><a href="https://faxef.github.io/packet/users.index.html"><i class="fas fa-users"></i>Пользователи</a></li>
+				<li><a href="https://faxef.github.io/packet/users.index.html"><i class="fas fa-users"></i>Пользователи</a></li>
 				<li><a href="https://faxef.github.io/packet/"><i class="fas fa-file-export"></i>Экспорт/импорт</a></li>
 				<li class="parentMenu">
 					<a href=""><i class="fas fa-tasks"></i>Соответствия<i class="fas fa-angle-down"></i></a>
@@ -35,7 +35,7 @@
 					</ul>
 				</li>
 				<li><a href=""><i class="fas fa-hospital-alt"></i>Холдинги</a></li>
-				<li><a href=""><i class="fas fa-clinic-medical"></i>Аптеки</a></li>
+				<li class="active"><a href="https://faxef.github.io/packet/pharma.index.html"><i class="fas fa-clinic-medical"></i>Аптеки</a></li>
 				<li class="parentMenu">
 					<a href=""><i class="fas fa-book-open"></i>Отчеты<i class="fas fa-angle-down"></i></a>
 					<ul class="subMenu">
@@ -74,21 +74,28 @@
 	</nav>
 	<main>
 		<div class="title">
-			<h2>Пользователи</h2>
+			<h2>Аптеки</h2>
 		</div>
-		<div class="users">
-			<div class="users_find">
+		<div class="pharma">
+			<div class="pharma_find">
 				<form action="">
 					<div class="group_input">
-						<input type="search" q="googlesearch" placeholder="Введите Ф.И.О">
-						<a href="https://faxef.github.io/packet/user_add.index.html">Добавить пользователя</a>
+						<input type="search" q="googlesearch" placeholder="Введите название">
 					</div>
 					<div class="group_select">
 						<fieldset class="select">
 							<select name="podrazdelenie" id="podrazdelenie">
-								<option value="0" selected>Тип</option>
-								<option value="1">Тип</option>
-								<option value="2">Тип</option>
+								<option value="0" selected>Холдинг</option>
+								<option value="1">Холдинг</option>
+								<option value="2">Холдинг</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</fieldset>
+						<fieldset class="select">
+							<select name="podrazdelenie" id="podrazdelenie">
+								<option value="0" selected>Юр. лицо</option>
+								<option value="1">Юр. лицо</option>
+								<option value="2">Юр. лицо</option>
 							</select>
 							<i class="fas fa-angle-down"></i>
 						</fieldset>
@@ -102,12 +109,20 @@
 						</fieldset>
 						<fieldset class="select">
 							<select name="podrazdelenie" id="podrazdelenie">
-								<option value="0" selected>Подразделение</option>
-								<option value="1">Подразделение</option>
-								<option value="2">Подразделение</option>
+								<option value="0" selected>Дежурная аптека</option>
+								<option value="1">Дежурная аптека</option>
+								<option value="2">Дежурная аптека</option>
 							</select>
 							<i class="fas fa-angle-down"></i>
 						</fieldset>
+						<fieldset class="select">
+							<select name="podrazdelenie" id="podrazdelenie">
+								<option value="0" selected>Категория</option>
+								<option value="1">Категория</option>
+								<option value="2">Категория</option>
+							</select>
+							<i class="fas fa-angle-down"></i>			
+						</fieldset>				
 						<fieldset class="select">
 							<select name="podrazdelenie" id="podrazdelenie">
 								<option value="0" selected>Статус</option>
@@ -119,25 +134,27 @@
 					</div>
 				</form>
 			</div>
-			<ul class="users_lists">
+			<ul class="pharma_lists">
 				<li class="title">
-					<span class="name">Фамилия Имя Отчество</span>
-					<span class="code">Код сотрудника</span>
-					<span class="adress">Аптека</span>
-					<span class="podr">Подразделение</span>
+					<span class="name">Название</span>
+					<span class="holding">Холдинг</span>
+					<span class="region">Регион</span>
+					<span class="adress">Адрес</span>
+					<span class="phone">Телефон</span>
 				</li>
 				<li>
 					<span class="name">
 						<div class="icons">
-							<a href="https://faxef.github.io/packet/user_info.index.html"><i class="fas fa-eye"></i></a>
-							<a href="https://faxef.github.io/packet/user_info.index.html"><i class="fas fa-pen"></i></a>
+							<a href="https://faxef.github.io/packet/pharma_info.index.html"><i class="fas fa-eye"></i></a>
+							<a href="https://faxef.github.io/packet/pharma_info.index.html"><i class="fas fa-pen"></i></a>
 							<a href=""><i class="fas fa-trash"></i></a>
 						</div>
-						<p>Константинопольский Константин Константинович</p>
+						<p>Комфарм ООО Аптека №1</p>
 					</span>
-					<span class="code">info</span>
-					<span class="adress">info</span>
-					<span class="podr">info</span>
+					<span class="holding">Комфарм</span>
+					<span class="region">Витебск</span>
+					<span class="adress">г. Минск, ул. Ленина, 1</span>
+					<span class="phone">+375 (29) 000-00-00</span>
 				</li>
 			</ul>
 		</div>

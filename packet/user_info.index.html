@@ -60,8 +60,8 @@
 		</div>
 		<div class="nav_menu">
 			<ul>
-				<li class="active"><a href="https://faxef.github.io/packet/users.index.html"><i class="fas fa-users"></i></a></li>
-				<li><a href="https://faxef.github.io/packet/"><i class="fas fa-file-export"></i></a></li>
+				<li><a href="https://faxef.github.io/packet/users.index.html"><i class="fas fa-users"></i></a></li>
+				<li class="active"><a href="https://faxef.github.io/packet/"><i class="fas fa-file-export"></i></a></li>
 				<li><a href=""><i class="fas fa-tasks"></i></a></li>
 				<li><a href=""><i class="fas fa-hospital-alt"></i></a></li>
 				<li><a href=""><i class="fas fa-clinic-medical"></i></a></li>
@@ -74,72 +74,121 @@
 	</nav>
 	<main>
 		<div class="title">
-			<h2>Пользователи</h2>
+			<h2>Экспорт/импорт</h2>
 		</div>
-		<div class="users">
-			<div class="users_find">
-				<form action="">
-					<div class="group_input">
-						<input type="search" q="googlesearch" placeholder="Введите Ф.И.О">
-						<a href="https://faxef.github.io/packet/user_add.index.html">Добавить пользователя</a>
-					</div>
-					<div class="group_select">
-						<fieldset class="select">
-							<select name="podrazdelenie" id="podrazdelenie">
-								<option value="0" selected>Тип</option>
-								<option value="1">Тип</option>
-								<option value="2">Тип</option>
-							</select>
-							<i class="fas fa-angle-down"></i>
-						</fieldset>
-						<fieldset class="select">
-							<select name="podrazdelenie" id="podrazdelenie">
-								<option value="0" selected>Регион</option>
-								<option value="1">Регион</option>
-								<option value="2">Регион</option>
-							</select>
-							<i class="fas fa-angle-down"></i>
-						</fieldset>
-						<fieldset class="select">
-							<select name="podrazdelenie" id="podrazdelenie">
-								<option value="0" selected>Подразделение</option>
-								<option value="1">Подразделение</option>
-								<option value="2">Подразделение</option>
-							</select>
-							<i class="fas fa-angle-down"></i>
-						</fieldset>
-						<fieldset class="select">
-							<select name="podrazdelenie" id="podrazdelenie">
-								<option value="0" selected>Статус</option>
-								<option value="1">Статус</option>
-								<option value="2">Статус</option>
-							</select>
-							<i class="fas fa-angle-down"></i>
-						</fieldset>
-					</div>
-				</form>
-			</div>
-			<ul class="users_lists">
-				<li class="title">
-					<span class="name">Фамилия Имя Отчество</span>
-					<span class="code">Код сотрудника</span>
-					<span class="adress">Аптека</span>
-					<span class="podr">Подразделение</span>
-				</li>
-				<li>
-					<span class="name">
-						<div class="icons">
-							<a href="https://faxef.github.io/packet/user_info.index.html"><i class="fas fa-eye"></i></a>
-							<a href="https://faxef.github.io/packet/user_info.index.html"><i class="fas fa-pen"></i></a>
-							<a href=""><i class="fas fa-trash"></i></a>
-						</div>
-						<p>Константинопольский Константин Константинович</p>
-					</span>
-					<span class="code">info</span>
-					<span class="adress">info</span>
-					<span class="podr">info</span>
-				</li>
+		<div class="user_info">
+			<ul class="tabs_menu">
+				<li class="active">Основная информация</li>
+				<li>Карьера</li>
+				<li>Автомобиль</li>
 			</ul>
+			<div class="tabs_content">
+				<div class="content main_info active">
+					<ul>
+						<li>
+							<div>Ф.И.О</div>
+							<div>Контантинопольский Константин Константинович</div>
+						</li>
+						<li>
+							<div>Код сотрудника</div>
+							<div>1234АБВ</div>
+						</li>
+						<li>
+							<div>Пол</div>
+							<div>Мужской</div>
+						</li>
+						<li>
+							<div>Рабочий телефон</div>
+							<div>+375 (29) 000-00-00</div>
+						</li>
+						<li>
+							<div>Личный телефон</div>
+							<div>+375 (29) 000-00-00</div>
+						</li>
+						<li>
+							<div>E-mail</div>
+							<div>email@gmailcom</div>
+						</li>
+						<li>
+							<div>Дата рождения</div>
+							<div>01/01/2019</div>
+						</li>
+						<li>
+							<div>Дата проживания</div>
+							<div>г.Минск, ул.Ленина, 5/10</div>
+						</li>
+						<li>
+							<div>Тип</div>
+							<div>Торговый представитель</div>
+						</li>
+						<li>
+							<div>Подразделение</div>
+							<div>Отдел продаж</div>
+						</li>
+						<li>
+							<div>Аптеки</div>
+							<div>г.Минск, ул.Ленина, 1</div>
+						</li>
+					</ul>
+					<div class="btn">
+						<a href="" class="edit">Редактировать</a>
+					</div>
+				</div>
+				<div class="content career">
+					<ul>
+						<li>
+							<div>Дата принятия на работу</div>
+							<div>01/01/2019</div>
+						</li>
+						<li>
+							<div>Испытательный срок до</div>
+							<div>01/03/2019</div>
+						</li>
+						<li>
+							<div>Рейтинг</div>
+							<div>5</div>
+						</li>
+						<li>
+							<div>KPI</div>
+							<div>90%</div>
+						</li>
+						<li class="u">
+							<div>Уволен</div>
+							<div>-</div>
+						</li>
+						<li class="u">
+							<div>Причина увольнения</div>
+							<div>-</div>
+						</li>
+					</ul>
+					<div class="btn">
+						<a href="" class="edit">Редактировать</a>
+					</div>
+				</div>				
+				<div class="content auto">
+					<ul>
+						<li>
+							<div>Марка автомобиляу</div>
+							<div>Reno Megane</div>
+						</li>
+						<li>
+							<div>Регистрационный номер</div>
+							<div>2341AB-7</div>
+						</li>
+						<li>
+							<div>Водительское удостоверение</div>
+							<div>AB1234</div>
+						</li>
+						<li>
+							<div>Линейная норма расхода топлива</div>
+							<div>15л/100 км</div>
+						</li>
+					</ul>
+					<div class="btn">
+						<a href="" class="edit">Редактировать</a>
+					</div>
+				</div>	
+			</div>
 		</div>
 	</main>
 	<script src="js/scripts.js"></script>

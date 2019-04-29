@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
-<body> 
+<body>
 	<nav class="full active">
 		<div class="nav_close">
 			<div class="close"><i class="fas fa-chevron-left"></i></div>
@@ -27,7 +27,7 @@
 				<li><a href="https://faxef.github.io/packet/users.index.html"><i class="fas fa-users"></i>Пользователи</a></li>
 				<li class="active"><a href="https://faxef.github.io/packet/"><i class="fas fa-file-export"></i>Экспорт/импорт</a></li>
 				<li class="parentMenu">
-					<a href="https://faxef.github.io/packet/matching_prices.index.html"><i class="fas fa-tasks"></i>Соответствия<i class="fas fa-angle-down"></i></a>
+					<a href=""><i class="fas fa-tasks"></i>Соответствия<i class="fas fa-angle-down"></i></a>
 					<ul class="subMenu">
 						<li><a href="https://faxef.github.io/packet/matching_prices.index.html">Прайс-лист</a></li>
 						<li><a href="https://faxef.github.io/packet/matching_holdings.index.html">Холдинг ассортимент</a></li>
@@ -35,12 +35,13 @@
 					</ul>
 				</li>
 				<li><a href=""><i class="fas fa-hospital-alt"></i>Холдинги</a></li>
+				<li><a href="https://faxef.github.io/packet/pharma.index.html"><i class="fas fa-clinic-medical"></i>Аптеки</a></li>
 				<li class="parentMenu">
 					<a href=""><i class="fas fa-book-open"></i>Отчеты<i class="fas fa-angle-down"></i></a>
 					<ul class="subMenu">
 						<li><a href="https://faxef.github.io/packet/analysis.index.html">Анализ рынка</a></li>
 						<li><a href="https://faxef.github.io/packet/audit.index.html">Аудит наличия</a></li>
-						<li><a href="https://faxef.github.io/packet/analysis_sales.html">Анализ продаж МРН</a></li>
+						<li><a href="https://faxef.github.io/packet/analysis_sales.index.html">Анализ продаж МРН</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -61,7 +62,7 @@
 			<ul>
 				<li><a href="https://faxef.github.io/packet/users.index.html"><i class="fas fa-users"></i></a></li>
 				<li class="active"><a href="https://faxef.github.io/packet/"><i class="fas fa-file-export"></i></a></li>
-				<li><a href="https://faxef.github.io/packet/matching_prices.index.html"><i class="fas fa-tasks"></i></a></li>
+				<li><a href=""><i class="fas fa-tasks"></i></a></li>
 				<li><a href=""><i class="fas fa-hospital-alt"></i></a></li>
 				<li><a href=""><i class="fas fa-clinic-medical"></i></a></li>
 				<li><a href=""><i class="fas fa-book-open"></i></a></li>
@@ -131,19 +132,45 @@
 								<h2>База аудит наличия</h2>							
 							</div>
 							<ul class="files_list">
-<!-- 								<li th:each="file : ${files}">
-									<div class="file"><a th:href="${file}" th:text="${file}">название</a></div>
-									<div class="date">
-										<span class="d">25.03.2019</span><span class="t">15:59</span>
-									</div>
-									<div class="icons">
-										<i class="fas fa-pencil-alt"></i>
-										<i class="fas fa-trash-alt"></i>
-									</div>
-								</li> -->
 							</ul>
 						</div>
 					</div>
+				</div>
+				<div class="content export">
+					<form>
+						<fieldset class="files">
+							<input type="file" id="save_file" name="file">
+							<div class="saving_files">
+								<div class="bases_block">
+									<select name="bases" id="bases">
+										<option value="0" selected>Отчет 1</option>
+										<option value="1">Отчет 2</option>
+										<option value="2">Отчет 3</option>
+									</select>
+									<i class="fas fa-angle-down"></i>
+								</div>
+							</div>
+						</fieldset>
+						<input type="submit" value="Экспортировать">
+					</form>
+				</div>
+				<div class="content export">
+					<form>
+						<fieldset class="files">
+							<input type="file" id="save_file" name="file">
+							<div class="saving_files">
+								<div class="bases_block">
+									<select name="bases" id="bases">
+										<option value="0" selected>Отчет 1</option>
+										<option value="1">Отчет 2</option>
+										<option value="2">Отчет 3</option>
+									</select>
+									<i class="fas fa-angle-down"></i>
+								</div>
+							</div>
+						</fieldset>
+						<input type="submit" value="Экспортировать">
+					</form>
 				</div>
 				<div class="content export">
 					<form>
