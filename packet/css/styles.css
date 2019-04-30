@@ -19,6 +19,22 @@ html, body {
 body {
   background-color: #eeeeee; }
 
+.hello {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  .hello h2 {
+    font-size: 32px; }
+  .hello p {
+    margin-top: 16px; }
+
 nav {
   box-sizing: border-box;
   height: 100%;
@@ -961,6 +977,215 @@ main {
           main .matching_holdings .matching_blocks .block.chooses .title h2 {
             color: #3b4662; }
         main .matching_holdings .matching_blocks .block.chooses ul.block_lists li {
+          color: #e5e5e5; }
+  main .matching_market {
+    margin-top: 10px; }
+    main .matching_market .matching_blocks {
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      main .matching_market .matching_blocks .block {
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto; }
+        main .matching_market .matching_blocks .block + .block {
+          margin-left: 10px; }
+        main .matching_market .matching_blocks .block .title {
+          text-align: center;
+          box-shadow: 4px 0 5px 0 rgba(0, 0, 0, 0.05);
+          background-color: #3b4662; }
+          main .matching_market .matching_blocks .block .title h2 {
+            position: relative;
+            font-family: Roboto;
+            font-size: 16px;
+            color: #ffffff;
+            padding: 15px 30px; }
+            main .matching_market .matching_blocks .block .title h2 i {
+              color: black;
+              position: absolute;
+              right: 15px;
+              top: 50%;
+              transform: translate(-50%, -50%); }
+        main .matching_market .matching_blocks .block form {
+          padding: 20px;
+          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.01), -5px 0 5px 0 rgba(0, 0, 0, 0.01), 5px 0 5px 0 rgba(0, 0, 0, 0.01);
+          background-color: white;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+          main .matching_market .matching_blocks .block form div.input_default {
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+                flex-direction: column;
+            margin-bottom: 15px; }
+            main .matching_market .matching_blocks .block form div.input_default label {
+              margin-bottom: 15px;
+              font-size: 14px; }
+            main .matching_market .matching_blocks .block form div.input_default input,
+            main .matching_market .matching_blocks .block form div.input_default textarea {
+              border: solid 1px #c5c9cc;
+              background-color: #f5f5f5;
+              padding: 5px 20px; }
+          main .matching_market .matching_blocks .block form .group_input {
+            margin-top: 20px;
+            width: 100%;
+            -ms-flex: 1 0 auto;
+                flex: 1 0 auto; }
+            main .matching_market .matching_blocks .block form .group_input input[type="search"] {
+              width: 100%;
+              max-width: 100%; }
+          main .matching_market .matching_blocks .block form input[type="submit"] {
+            margin-top: 20px; }
+        main .matching_market .matching_blocks .block .lists {
+          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.01), -5px 0 5px 0 rgba(0, 0, 0, 0.01), 5px 0 5px 0 rgba(0, 0, 0, 0.01);
+          margin-top: 10px;
+          background-color: white; }
+          main .matching_market .matching_blocks .block .lists ul.block_lists li {
+            position: relative;
+            padding: 15px 20px;
+            color: #3b4662; }
+            main .matching_market .matching_blocks .block .lists ul.block_lists li i {
+              color: #e5e5e5;
+              position: absolute;
+              right: 15px;
+              top: 50%;
+              transform: translate(-50%, -50%); }
+            main .matching_market .matching_blocks .block .lists ul.block_lists li + li {
+              border-top: 1px solid #e5e5e5; }
+        main .matching_market .matching_blocks .block.add {
+          max-width: 600px; }
+          main .matching_market .matching_blocks .block.add ul.market_lists li.market_skillet {
+            display: none; }
+          main .matching_market .matching_blocks .block.add ul.market_lists li {
+            padding: 0;
+            position: relative;
+            color: #3b4662; }
+            main .matching_market .matching_blocks .block.add ul.market_lists li.market_skillet {
+              display: none; }
+            main .matching_market .matching_blocks .block.add ul.market_lists li .market_title {
+              box-sizing: border-box;
+              display: -moz-flex;
+              display: -ms-flex;
+              display: -o-flex;
+              display: -ms-flexbox;
+              display: flex;
+              border-bottom: 1px  solid #ebebeb;
+              display: block;
+              padding: 15px 20px;
+              width: 100%;
+              position: relative; }
+              main .matching_market .matching_blocks .block.add ul.market_lists li .market_title i {
+                color: #e5e5e5;
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translate(-50%, -50%); }
+            main .matching_market .matching_blocks .block.add ul.market_lists li .market_groups {
+              min-height: 0;
+              max-height: 0;
+              opacity: 0;
+              transition: all 0.8s ease; }
+              main .matching_market .matching_blocks .block.add ul.market_lists li .market_groups .groups_content .groups {
+                padding: 15px 20px;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
+                -ms-flex-pack: justify;
+                    justify-content: space-between; }
+                main .matching_market .matching_blocks .block.add ul.market_lists li .market_groups .groups_content .groups .group {
+                  margin: 10px;
+                  border-radius: 5px;
+                  background-color: #e39855;
+                  padding: 10px 20px;
+                  color: white; }
+              main .matching_market .matching_blocks .block.add ul.market_lists li .market_groups.show {
+                min-height: 50px;
+                max-height: 100vh;
+                opacity: 1; }
+            main .matching_market .matching_blocks .block.add ul.market_lists li + li {
+              border-top: 1px solid #e5e5e5; }
+        main .matching_market .matching_blocks .block.sales form .group_input {
+          margin-top: 0; }
+        main .matching_market .matching_blocks .block.sales form .group_select .select {
+          margin-top: 20px; }
+        main .matching_market .matching_blocks .block.sales .lists {
+          background-color: transparent;
+          box-shadow: none; }
+          main .matching_market .matching_blocks .block.sales .lists form {
+            background-color: transparent;
+            box-shadow: none;
+            padding: 0; }
+            main .matching_market .matching_blocks .block.sales .lists form .btns {
+              display: -ms-flexbox;
+              display: flex;
+              border-radius: 5px;
+              background-color: #e39855; }
+              main .matching_market .matching_blocks .block.sales .lists form .btns a.checkAll {
+                width: 0px;
+                height: 0px;
+                display: block;
+                border: 1px solid white;
+                padding: 10px;
+                margin: 15px;
+                background-color: white;
+                border-radius: 5px; }
+              main .matching_market .matching_blocks .block.sales .lists form .btns .submit {
+                display: -ms-flexbox;
+                display: flex;
+                border-left: 1px solid white;
+                position: relative;
+                -ms-flex-align: center;
+                    align-items: center; }
+                main .matching_market .matching_blocks .block.sales .lists form .btns .submit input {
+                  margin-top: 0;
+                  background-color: transparent; }
+                main .matching_market .matching_blocks .block.sales .lists form .btns .submit > i {
+                  color: white; }
+            main .matching_market .matching_blocks .block.sales .lists form ul.block_lists {
+              background-color: #fff;
+              margin-top: 10px; }
+              main .matching_market .matching_blocks .block.sales .lists form ul.block_lists li {
+                display: -ms-flexbox;
+                display: flex;
+                padding: 0; }
+                main .matching_market .matching_blocks .block.sales .lists form ul.block_lists li input[type="checkbox"] {
+                  display: none; }
+                main .matching_market .matching_blocks .block.sales .lists form ul.block_lists li label {
+                  display: -ms-flexbox;
+                  display: flex;
+                  -ms-flex: 1 0 auto;
+                      flex: 1 0 auto;
+                  -ms-flex-align: center;
+                      align-items: center; }
+                  main .matching_market .matching_blocks .block.sales .lists form ul.block_lists li label:before {
+                    content: '';
+                    width: 0px;
+                    height: 0px;
+                    display: block;
+                    border: 1px solid #c5c9cc;
+                    padding: 10px;
+                    margin: 15px;
+                    margin-right: 35px;
+                    background-color: white;
+                    border-radius: 5px; }
+        main .matching_market .matching_blocks .block.chooses .market_group {
+          display: none; }
+          main .matching_market .matching_blocks .block.chooses .market_group.skillet {
+            display: none; }
+          main .matching_market .matching_blocks .block.chooses .market_group.active {
+            display: block; }
+        main .matching_market .matching_blocks .block.chooses .added_group.skillet {
+          display: none; }
+        main .matching_market .matching_blocks .block.chooses .added_group .title {
+          background-color: #fff; }
+          main .matching_market .matching_blocks .block.chooses .added_group .title h2 {
+            color: #3b4662; }
+        main .matching_market .matching_blocks .block.chooses .added_group ul.block_lists li {
           color: #e5e5e5; }
   main .analysis .analysis_filter {
     padding: 20px;
