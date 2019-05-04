@@ -1100,32 +1100,45 @@ main {
                 main .matching_market .matching_blocks .block.add ul.market_lists li .market_groups .groups_content .groups .group {
                   margin: 10px;
                   border-radius: 5px;
-                  background-color: #e39855;
+                  background-color: #3b4662;
                   padding: 10px 20px;
                   color: white; }
+                  main .matching_market .matching_blocks .block.add ul.market_lists li .market_groups .groups_content .groups .group.active {
+                    background-color: #e39855; }
               main .matching_market .matching_blocks .block.add ul.market_lists li .market_groups.show {
                 min-height: 50px;
                 max-height: 100vh;
                 opacity: 1; }
             main .matching_market .matching_blocks .block.add ul.market_lists li + li {
               border-top: 1px solid #e5e5e5; }
-        main .matching_market .matching_blocks .block.sales form .group_input {
+        main .matching_market .matching_blocks .block.products form .group_input {
           margin-top: 0; }
-        main .matching_market .matching_blocks .block.sales form .group_select .select {
+          main .matching_market .matching_blocks .block.products form .group_input input {
+            box-sizing: border-box;
+            width: 100%;
+            margin: 5px auto;
+            max-width: 615px;
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+            border-radius: 3px;
+            border: solid 1.3px #c5c9cc;
+            background-color: #ffffff;
+            padding: 5px 20px; }
+        main .matching_market .matching_blocks .block.products form .group_select .select {
           margin-top: 20px; }
-        main .matching_market .matching_blocks .block.sales .lists {
+        main .matching_market .matching_blocks .block.products .lists {
           background-color: transparent;
           box-shadow: none; }
-          main .matching_market .matching_blocks .block.sales .lists form {
+          main .matching_market .matching_blocks .block.products .lists form {
             background-color: transparent;
             box-shadow: none;
             padding: 0; }
-            main .matching_market .matching_blocks .block.sales .lists form .btns {
+            main .matching_market .matching_blocks .block.products .lists form .btns {
               display: -ms-flexbox;
               display: flex;
               border-radius: 5px;
               background-color: #e39855; }
-              main .matching_market .matching_blocks .block.sales .lists form .btns a.checkAll {
+              main .matching_market .matching_blocks .block.products .lists form .btns a.checkAll {
                 width: 0px;
                 height: 0px;
                 display: block;
@@ -1134,35 +1147,45 @@ main {
                 margin: 15px;
                 background-color: white;
                 border-radius: 5px; }
-              main .matching_market .matching_blocks .block.sales .lists form .btns .submit {
+              main .matching_market .matching_blocks .block.products .lists form .btns .submit {
                 display: -ms-flexbox;
                 display: flex;
                 border-left: 1px solid white;
                 position: relative;
                 -ms-flex-align: center;
                     align-items: center; }
-                main .matching_market .matching_blocks .block.sales .lists form .btns .submit input {
+                main .matching_market .matching_blocks .block.products .lists form .btns .submit input {
                   margin-top: 0;
                   background-color: transparent; }
-                main .matching_market .matching_blocks .block.sales .lists form .btns .submit > i {
+                main .matching_market .matching_blocks .block.products .lists form .btns .submit > i {
                   color: white; }
-            main .matching_market .matching_blocks .block.sales .lists form ul.block_lists {
+            main .matching_market .matching_blocks .block.products .lists form div.block_lists {
               background-color: #fff;
               margin-top: 10px; }
-              main .matching_market .matching_blocks .block.sales .lists form ul.block_lists li {
+              main .matching_market .matching_blocks .block.products .lists form div.block_lists div.product {
                 display: -ms-flexbox;
                 display: flex;
                 padding: 0; }
-                main .matching_market .matching_blocks .block.sales .lists form ul.block_lists li input[type="checkbox"] {
+                main .matching_market .matching_blocks .block.products .lists form div.block_lists div.product.selected label:after {
+                  content: '';
+                  width: 10px;
+                  height: 3px;
+                  background: #c00;
+                  transform: rotate(50deg);
+                  transition: 0.3s;
+                  position: absolute;
+                  left: 20px; }
+                main .matching_market .matching_blocks .block.products .lists form div.block_lists div.product input[type="checkbox"] {
                   display: none; }
-                main .matching_market .matching_blocks .block.sales .lists form ul.block_lists li label {
+                main .matching_market .matching_blocks .block.products .lists form div.block_lists div.product label {
                   display: -ms-flexbox;
                   display: flex;
                   -ms-flex: 1 0 auto;
                       flex: 1 0 auto;
                   -ms-flex-align: center;
-                      align-items: center; }
-                  main .matching_market .matching_blocks .block.sales .lists form ul.block_lists li label:before {
+                      align-items: center;
+                  position: relative; }
+                  main .matching_market .matching_blocks .block.products .lists form div.block_lists div.product label:before {
                     content: '';
                     width: 0px;
                     height: 0px;
@@ -1179,6 +1202,15 @@ main {
             display: none; }
           main .matching_market .matching_blocks .block.chooses .market_group.active {
             display: block; }
+        main .matching_market .matching_blocks .block.chooses .added_group .lists {
+          display: none;
+          margin-top: 5px; }
+        main .matching_market .matching_blocks .block.chooses .added_group + .added_group {
+          margin-top: 10px; }
+        main .matching_market .matching_blocks .block.chooses .added_group.active .title {
+          background-color: #e39855; }
+        main .matching_market .matching_blocks .block.chooses .added_group.active .lists {
+          display: block; }
         main .matching_market .matching_blocks .block.chooses .added_group.skillet {
           display: none; }
         main .matching_market .matching_blocks .block.chooses .added_group .title {
@@ -1187,6 +1219,20 @@ main {
             color: #3b4662; }
         main .matching_market .matching_blocks .block.chooses .added_group ul.block_lists li {
           color: #e5e5e5; }
+    main .matching_market .createReport {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center; }
+      main .matching_market .createReport button {
+        margin-top: 25px;
+        border-radius: 3px;
+        background-color: #3b4662;
+        padding: 8px 20px;
+        color: white;
+        border: 0;
+        font-size: 16px;
+        font-weight: 600; }
   main .analysis .analysis_filter {
     padding: 20px;
     background-color: #fff; }
