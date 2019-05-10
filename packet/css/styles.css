@@ -125,7 +125,8 @@ nav {
   nav.full {
     width: 250px;
     min-width: 250px;
-    left: -250px; }
+    left: -250px;
+    overflow-y: scroll; }
     nav.full .nav_close .close {
       display: -ms-flexbox;
       display: flex;
@@ -507,9 +508,8 @@ main {
         display: -ms-flexbox;
         display: flex; }
         main .users .users_find form div.group_select .select {
-          min-width: 200px; }
-          main .users .users_find form div.group_select .select + .select {
-            margin-left: 20px; }
+          min-width: 200px;
+          margin-right: 20px; }
   main .users .users_lists {
     margin-top: 10px;
     background-color: #fff;
@@ -624,9 +624,8 @@ main {
         display: -ms-flexbox;
         display: flex; }
         main .matching_bases .bases_find form div.group_select .select {
-          min-width: 200px; }
-          main .matching_bases .bases_find form div.group_select .select + .select {
-            margin-left: 20px; }
+          min-width: 200px;
+          margin-right: 20px; }
   main .matching_bases .bases_lists {
     margin-top: 10px;
     background-color: #fff;
@@ -730,8 +729,8 @@ main {
           width: 100%;
           -ms-flex: 1 0 auto;
               flex: 1 0 auto; }
-          main .matching_prices .matching_blocks .block form .group_select .select + .select {
-            margin-top: 20px; }
+          main .matching_prices .matching_blocks .block form .group_select .select {
+            margin-bottom: 20px; }
         main .matching_prices .matching_blocks .block form .group_input {
           margin-top: 20px;
           width: 100%;
@@ -978,42 +977,42 @@ main {
             color: #3b4662; }
         main .matching_holdings .matching_blocks .block.chooses ul.block_lists li {
           color: #e5e5e5; }
-  main .matching_market {
+  main .matching_segments {
     margin-top: 10px; }
-    main .matching_market .matching_blocks {
+    main .matching_segments .matching_blocks {
       display: -moz-flex;
       display: -ms-flex;
       display: -o-flex;
       display: -ms-flexbox;
       display: flex; }
-      main .matching_market .matching_blocks .block {
+      main .matching_segments .matching_blocks .block {
         -ms-flex: 1 0 auto;
             flex: 1 0 auto; }
-        main .matching_market .matching_blocks .block + .block {
+        main .matching_segments .matching_blocks .block + .block {
           margin-left: 10px; }
-        main .matching_market .matching_blocks .block .title {
+        main .matching_segments .matching_blocks .block .title {
           text-align: center;
           box-shadow: 4px 0 5px 0 rgba(0, 0, 0, 0.05);
           background-color: #3b4662; }
-          main .matching_market .matching_blocks .block .title h2 {
+          main .matching_segments .matching_blocks .block .title h2 {
             position: relative;
             font-family: Roboto;
             font-size: 16px;
             color: #ffffff;
             padding: 15px 30px; }
-            main .matching_market .matching_blocks .block .title h2 i {
+            main .matching_segments .matching_blocks .block .title h2 i {
               color: black;
               position: absolute;
               right: 15px;
               top: 50%;
               transform: translate(-50%, -50%); }
-        main .matching_market .matching_blocks .block form {
+        main .matching_segments .matching_blocks .block form {
           padding: 20px;
           box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.01), -5px 0 5px 0 rgba(0, 0, 0, 0.01), 5px 0 5px 0 rgba(0, 0, 0, 0.01);
           background-color: white;
           -ms-flex-direction: column;
               flex-direction: column; }
-          main .matching_market .matching_blocks .block form div.input_default {
+          main .matching_segments .matching_blocks .block form div.input_default {
             display: -moz-flex;
             display: -ms-flex;
             display: -o-flex;
@@ -1022,51 +1021,51 @@ main {
             -ms-flex-direction: column;
                 flex-direction: column;
             margin-bottom: 15px; }
-            main .matching_market .matching_blocks .block form div.input_default label {
+            main .matching_segments .matching_blocks .block form div.input_default label {
               margin-bottom: 15px;
               font-size: 14px; }
-            main .matching_market .matching_blocks .block form div.input_default input,
-            main .matching_market .matching_blocks .block form div.input_default textarea {
+            main .matching_segments .matching_blocks .block form div.input_default input,
+            main .matching_segments .matching_blocks .block form div.input_default textarea {
               border: solid 1px #c5c9cc;
               background-color: #f5f5f5;
               padding: 5px 20px; }
-          main .matching_market .matching_blocks .block form .group_input {
+          main .matching_segments .matching_blocks .block form .group_input {
             margin-top: 20px;
             width: 100%;
             -ms-flex: 1 0 auto;
                 flex: 1 0 auto; }
-            main .matching_market .matching_blocks .block form .group_input input[type="search"] {
+            main .matching_segments .matching_blocks .block form .group_input input[type="search"] {
               width: 100%;
               max-width: 100%; }
-          main .matching_market .matching_blocks .block form input[type="submit"] {
+          main .matching_segments .matching_blocks .block form input[type="submit"] {
             margin-top: 20px; }
-        main .matching_market .matching_blocks .block .lists {
+        main .matching_segments .matching_blocks .block .lists {
           box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.01), -5px 0 5px 0 rgba(0, 0, 0, 0.01), 5px 0 5px 0 rgba(0, 0, 0, 0.01);
           margin-top: 10px;
           background-color: white; }
-          main .matching_market .matching_blocks .block .lists ul.block_lists li {
+          main .matching_segments .matching_blocks .block .lists ul.block_lists li {
             position: relative;
             padding: 15px 20px;
             color: #3b4662; }
-            main .matching_market .matching_blocks .block .lists ul.block_lists li i {
+            main .matching_segments .matching_blocks .block .lists ul.block_lists li i {
               color: #e5e5e5;
               position: absolute;
               right: 15px;
               top: 50%;
               transform: translate(-50%, -50%); }
-            main .matching_market .matching_blocks .block .lists ul.block_lists li + li {
+            main .matching_segments .matching_blocks .block .lists ul.block_lists li + li {
               border-top: 1px solid #e5e5e5; }
-        main .matching_market .matching_blocks .block.add {
+        main .matching_segments .matching_blocks .block.add {
           max-width: 600px; }
-          main .matching_market .matching_blocks .block.add ul.market_lists li.market_skillet {
+          main .matching_segments .matching_blocks .block.add ul.matching_lists li.matching_skillet {
             display: none; }
-          main .matching_market .matching_blocks .block.add ul.market_lists li {
+          main .matching_segments .matching_blocks .block.add ul.matching_lists li {
             padding: 0;
             position: relative;
             color: #3b4662; }
-            main .matching_market .matching_blocks .block.add ul.market_lists li.market_skillet {
+            main .matching_segments .matching_blocks .block.add ul.matching_lists li.matching_skillet {
               display: none; }
-            main .matching_market .matching_blocks .block.add ul.market_lists li .market_title {
+            main .matching_segments .matching_blocks .block.add ul.matching_lists li .matching_title {
               box-sizing: border-box;
               display: -moz-flex;
               display: -ms-flex;
@@ -1078,45 +1077,43 @@ main {
               padding: 15px 20px;
               width: 100%;
               position: relative; }
-              main .matching_market .matching_blocks .block.add ul.market_lists li .market_title i {
+              main .matching_segments .matching_blocks .block.add ul.matching_lists li .matching_title i {
                 color: #e5e5e5;
                 position: absolute;
                 right: 15px;
                 top: 50%;
                 transform: translate(-50%, -50%); }
-            main .matching_market .matching_blocks .block.add ul.market_lists li .market_groups {
+            main .matching_segments .matching_blocks .block.add ul.matching_lists li .matching_groups {
               min-height: 0;
               max-height: 0;
               opacity: 0;
               transition: all 0.8s ease; }
-              main .matching_market .matching_blocks .block.add ul.market_lists li .market_groups .groups_content .groups {
+              main .matching_segments .matching_blocks .block.add ul.matching_lists li .matching_groups .groups_content .groups {
                 padding: 15px 20px;
                 display: -ms-flexbox;
                 display: flex;
                 -ms-flex-wrap: wrap;
-                    flex-wrap: wrap;
-                -ms-flex-pack: justify;
-                    justify-content: space-between; }
-                main .matching_market .matching_blocks .block.add ul.market_lists li .market_groups .groups_content .groups .group {
+                    flex-wrap: wrap; }
+                main .matching_segments .matching_blocks .block.add ul.matching_lists li .matching_groups .groups_content .groups .group {
                   margin: 10px;
                   border-radius: 5px;
                   background-color: #3b4662;
                   padding: 10px 20px;
                   color: white; }
-                  main .matching_market .matching_blocks .block.add ul.market_lists li .market_groups .groups_content .groups .group.active {
+                  main .matching_segments .matching_blocks .block.add ul.matching_lists li .matching_groups .groups_content .groups .group.active {
                     background-color: #e39855; }
-              main .matching_market .matching_blocks .block.add ul.market_lists li .market_groups.show {
+              main .matching_segments .matching_blocks .block.add ul.matching_lists li .matching_groups.show {
                 min-height: 50px;
                 max-height: 100vh;
                 opacity: 1; }
-            main .matching_market .matching_blocks .block.add ul.market_lists li + li {
+            main .matching_segments .matching_blocks .block.add ul.matching_lists li + li {
               border-top: 1px solid #e5e5e5; }
-        main .matching_market .matching_blocks .block.products form .group_input {
-          margin-top: 0; }
-          main .matching_market .matching_blocks .block.products form .group_input input {
+        main .matching_segments .matching_blocks .block.products form .group_input {
+          margin-top: 10px; }
+          main .matching_segments .matching_blocks .block.products form .group_input input {
             box-sizing: border-box;
             width: 100%;
-            margin: 5px auto;
+            margin: 5px auto 0;
             max-width: 615px;
             -ms-flex: 1 0 auto;
             flex: 1 0 auto;
@@ -1124,21 +1121,23 @@ main {
             border: solid 1.3px #c5c9cc;
             background-color: #ffffff;
             padding: 5px 20px; }
-        main .matching_market .matching_blocks .block.products form .group_select .select {
-          margin-top: 20px; }
-        main .matching_market .matching_blocks .block.products .lists {
+        main .matching_segments .matching_blocks .block.products form .group_select + .group_select {
+          margin-top: 10px; }
+        main .matching_segments .matching_blocks .block.products form .group_select .select {
+          margin-top: 5px; }
+        main .matching_segments .matching_blocks .block.products .lists {
           background-color: transparent;
           box-shadow: none; }
-          main .matching_market .matching_blocks .block.products .lists form {
+          main .matching_segments .matching_blocks .block.products .lists form {
             background-color: transparent;
             box-shadow: none;
             padding: 0; }
-            main .matching_market .matching_blocks .block.products .lists form .btns {
+            main .matching_segments .matching_blocks .block.products .lists form .btns {
               display: -ms-flexbox;
               display: flex;
               border-radius: 5px;
               background-color: #e39855; }
-              main .matching_market .matching_blocks .block.products .lists form .btns a.checkAll {
+              main .matching_segments .matching_blocks .block.products .lists form .btns a.checkAll {
                 width: 0px;
                 height: 0px;
                 display: block;
@@ -1147,37 +1146,39 @@ main {
                 margin: 15px;
                 background-color: white;
                 border-radius: 5px; }
-              main .matching_market .matching_blocks .block.products .lists form .btns .submit {
+              main .matching_segments .matching_blocks .block.products .lists form .btns .submit {
                 display: -ms-flexbox;
                 display: flex;
                 border-left: 1px solid white;
                 position: relative;
                 -ms-flex-align: center;
                     align-items: center; }
-                main .matching_market .matching_blocks .block.products .lists form .btns .submit input {
+                main .matching_segments .matching_blocks .block.products .lists form .btns .submit input {
                   margin-top: 0;
                   background-color: transparent; }
-                main .matching_market .matching_blocks .block.products .lists form .btns .submit > i {
+                main .matching_segments .matching_blocks .block.products .lists form .btns .submit > i {
                   color: white; }
-            main .matching_market .matching_blocks .block.products .lists form div.block_lists {
+            main .matching_segments .matching_blocks .block.products .lists form div.block_lists {
               background-color: #fff;
               margin-top: 10px; }
-              main .matching_market .matching_blocks .block.products .lists form div.block_lists div.product {
+              main .matching_segments .matching_blocks .block.products .lists form div.block_lists div.product {
                 display: -ms-flexbox;
                 display: flex;
                 padding: 0; }
-                main .matching_market .matching_blocks .block.products .lists form div.block_lists div.product.selected label:after {
+                main .matching_segments .matching_blocks .block.products .lists form div.block_lists div.product input[type="checkbox"]:checked ~ label:after {
                   content: '';
+                  left: 19px;
+                  top: 20px;
                   width: 10px;
-                  height: 3px;
-                  background: #c00;
-                  transform: rotate(50deg);
-                  transition: 0.3s;
-                  position: absolute;
-                  left: 20px; }
-                main .matching_market .matching_blocks .block.products .lists form div.block_lists div.product input[type="checkbox"] {
+                  height: 5px;
+                  border-radius: 1px;
+                  border-left: 4px solid #e39855;
+                  border-bottom: 4px solid #e39855;
+                  transform: rotate(-45deg);
+                  position: absolute; }
+                main .matching_segments .matching_blocks .block.products .lists form div.block_lists div.product input[type="checkbox"] {
                   display: none; }
-                main .matching_market .matching_blocks .block.products .lists form div.block_lists div.product label {
+                main .matching_segments .matching_blocks .block.products .lists form div.block_lists div.product label {
                   display: -ms-flexbox;
                   display: flex;
                   -ms-flex: 1 0 auto;
@@ -1185,7 +1186,7 @@ main {
                   -ms-flex-align: center;
                       align-items: center;
                   position: relative; }
-                  main .matching_market .matching_blocks .block.products .lists form div.block_lists div.product label:before {
+                  main .matching_segments .matching_blocks .block.products .lists form div.block_lists div.product label:before {
                     content: '';
                     width: 0px;
                     height: 0px;
@@ -1196,35 +1197,37 @@ main {
                     margin-right: 35px;
                     background-color: white;
                     border-radius: 5px; }
-        main .matching_market .matching_blocks .block.chooses .market_group {
+        main .matching_segments .matching_blocks .block.chooses .matching_group {
           display: none; }
-          main .matching_market .matching_blocks .block.chooses .market_group.skillet {
+          main .matching_segments .matching_blocks .block.chooses .matching_group.skillet {
             display: none; }
-          main .matching_market .matching_blocks .block.chooses .market_group.active {
+          main .matching_segments .matching_blocks .block.chooses .matching_group.active {
             display: block; }
-        main .matching_market .matching_blocks .block.chooses .added_group .lists {
+        main .matching_segments .matching_blocks .block.chooses .added_group .lists {
           display: none;
           margin-top: 5px; }
-        main .matching_market .matching_blocks .block.chooses .added_group + .added_group {
+        main .matching_segments .matching_blocks .block.chooses .added_group + .added_group {
           margin-top: 10px; }
-        main .matching_market .matching_blocks .block.chooses .added_group.active .title {
+        main .matching_segments .matching_blocks .block.chooses .added_group.active .title {
           background-color: #e39855; }
-        main .matching_market .matching_blocks .block.chooses .added_group.active .lists {
+          main .matching_segments .matching_blocks .block.chooses .added_group.active .title h2 {
+            color: white; }
+        main .matching_segments .matching_blocks .block.chooses .added_group.active .lists {
           display: block; }
-        main .matching_market .matching_blocks .block.chooses .added_group.skillet {
+        main .matching_segments .matching_blocks .block.chooses .added_group.skillet {
           display: none; }
-        main .matching_market .matching_blocks .block.chooses .added_group .title {
+        main .matching_segments .matching_blocks .block.chooses .added_group .title {
           background-color: #fff; }
-          main .matching_market .matching_blocks .block.chooses .added_group .title h2 {
+          main .matching_segments .matching_blocks .block.chooses .added_group .title h2 {
             color: #3b4662; }
-        main .matching_market .matching_blocks .block.chooses .added_group ul.block_lists li {
+        main .matching_segments .matching_blocks .block.chooses .added_group ul.block_lists li {
           color: #e5e5e5; }
-    main .matching_market .createReport {
+    main .matching_segments .createReport {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: center;
           justify-content: center; }
-      main .matching_market .createReport button {
+      main .matching_segments .createReport button {
         margin-top: 25px;
         border-radius: 3px;
         background-color: #3b4662;
@@ -1242,8 +1245,7 @@ main {
         display: -ms-flexbox;
         display: flex;
         -ms-flex-align: end;
-            align-items: flex-end;
-        margin-top: 20px; }
+            align-items: flex-end; }
         main .analysis .analysis_filter form div.group_input fieldset.input_default {
           display: -moz-flex;
           display: -ms-flex;
@@ -1275,12 +1277,61 @@ main {
         display: -o-flex;
         display: -ms-flexbox;
         display: flex; }
-        main .analysis .analysis_filter form div.group_select + div.group_select {
-          margin-top: 20px; }
         main .analysis .analysis_filter form div.group_select .select {
-          min-width: 236px; }
-          main .analysis .analysis_filter form div.group_select .select + .select {
-            margin-left: 20px; }
+          min-width: 236px;
+          margin-bottom: 20px;
+          margin-right: 20px; }
+      main .analysis .analysis_filter form div.group_checkboxes {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: -ms-flexbox;
+        display: flex; }
+        main .analysis .analysis_filter form div.group_checkboxes + div.group_checkboxes {
+          margin-top: 20px; }
+        main .analysis .analysis_filter form div.group_checkboxes .checkboxes {
+          min-width: 238px;
+          margin-right: 20px;
+          margin-bottom: 20px; }
+          main .analysis .analysis_filter form div.group_checkboxes .checkboxes input {
+            display: none; }
+          main .analysis .analysis_filter form div.group_checkboxes .checkboxes label {
+            padding: 5px 25px 5px 25px;
+            border-radius: 3px;
+            border: solid 1.3px #e5e5e5;
+            background-color: #e5e5e5;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+            -ms-flex-align: center;
+            align-items: center;
+            position: relative; }
+            main .analysis .analysis_filter form div.group_checkboxes .checkboxes label:after {
+              content: '';
+              width: 0px;
+              height: 0px;
+              display: block;
+              border: 1px solid #c5c9cc;
+              padding: 10px;
+              background-color: white;
+              border-radius: 5px;
+              position: absolute;
+              right: 12px; }
+            main .analysis .analysis_filter form div.group_checkboxes .checkboxes label:before {
+              content: '';
+              right: 16px;
+              top: 11px;
+              width: 12px;
+              height: 6px;
+              border-radius: 1px;
+              border-left: 2px solid black;
+              border-bottom: 2px solid black;
+              transform: rotate(-45deg);
+              position: absolute;
+              z-index: 1; }
   main .analysis .analysis_block table, main .analysis .analysis_block th, main .analysis .analysis_block td {
     border-collapse: collapse;
     border: 1px solid black; }
@@ -1294,31 +1345,18 @@ main {
     main .analysis .analysis_block table caption {
       text-align: center;
       border: 1px solid gray; }
-    main .analysis .analysis_block table td {
-      padding: 10px 40px;
-      border: solid 1px #e5e5e5; }
     main .analysis .analysis_block table tr {
       background-color: white;
       height: 50px;
       border: 1px solid #e5e5e5; }
-      main .analysis .analysis_block table tr:last-child th {
-        vertical-align: middle;
-        text-align: center;
-        border: solid 1px #e5e5e5;
-        color: white;
-        background-color: #3b4662; }
-  main .analysis .analysis_block .report_all {
-    padding: 10px 0;
-    background-color: #eeeeee;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-        justify-content: center; }
-    main .analysis .analysis_block .report_all table tbody tr td {
-      vertical-align: middle;
-      text-align: center;
-      color: #000000; }
+      main .analysis .analysis_block table tr td {
+        word-break: break-all;
+        padding: 10px 40px;
+        border: solid 1px #e5e5e5; }
+      main .analysis .analysis_block table tr th {
+        padding: 0px 40px; }
   main .analysis .analysis_block .groups_report {
+    margin-top: 10px;
     white-space: nowrap;
     overflow-x: scroll;
     display: -ms-grid;
@@ -1333,10 +1371,8 @@ main {
       display: inline-flex;
       -ms-flex-align: center;
       align-items: center; }
-      main .analysis .analysis_block .groups_report .report_header .report_header_name {
-        min-width: 600px; }
-        main .analysis .analysis_block .groups_report .report_header .report_header_name table {
-          width: 100%; }
+      main .analysis .analysis_block .groups_report .report_header .report_header_name table {
+        width: 100%; }
       main .analysis .analysis_block .groups_report .report_header .report_header_informations {
         width: calc(100% - 400px);
         display: -moz-flex;
@@ -1350,10 +1386,6 @@ main {
           display: -ms-flexbox;
           display: flex;
           width: calc(100% - 500px); }
-          main .analysis .analysis_block .groups_report .report_header .report_header_informations .month .info {
-            width: 250px; }
-        main .analysis .analysis_block .groups_report .report_header .report_header_informations .info {
-          width: 500px; }
     main .analysis .analysis_block .groups_report .group {
       display: -moz-inline-flex;
       display: -ms-inline-flex;
@@ -1362,40 +1394,73 @@ main {
       display: inline-flex;
       -ms-flex-align: center;
       align-items: center; }
-      main .analysis .analysis_block .groups_report .group table {
-        width: 100%; }
-        main .analysis .analysis_block .groups_report .group table thead th {
-          background-color: #c4c4c4;
-          color: black;
-          cursor: pointer;
-          vertical-align: middle;
-          text-align: center; }
-        main .analysis .analysis_block .groups_report .group table tbody td {
-          vertical-align: middle; }
-        main .analysis .analysis_block .groups_report .group table tbody.hide {
-          display: none;
-          opacity: 0; }
-      main .analysis .analysis_block .groups_report .group .group_name {
-        min-width: 600px; }
+      main .analysis .analysis_block .groups_report .group table thead th {
+        background-color: #c4c4c4;
+        color: black;
+        cursor: pointer;
+        vertical-align: middle;
+        text-align: center; }
+      main .analysis .analysis_block .groups_report .group table tbody td {
+        vertical-align: middle; }
+      main .analysis .analysis_block .groups_report .group table tbody.hide {
+        display: none;
+        opacity: 0; }
+      main .analysis .analysis_block .groups_report .group .group_name thead .head th {
+        background-color: #fff; }
+      main .analysis .analysis_block .groups_report .group .group_name thead .params th {
+        color: white;
+        background-color: #3b4662; }
+      main .analysis .analysis_block .groups_report .group .group_name .segment td {
+        position: relative; }
+      main .analysis .analysis_block .groups_report .group .group_name .segment i {
+        border-radius: 20px;
+        border: solid 1px #c5c9cc;
+        font-size: 10px;
+        padding: 3px 3px;
+        color: #c5c9cc;
+        line-height: 0;
+        width: 10px;
+        height: 10px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+            align-items: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%); }
+      main .analysis .analysis_block .groups_report .group .group_name .product {
+        text-align: center; }
+        main .analysis .analysis_block .groups_report .group .group_name .product td {
+          padding-left: 90px;
+          padding-right: 45px; }
       main .analysis .analysis_block .groups_report .group .group_informations {
-        width: calc(100% - 400px);
+        width: 100%;
         display: -moz-flex;
         display: -ms-flex;
         display: -o-flex;
         display: -ms-flexbox;
         display: flex; }
+        main .analysis .analysis_block .groups_report .group .group_informations thead .head th {
+          background-color: #fff; }
+        main .analysis .analysis_block .groups_report .group .group_informations thead .params th {
+          color: white;
+          background-color: #3b4662; }
         main .analysis .analysis_block .groups_report .group .group_informations .month {
           display: -moz-flex;
           display: -ms-flex;
           display: -o-flex;
           display: -ms-flexbox;
-          display: flex;
-          width: calc(100% - 500px); }
+          display: flex; }
+          main .analysis .analysis_block .groups_report .group .group_informations .month thead .head th {
+            background-color: #fff; }
+          main .analysis .analysis_block .groups_report .group .group_informations .month thead .params th {
+            color: white;
+            background-color: #3b4662; }
           main .analysis .analysis_block .groups_report .group .group_informations .month .info {
-            display: inline-block;
-            width: 250px; }
-        main .analysis .analysis_block .groups_report .group .group_informations .info {
-          width: 500px; }
+            display: inline-block; }
   main .audit .analysis_block .groups_report .group .group_name {
     min-width: 200px; }
   main .audit .analysis_block .groups_report .group .group_informations .month {
@@ -1529,3 +1594,92 @@ main {
         background-color: #3b4662;
         padding: 8px 20px;
         color: white; }
+  main .market_bases .market_add {
+    padding: 20px;
+    background-color: #fff; }
+    main .market_bases .market_add form {
+      padding: 0; }
+      main .market_bases .market_add form div.group_input {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+            align-items: center; }
+        main .market_bases .market_add form div.group_input input {
+          max-width: 615px;
+          margin-right: 40px;
+          -ms-flex: 1 0 auto;
+              flex: 1 0 auto;
+          border-radius: 3px;
+          border: solid 1.3px #c5c9cc;
+          background-color: #ffffff;
+          padding: 5px 20px; }
+        main .market_bases .market_add form div.group_input button {
+          border-radius: 3px;
+          background-color: #3b4662;
+          padding: 8px 20px;
+          color: white;
+          border: none;
+          font-size: 14px; }
+      main .market_bases .market_add form div.group_select {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: -ms-flexbox;
+        display: flex; }
+        main .market_bases .market_add form div.group_select .select {
+          min-width: 200px;
+          margin-right: 20px; }
+  main .market_bases .bases_lists {
+    margin-top: 10px;
+    background-color: #fff;
+    overflow-x: scroll; }
+    main .market_bases .bases_lists li {
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      main .market_bases .bases_lists li.title {
+        color: white; }
+        main .market_bases .bases_lists li.title span {
+          background-color: #3b4662; }
+      main .market_bases .bases_lists li span {
+        width: 100px;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+        border: 1px solid #e5e5e5;
+        padding: 10px 35px; }
+        main .market_bases .bases_lists li span.name {
+          width: 400px;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-align: center;
+              align-items: center; }
+          main .market_bases .bases_lists li span.name .icons {
+            display: -ms-flexbox;
+            display: flex;
+            margin-right: 20px; }
+            main .market_bases .bases_lists li span.name .icons i {
+              display: -moz-flex;
+              display: -ms-flex;
+              display: -o-flex;
+              display: -ms-flexbox;
+              display: flex;
+              -ms-flex-align: center;
+                  align-items: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+              padding: 5px;
+              border-radius: 3px;
+              border: solid 1px #c5c9cc;
+              color: #c5c9cc; }
+              main .market_bases .bases_lists li span.name .icons i + i {
+                margin-left: 10px; }
+        main .market_bases .bases_lists li span.code {
+          width: 80px; }
+        main .market_bases .bases_lists li span.adress {
+          width: 150px; }
+        main .market_bases .bases_lists li span.podr {
+          width: 100px; }

@@ -24,7 +24,7 @@
 		</div>
 		<div class="nav_menu">
 			<ul>
-				<li class="active"><a href="https://faxef.github.io/packet/users.index.html"><i class="fas fa-users"></i>Пользователи</a></li>
+				<li><a href="https://faxef.github.io/packet/users.index.html"><i class="fas fa-users"></i>Пользователи</a></li>
 				<li><a href="https://faxef.github.io/packet/"><i class="fas fa-file-export"></i>Экспорт/импорт</a></li>
 				<li class="parentMenu">
 					<a href=""><i class="fas fa-tasks"></i>Соответствия<i class="fas fa-angle-down"></i></a>
@@ -44,11 +44,11 @@
 						<li><a href="https://faxef.github.io/packet/analysis_sales.index.html">Анализ продаж МРН</a></li>
 					</ul>
 				</li>
-				<li class="parentMenu">
+				<li class="parentMenu active">
 					<a href=""><i class="fas fa-book-open"></i>Рынки<i class="fas fa-angle-down"></i></a>
-					<ul class="subMenu">
-						<li><a href="https://faxef.github.io/packet/market_add.index.html">Создать</a></li>
-						<li><a href="https://faxef.github.io/packet/segment_groups.index.html">Сегмент-группа</a></li>
+					<ul class="subMenu active">
+						<li><a href="http://localhost:3000/market_add.html">Создать</a></li>
+						<li><a href="http://localhost:3000/segment_groups.html">Сегмент-группа</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -67,9 +67,9 @@
 		</div>
 		<div class="nav_menu">
 			<ul>
-				<li class="active"><a href="https://faxef.github.io/packet/users.index.html"><i class="fas fa-users"></i></a></li>
-				<li><a href="https://faxef.github.io/packet/"><i class="fas fa-file-export"></i></a></li>
-				<li><a href=""><i class="fas fa-tasks"></i></a></li>
+				<li><a href="http://localhost:3000/users.html"><i class="fas fa-users"></i></a></li>
+				<li><a href="http://localhost:3000/"><i class="fas fa-file-export"></i></a></li>
+				<li class="active"><a href=""><i class="fas fa-tasks"></i></a></li>
 				<li><a href=""><i class="fas fa-hospital-alt"></i></a></li>
 				<li><a href=""><i class="fas fa-clinic-medical"></i></a></li>
 				<li><a href=""><i class="fas fa-book-open"></i></a></li>
@@ -81,70 +81,28 @@
 	</nav>
 	<main>
 		<div class="title">
-			<h2>Пользователи</h2>
+			<h2><a href="">Рынок</a> > <a href="">Создать рынок</a></h2>
 		</div>
-		<div class="users">
-			<div class="users_find">
+		<div class="market_bases">
+			<div class="market_add">
 				<form action="">
 					<div class="group_input">
-						<input type="search" q="googlesearch" placeholder="Введите Ф.И.О">
-						<a href="https://faxef.github.io/packet/user_add.index.html">Добавить пользователя</a>
-					</div>
-					<div class="group_select">
-						<fieldset class="select">
-							<select name="podrazdelenie" id="podrazdelenie">
-								<option value="0" selected>Тип</option>
-								<option value="1">Тип</option>
-								<option value="2">Тип</option>
-							</select>
-							<i class="fas fa-angle-down"></i>
-						</fieldset>
-						<fieldset class="select">
-							<select name="podrazdelenie" id="podrazdelenie">
-								<option value="0" selected>Регион</option>
-								<option value="1">Регион</option>
-								<option value="2">Регион</option>
-							</select>
-							<i class="fas fa-angle-down"></i>
-						</fieldset>
-						<fieldset class="select">
-							<select name="podrazdelenie" id="podrazdelenie">
-								<option value="0" selected>Подразделение</option>
-								<option value="1">Подразделение</option>
-								<option value="2">Подразделение</option>
-							</select>
-							<i class="fas fa-angle-down"></i>
-						</fieldset>
-						<fieldset class="select">
-							<select name="podrazdelenie" id="podrazdelenie">
-								<option value="0" selected>Статус</option>
-								<option value="1">Статус</option>
-								<option value="2">Статус</option>
-							</select>
-							<i class="fas fa-angle-down"></i>
-						</fieldset>
+						<input type="text" placeholder="Введите название рынка">
+						<button type="submit">Добавить рынок</button>
 					</div>
 				</form>
 			</div>
-			<ul class="users_lists">
+			<ul class="bases_lists">
 				<li class="title">
-					<span class="name">Фамилия Имя Отчество</span>
-					<span class="code">Код сотрудника</span>
-					<span class="adress">Аптека</span>
-					<span class="podr">Подразделение</span>
+					<span class="name">Название рынка</span>
 				</li>
 				<li>
 					<span class="name">
 						<div class="icons">
-							<a href="https://faxef.github.io/packet/user_info.index.html"><i class="fas fa-eye"></i></a>
-							<a href="https://faxef.github.io/packet/user_info.index.html"><i class="fas fa-pen"></i></a>
-							<a href=""><i class="fas fa-trash"></i></a>
+							<i class="fas fa-eye"></i><i class="fas fa-pen"></i><i class="fas fa-trash"></i>
 						</div>
 						<p>Константинопольский Константин Константинович</p>
 					</span>
-					<span class="code">info</span>
-					<span class="adress">info</span>
-					<span class="podr">info</span>
 				</li>
 			</ul>
 		</div>

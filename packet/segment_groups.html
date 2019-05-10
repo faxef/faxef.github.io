@@ -26,13 +26,12 @@
 			<ul>
 				<li><a href="https://faxef.github.io/packet/users.index.html"><i class="fas fa-users"></i>Пользователи</a></li>
 				<li><a href="https://faxef.github.io/packet/"><i class="fas fa-file-export"></i>Экспорт/импорт</a></li>
-				<li class="parentMenu active">
+				<li class="parentMenu">
 					<a href=""><i class="fas fa-tasks"></i>Соответствия<i class="fas fa-angle-down"></i></a>
-					<ul class="subMenu active">
+					<ul class="subMenu">
 						<li><a href="https://faxef.github.io/packet/matching_prices.index.html">Прайс-лист</a></li>
 						<li><a href="https://faxef.github.io/packet/matching_holdings.index.html">Холдинг ассортимент</a></li>
 						<li><a href="https://faxef.github.io/packet/matching_bases.index.html">Базы ТП</a></li>
-						<li class="active"><a href="https://faxef.github.io/packet/matching_market.index.html">Рынок – товары</a></li>
 					</ul>
 				</li>
 				<li><a href=""><i class="fas fa-hospital-alt"></i>Холдинги</a></li>
@@ -45,11 +44,11 @@
 						<li><a href="https://faxef.github.io/packet/analysis_sales.index.html">Анализ продаж МРН</a></li>
 					</ul>
 				</li>
-				<li class="parentMenu">
+				<li class="parentMenu active">
 					<a href=""><i class="fas fa-book-open"></i>Рынки<i class="fas fa-angle-down"></i></a>
-					<ul class="subMenu">
-						<li><a href="https://faxef.github.io/packet/market_add.index.html">Создать</a></li>
-						<li><a href="https://faxef.github.io/packet/segment_groups.index.html">Сегмент-группа</a></li>
+					<ul class="subMenu active">
+						<li><a href="http://localhost:3000/market_add.html">Создать</a></li>
+						<li class="active"><a href="http://localhost:3000/segment_groups.html">Сегмент-группа</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -82,42 +81,67 @@
 	</nav>
 	<main>
 		<div class="title">
-			<h2><a href="">Соответствия</a> > <a href="">Рынок - товары</a></h2>
+			<h2><a href="">Рынки</a> > <a href="">Сегменты - группы</a></h2>
 		</div>
-		<div class="matching_market">
+		<div class="matching_segments">
 			<div class="matching_blocks">
 				<div class="block add">
 					<div class="title">
-						<h2>Добавить рынок</h2>
+						<h2>Добавить группу</h2>
 					</div>
-					<div class="markets_header">
+					<div class="matchings_header">
 						<form>
 							<div class="input_default">
-								<label for="marketName">Название рынка</label>
-								<input type="text" id="marketName" name="marketName">
+								<label for="groupName">Название</label>
+								<input type="text" id="groupName" name="groupName">
 							</div>
-							<input type="submit" value="Добавить рынок">
+							<input type="submit" value="Добавить">
 						</form>
 					</div>
 					<div class="lists">
-						<ul class="market_lists">
-							<li class="market_skillet market">
-								<div class="market_title">
-									<h2>Рынок 1</h2>
+						<ul class="matching_lists">
+							<li class="matching">
+								<div class="matching_title">
+									<h2>Группа 1</h2>
 									<i class="fas fa-plus-circle"></i>
 								</div>
-								<div class="market_groups">
+								<div class="matching_groups show">
 									<div class="groups_header">
 										<form>
 											<div class="input_default">
-												<label for="groupName">Название группы</label>
+												<label for="groupName">Название сегмента</label>
 												<input type="text" id="groupName" name="groupName">
 											</div>
-											<input type="submit" value="Добавить группу">
+											<input type="submit" value="Добавить сегмент">
 										</form>
 									</div>
 									<div class="groups_content">
 										<div class="groups">
+											<div class="group active">Сегмент 1</div>
+											<div class="group">Сегмент 2</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="matching">
+								<div class="matching_title">
+									<h2>Группа 1</h2>
+									<i class="fas fa-plus-circle"></i>
+								</div>
+								<div class="matching_groups">
+									<div class="groups_header">
+										<form>
+											<div class="input_default">
+												<label for="groupName">Название сегмента</label>
+												<input type="text" id="groupName" name="groupName">
+											</div>
+											<input type="submit" value="Добавить сегмент">
+										</form>
+									</div>
+									<div class="groups_content">
+										<div class="groups">
+											<div class="group">Сегмент 1</div>
+											<div class="group">Сегмент 2</div>
 										</div>
 									</div>
 								</div>
@@ -126,15 +150,26 @@
 					</div>
 				</div>
 				<div class="block chooses">
-					<div class="market_group skillet">
-					</div>
-					<div class="added_group skillet">
-						<div class="title">
-							<h2>Список групп<i class="fas fa-angle-down"></i></h2>
+					<div class="matching_group active">
+						<div class="added_group active">
+							<div class="title">
+								<h2>Группа 1 > Сегмент 1<i class="fas fa-angle-down"></i></h2>
+							</div>
+							<div class="lists">
+								<ul class="block_lists">
+									<li>Товар 1</li>
+									<li>Товар 2</li>
+								</ul>
+							</div>
 						</div>
-						<div class="lists">
-							<ul class="block_lists">
-							</ul>
+						<div class="added_group">
+							<div class="title">
+								<h2>Сегмент 2<i class="fas fa-angle-down"></i></h2>
+							</div>
+							<div class="lists">
+								<ul class="block_lists">
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -146,12 +181,12 @@
 						<fieldset class="group_select">
 							<fieldset class="select">
 								<select name="region" id="region">
-									<option selected="" size="2" disabled="">Выберите регион</option>
-									<option value="Регион 1">Регион 1</option>
-									<option value="Регион 2">Регион 2</option>
-									<option value="Регион 3">Регион 3</option>
-									<option value="Регион 4">Регион 4</option>
-									<option value="Регион 5">Регион 5</option>
+									<option selected="" size="2" disabled="">Производитель</option>
+									<option value="Производитель 1">Производитель 1</option>
+									<option value="Производитель 2">Производитель 2</option>
+									<option value="Производитель 3">Производитель 3</option>
+									<option value="Производитель 4">Производитель 4</option>
+									<option value="Производитель 5">Производитель 5</option>
 								</select>
 								<i class="fas fa-angle-down"></i>
 							</fieldset>
@@ -159,12 +194,25 @@
 						<fieldset class="group_select">
 							<fieldset class="select">
 								<select name="supplier" id="supplier">
-									<option selected="" size="2" disabled="">Выберите производителя</option>
-									<option value="Производитель 1">Производитель 1</option>
-									<option value="Производитель 2">Производитель 2</option>
-									<option value="Производитель 3">Производитель 3</option>
-									<option value="Производитель 4">Производитель 4</option>
-									<option value="Производитель 5">Производитель 5</option>
+									<option selected="" size="2" disabled="">Форма выпуска</option>
+									<option value="Форма выпуска 1">Форма выпуска 1</option>
+									<option value="Форма выпуска 2">Форма выпуска 2</option>
+									<option value="Форма выпуска 3">Форма выпуска 3</option>
+									<option value="Форма выпуска 4">Форма выпуска 4</option>
+									<option value="Форма выпуска 5">Форма выпуска 5</option>
+								</select>
+								<i class="fas fa-angle-down"></i>
+							</fieldset>
+						</fieldset>
+						<fieldset class="group_select">
+							<fieldset class="select">
+								<select name="supplier" id="supplier">
+									<option selected="" size="2" disabled="">Страна</option>
+									<option value="Страна 1">Страна 1</option>
+									<option value="Страна 2">Страна 2</option>
+									<option value="Страна 3">Страна 3</option>
+									<option value="Страна 4">Страна 4</option>
+									<option value="Страна 5">Страна 5</option>
 								</select>
 								<i class="fas fa-angle-down"></i>
 							</fieldset>
@@ -185,11 +233,11 @@
 							</div>
 							<div class="block_lists">
 								<div class="product">
-									<input type="checkbox" id="tovar1">
+									<input type="checkbox" id="tovar1" checked>
 									<label for="tovar1">Товар 1</label>
 								</div>
 								<div class="product">
-									<input type="checkbox" id="tovar2">
+									<input type="checkbox" id="tovar2" checked>
 									<label for="tovar2">Товар 2</label>
 								</div>
 								<div class="product">
@@ -207,7 +255,7 @@
 		</div>
 	</main>
 	<script src="js/scripts.js"></script>
-	<script src="js/addNewMarket.js"></script>
+	<script src="js/addNewmatching.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
