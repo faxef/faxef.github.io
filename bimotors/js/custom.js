@@ -5,8 +5,8 @@ jQuery(document).ready(function ($) {
 		lazyLoad: 'ondemand',
 		dots: false,
 		arrows: true,
-		prevArrow: '<div class="arrow_prev"><img src="../img/left.png" alt="left"></div>',
-		nextArrow: '<div class="arrow_next"><img src="../img/right.png" alt="right"></div>',
+		prevArrow: '<div class="arrow_prev"><img src="img/left.png" alt="left"></div>',
+		nextArrow: '<div class="arrow_next"><img src="img/right.png" alt="right"></div>',
 		responsive: [
 		{
 			breakpoint: 1200,
@@ -36,8 +36,8 @@ jQuery(document).ready(function ($) {
 		lazyLoad: 'ondemand',
 		dots: false,
 		arrows: true,
-		prevArrow: '<div class="arrow_prev"><img src="../img/left.png" alt="left"></div>',
-		nextArrow: '<div class="arrow_next"><img src="../img/right.png" alt="right"></div>',
+		prevArrow: '<div class="arrow_prev"><img src="img/left.png" alt="left"></div>',
+		nextArrow: '<div class="arrow_next"><img src="img/right.png" alt="right"></div>',
 		responsive: [
 		{
 			breakpoint: 992,
@@ -55,8 +55,8 @@ jQuery(document).ready(function ($) {
 		lazyLoad: 'ondemand',
 		dots: false,
 		arrows: true,
-		prevArrow: '<div class="arrow_prev"><img src="../img/left.png" alt="left"></div>',
-		nextArrow: '<div class="arrow_next"><img src="../img/right.png" alt="right"></div>',
+		prevArrow: '<div class="arrow_prev"><img src="img/left.png" alt="left"></div>',
+		nextArrow: '<div class="arrow_next"><img src="img/right.png" alt="right"></div>',
 		responsive: [
 		{
 			breakpoint: 992,
