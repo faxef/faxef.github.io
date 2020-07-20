@@ -1,1 +1,0 @@
-jQuery(document).ready(function(l){l(".x1").on("click",function(e){l(this).toggleClass("active"),e.preventDefault(),l(".layer_1").toggleClass("visible")}),l(".x2").on("click",function(e){l(this).toggleClass("active"),e.preventDefault(),l(".layer_2").toggleClass("visible")})});
