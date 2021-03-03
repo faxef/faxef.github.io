@@ -1,9 +1,7 @@
-//Caching schema
 <FilesMatch "\.(jpg|css|js)$">
 Header set Cache-Control "public, max-age=43200"
-</FilesMatch>
 
-//Prevent viewing of .htaccess file
+</FilesMatch>
 <Files .htaccess>
 order allow,deny
 deny from all
