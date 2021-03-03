@@ -170,7 +170,7 @@
 	  		horizontalScrolling: false,
 	  		hideDistantElements: false,
 	  		horizontalOffset: 0,
-	  		verticalOffset: -2000
+	  		verticalOffset: -1500
 	  	});
 	  }
 
