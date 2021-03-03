@@ -61,8 +61,6 @@
 
 
 
-  @import url('bootstrap.min.css');
-  @import url('animate.css');
   @import url('magnific-popup.css');
   @import url('slick.css');
   @import url('slick-theme.css');
@@ -732,7 +730,7 @@
   .masthead{
     background: url(../img/bg/masthead.jpg) 50% 0 no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center 67%;
   }
 
   .masthead-inner{
@@ -772,6 +770,7 @@
   }
 
   .lead{
+    width: 65%;
     font-size: inherit;
     font-size: 17px;
     font-weight: 400;
@@ -781,126 +780,126 @@
 
   .lead-text{
    color: #ffffffc2;
-  }
-  .lead-text strong {
-    color: #ec7550;
-  }
-  .lead-controls{
-    margin-top:20px;
-  }
+ }
+ .lead-text strong {
+  color: #ec7550;
+}
+.lead-controls{
+  margin-top:20px;
+}
 
-  .lead-controls a{
-    margin-top: 20px;
-    vertical-align: middle;
-  }
+.lead-controls a{
+  margin-top: 20px;
+  vertical-align: middle;
+}
 
-  .play-home{
-    font-size: 15px;
-    display:inline-block;
-  }
+.play-home{
+  font-size: 15px;
+  display:inline-block;
+}
 
-  .play{
-    display: inline-block;
-  }
+.play{
+  display: inline-block;
+}
 
-  .play .fa{
-    padding:1px;
-    color: inherit;
-    vertical-align: middle;
-    margin-right: 10px;
-    -webkit-transition:all .5s;
-    transition:all .5s;
-  }
+.play .fa{
+  padding:1px;
+  color: inherit;
+  vertical-align: middle;
+  margin-right: 10px;
+  -webkit-transition:all .5s;
+  transition:all .5s;
+}
 
-  .play:hover{
-    text-decoration: none;
-  }
+.play:hover{
+  text-decoration: none;
+}
 
-  .btn-lead{
-    margin-right: 20px;
-  }
+.btn-lead{
+  margin-right: 20px;
+}
 
-  .btn-lead:hover,
-  .btn-lead:focus{
-    color: #fff;
-    border-color: #fff;
-  }
+.btn-lead:hover,
+.btn-lead:focus{
+  color: #fff;
+  border-color: #fff;
+}
 
-  .play-home .fa{
-    padding:1px;
-    color: inherit;
-    vertical-align: middle;
-    margin-right: 10px;
-    font-size:50px;
-    -webkit-transition:color .5s;
-    transition:color .5s;
-  }
+.play-home .fa{
+  padding:1px;
+  color: inherit;
+  vertical-align: middle;
+  margin-right: 10px;
+  font-size:50px;
+  -webkit-transition:color .5s;
+  transition:color .5s;
+}
 
-  .play:hover{
-    text-decoration: none;
-    color: #fff;
-  }
+.play:hover{
+  text-decoration: none;
+  color: #fff;
+}
 
-  .play:hover .fa{
-    color: #ec7550;
-  }
+.play:hover .fa{
+  color: #ec7550;
+}
 
-  .content{
-    position: relative;
-    background-color: #fff;
-  }
+.content{
+  position: relative;
+  background-color: #fff;
+}
 
-  .content-inner{
-    padding-top: 60px;
-  }
+.content-inner{
+  padding-top: 60px;
+}
 
-  .intro{
-    padding:0px 0 30px;
-  }
-
-
-
-  /* Breadcrumbs */
+.intro{
+  padding:0px 0 30px;
+}
 
 
 
-  .breadcrumbs{
-    padding:22px 0 22px;
-    background-color: #f5f5f5;
-    text-transform: uppercase;
-    font-size:13px;
-    font-weight: 500;
-  }
-
-
-  .breadcrumbs li{
-    float: left;
-    margin:0;
-  }
-
-  .breadcrumbs .active a,
-  .breadcrumbs a:hover{
-    color: #ec7550;
-  }
-
-  .breadcrumbs li a{
-    color:inherit;
-    text-decoration: none;
-  }
-
-  .breadcrumbs li a:after{
-    display: inline-block;
-    content:'/';
-    margin:0 10px;
-  }
-
-  .breadcrumbs li:last-child a:after{
-    display: none;
-  }
+/* Breadcrumbs */
 
 
 
-  /* ------------------------------------------------------------------------------- */
+.breadcrumbs{
+  padding:22px 0 22px;
+  background-color: #f5f5f5;
+  text-transform: uppercase;
+  font-size:13px;
+  font-weight: 500;
+}
+
+
+.breadcrumbs li{
+  float: left;
+  margin:0;
+}
+
+.breadcrumbs .active a,
+.breadcrumbs a:hover{
+  color: #ec7550;
+}
+
+.breadcrumbs li a{
+  color:inherit;
+  text-decoration: none;
+}
+
+.breadcrumbs li a:after{
+  display: inline-block;
+  content:'/';
+  margin:0 10px;
+}
+
+.breadcrumbs li:last-child a:after{
+  display: none;
+}
+
+
+
+/* ------------------------------------------------------------------------------- */
 /*  4. Partners
 /* ------------------------------------------------------------------------------- */
 
@@ -971,7 +970,16 @@
 /* ------------------------------------------------------------------------------- */
 
 
+section.about .row-columns{
+  margin-top: -50px;
+  display: flex;
+  flex-wrap: wrap;
+}
 
+section.about .row-columns .column{
+  margin-top: 50px;
+  width: 33%;
+}
 .row-columns{
   margin-top: -50px;
 }
@@ -993,6 +1001,17 @@ section.product {
 section.product .slider {
   padding-top: 45px;
 }
+section.product .slider .slick-track{
+  display: flex;
+}
+section.product .slider .slick-track .slick-slide {
+  height: auto;
+}
+section.product .slider .slick-track .slick-slide img{
+  height: 100%;
+  object-fit: cover
+}
+
 .animatePhone{
   -webkit-animation-name: animatePhone;
   animation-name:animatePhone;
@@ -1268,7 +1287,7 @@ img.mfp-img{
 
 
 .prices{
-  background: url(../img/bg/masthead.jpg) 50% no-repeat;
+  background: url(../img/bg/masthead_2.jpg) 50% no-repeat;
   background-size: cover;
 }
 
@@ -1929,8 +1948,8 @@ body:not(.modal-open){
     width: 18px;
     height: 18px;
   }
-    .slick-dots li.slick-active button:before{
-      border-color: #ec7550;
+  .slick-dots li.slick-active button:before{
+    border-color: #ec7550;
   }
   .slick-dots li button:hover:before, .slick-dots li button:focus:before {
     border-color: #ec7550;
